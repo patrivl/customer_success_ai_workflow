@@ -2,9 +2,12 @@
 
 A runnable, deterministic simulation of an end-to-end Customer Success AI
 workflow. It ingests the seven synthetic CSVs in `data/`, joins them,
-generates a risk-ranked briefing for every account, and runs a quality
-review of junior-drafted customer communications against a defined set of
-quality standards.
+generates a risk-ranked briefing for every account, runs a quality review
+of junior-drafted customer communications against a defined set of quality
+standards, and then executes all 37 planned workflow stages defined in
+`config/token_math_plan.csv` (model routing, prompt templates, token
+measurement, and cost logging) against those same accounts/tickets/
+check-ins/outputs.
 
 **No external AI API is called anywhere in this project.** Every "LLM
 response" is produced by deterministic, rule-based logic that is fed
@@ -22,8 +25,9 @@ pip install -r requirements.txt
 python run_workflow.py
 ```
 
-That's it — one command, no API keys, no network access required. Output
-appears in `output/` and a run summary is printed to the console.
+That's it — one command, no API keys, no network access required. `outputs/`
+is the single final output directory; a run summary is also printed to the
+console.
 
 ## What it does
 
@@ -63,15 +67,32 @@ appears in `output/` and a run summary is printed to the console.
    Verdicts roll up into an overall score and a recommendation of
    *Approved*, *Needs revision*, or *Rejected*, plus a suggested revision
    when it isn't a clean approval.
-7. **Reports** — Stage 1/2 output lands in `output/` as JSON + Markdown,
-   plus a per-call token/cost log. The preprocessing layer's own output
-   lands separately in `outputs/preprocessing/` (see below).
+7. **Reports** — Stage 1/2 output is kept for local debugging only, under
+   `outputs/legacy_stage_reports/` (JSON + Markdown + a per-call token/cost
+   log) — it is **not** part of the final deliverable. The preprocessing
+   layer's own output lands in `outputs/preprocessing/` (see below).
+8. **Token-math-plan-driven simulated model layer** (`src/model_simulator.py`,
+   `src/token_measurement.py`, runs after Stage 1/2) — every one of the 37
+   planned workflow stages in `config/token_math_plan.csv` is executed
+   against the preprocessing layer's real selected populations (accounts,
+   tickets, check-ins, junior outputs, intervention candidates, issue
+   themes), producing a full prompt/response/token/cost trace per call,
+   measured against that stage's planned model, tokens, and pricing. See
+   "The token-math-plan-driven simulated model layer" below.
+9. **Final end-to-end orchestration** (`src/final_report.py`) — reuses those
+   same traces (no re-simulation) to assemble one JSON file per
+   representative account run (`outputs/representative_runs/`),
+   portfolio-wide quality/routing/intervention rollup CSVs, and the
+   top-level `outputs/workflow_summary.json` / `outputs/workflow_summary.md`.
+   See "Final output (outputs/)" below.
 
 ## Project structure
 
 ```
 run_workflow.py            # single entry point — orchestrates everything
 requirements.txt
+config/
+  token_math_plan.csv       # planned workflow stages, model routing, token/price/retry/QA assumptions
 data/                       # the 7 source CSVs
   accounts.csv
   usage_events.csv
@@ -84,24 +105,36 @@ src/
   config.py                 # required columns, scoring weights, thresholds, pricing constants
   data_loader.py             # load, validate, account_id joins, standard_ids split/join (Stage 1/2 shape)
   preprocessing.py            # deterministic preprocessing layer: normalize, flags, scores, selectors, patterns
-  llm_simulator.py           # simulated LLM call wrapper + token/cost metering
-  prompts.py                 # prompt templates for both simulated LLM tasks
+  llm_simulator.py           # simulated LLM call wrapper + token/cost metering (Stage 1/2)
+  prompts.py                 # prompt templates for Stage 1/2 + the 9 token-math-plan templates
   briefing_generator.py       # Stage 1: risk/opportunity scoring + briefings
   quality_reviewer.py         # Stage 2: per-standard heuristic evaluators
   report_writer.py            # writes Stage 1/2 JSON/Markdown reports + logs
+  token_math_config.py        # loads/validates config/token_math_plan.csv into StagePlan objects
+  output_schemas.py           # expected JSON output schema per prompt template + validation
+  token_costs.py              # estimate_tokens / calculate_cost / variance / review_flag math
+  model_simulator.py          # STAGE_RUNTIME_MAP + simulate_model_call() (deterministic, no API calls)
+  token_measurement.py        # runs all 37 stages against preprocessing populations + writes aggregation CSVs
+  final_report.py             # assembles representative runs + rollup CSVs + workflow_summary from those traces
 tests/
-  test_workflow.py            # sanity tests: loading/joins/split-join/token logging/preprocessing
-output/                      # Stage 1/2 reports (generated by running the workflow)
-  account_briefings.json / .md
-  quality_review_report.json / .md
-  token_usage_log.csv
-  workflow_summary.md
-outputs/preprocessing/       # deterministic preprocessing layer output (generated by running the workflow)
-  account_contexts.json
-  account_scores.csv
-  portfolio_patterns.json
-  selected_workflow_items.json
-  representative_accounts.json
+  test_workflow.py            # sanity tests, incl. a full `python3 run_workflow.py` acceptance test
+outputs/                      # THE single final output directory (everything below lives here)
+  workflow_summary.json       # top-level machine-readable run summary
+  workflow_summary.md         # top-level human-readable run summary
+  stage_token_counts.csv      # one row per simulated call: planned vs. measured tokens
+  cost_summary.csv            # one row per simulated call: planned/measured/adjusted cost + variance
+  token_math_measurement_summary.csv  # one row per stage_id, spreadsheet-ready
+  quality_review_results.csv  # every quality_review_prompt call, portfolio-wide
+  routing_decisions.csv       # every routing_prompt / complex_escalation_prompt call, portfolio-wide
+  intervention_plans.csv      # every intervention_planning_prompt call, portfolio-wide
+  representative_runs/        # one JSON file per representative end-to-end account run
+    A008.json, A005.json, ...
+  preprocessing/               # deterministic preprocessing layer's own artifacts
+    account_contexts.json, account_scores.csv, portfolio_patterns.json,
+    selected_workflow_items.json, representative_accounts.json
+  legacy_stage_reports/        # OLD Stage 1/2 reports -- debug only, not the final deliverable
+    account_briefings.json / .md, quality_review_report.json / .md,
+    token_usage_log.csv, workflow_summary.md
 ```
 
 ## The preprocessing layer (`src/preprocessing.py`)
@@ -221,7 +254,7 @@ This long-format table is what `quality_reviewer.review_all_outputs()`
 iterates over (grouped back by `output_id`) to produce one verdict per
 standard and one overall recommendation per output.
 
-## Simulated LLM calls & cost logging
+## Simulated LLM calls & cost logging (legacy Stage 1/2)
 
 Every "LLM call" (one per account for briefings, one per junior output for
 quality review) goes through `SimulatedLLMClient.call()`:
@@ -232,8 +265,11 @@ quality review) goes through `SimulatedLLMClient.call()`:
   narrative/verdicts described above).
 - Both prompt and response are token-counted (`~1.33 tokens/word`
   heuristic) and priced against illustrative per-1K-token rates in
-  `config.py`, then logged to `output/token_usage_log.csv` with a
-  timestamp, task name, reference id, and estimated cost.
+  `config.py`, then logged to `outputs/legacy_stage_reports/token_usage_log.csv`
+  with a timestamp, task name, reference id, and estimated cost. This is the
+  older, simpler cost log kept for local debugging -- the final deliverable's
+  token/cost measurement is `outputs/stage_token_counts.csv` /
+  `outputs/cost_summary.csv` (see below).
 
 This means the pipeline's *shape* — prompt in, metered response out — is a
 faithful stand-in for a real LLM integration; swapping `response_fn` for
@@ -252,6 +288,124 @@ this a live system.
   `briefing_generator.py` / `quality_reviewer.py` with an actual API call,
   keeping the same prompt templates and `SimulatedLLMClient` interface (or
   swap in a real client with the same `.call()` signature).
+
+## The token-math-plan-driven simulated model layer
+
+`config/token_math_plan.csv` is the single source of truth for 37 planned
+workflow stages (`stage_id` TM_001-TM_037): which model each stage would
+call, planned input/output tokens per run, per-1M-token pricing,
+retry/QA-eval overhead, and cadence/annualization assumptions.
+`stage_id` is the unique key -- `workflow_component` + `operating_area` is
+**not** unique by design (e.g. TM_004 and TM_005 are both "Account
+review" / "Synthesis & recommendation" but cover different trigger
+schedules: second-pass validation vs. flagged-account summaries).
+
+Note on column naming: the CSV's retry column is `retry_rate_percent`
+(e.g. `5` for 5%), not `retry_rate`. `src/token_math_config.py` validates
+against the actual header and exposes it as `StagePlan.retry_rate`, a 0-1
+fraction, for direct use in cost math.
+
+**How a stage becomes a simulated call** (`src/model_simulator.py`,
+`src/token_measurement.py`):
+
+1. `STAGE_RUNTIME_MAP` wires each `stage_id` to the deterministic
+   preprocessing layer's population that feeds it (e.g. TM_002 pulls from
+   `daily_account_review`, TM_012 from `inbound_issues`, TM_037 from
+   `complex_escalation_candidates`), the *kind* of item in that population
+   (account / ticket / checkin / output / issue_theme), and which of the 9
+   prompt templates renders it.
+2. For each item, `src/token_measurement.py` builds a compact, grounded
+   context (the account's own preprocessing context for account-kind
+   stages; a joined ticket/check-in/output record plus its owning
+   account's scores/flags otherwise).
+3. `model_simulator.simulate_model_call(stage_id, context, prompt_template_name, run_id)`
+   looks up the stage's config row, renders the prompt
+   (`src/prompts.py`), generates a deterministic structured output grounded
+   in that context (`src/output_schemas.py` defines and validates the
+   expected shape), measures actual prompt/response token counts
+   (`ceil(chars / 4)`, `src/token_costs.py`), and returns a full trace:
+   planned vs. measured tokens, planned vs. measured cost, a retry/QA-
+   adjusted cost, percent variance, and a `review_flag`.
+
+**The 9 prompt templates** (`src/prompts.py`): `account_review_prompt`,
+`prioritization_prompt`, `inbound_issue_prompt`, `checkin_support_prompt`,
+`quality_review_prompt`, `intervention_planning_prompt`, `routing_prompt`,
+`complex_escalation_prompt`, `deployment_tracking_prompt`. Every one
+includes the stage identity, task objective, compact input context, the
+data fields it draws on, the expected JSON output schema, a confidence-
+score requirement, valid labels/routes, escalation/quality criteria where
+relevant, and explicit instructions against generic recommendations and in
+favor of citing account evidence in the rationale. Signal-monitoring /
+context-assembly stages (embedding models, zero planned output tokens) use
+a lightweight `context_indexing` pseudo-template instead of a JSON verdict.
+
+**Review-flag bands** (`src/token_costs.assign_review_flag`): within
+±20% variance = `OK`; +20% to +50% = `Review: above estimate`; above +50%
+= `High variance: revise assumptions`; -20% to -50% =
+`Review: overestimated`; below -50% =
+`High variance: estimate too conservative`; no measurement yet =
+`Pending measurement`.
+
+**Output** (written by `src/token_measurement.py` to `outputs/`):
+- `stage_token_counts.csv` -- one row per simulated call: planned vs.
+  measured input/output tokens.
+- `cost_summary.csv` -- one row per simulated call: planned/measured/
+  adjusted cost, retry_rate, qa_eval_multiplier, variance_pct, review_flag.
+- `token_math_measurement_summary.csv` -- one row per `stage_id`,
+  formatted for direct copy into the planning spreadsheet's measurement
+  columns (`num_calls`, average measured tokens/cost, planned tokens/cost,
+  `variance_pct`, `review_flag`).
+
+**Expected variance on this repo's synthetic sample data:** `token_math_plan.csv`'s
+planned token counts assume a full production portfolio's richer prompts;
+this repo's 7 synthetic CSVs are a small illustrative sample, so measured
+prompts are shorter and every stage currently reports
+`High variance: estimate too conservative`. That's the correct, honest
+signal this layer is built to produce -- on a real, larger portfolio the
+same wiring will show whichever stages are actually over/under-planned.
+
+## Final output (`outputs/`) and `src/final_report.py`
+
+`outputs/` is the single final output directory. `src/final_report.py` runs
+last (Step 8/8 of `run_workflow.py`) and assembles the final deliverable
+from the token-math layer's own call traces -- it does **not** re-run or
+duplicate any simulated model call.
+
+**Representative account selection** (`src/preprocessing.select_representative_runs`):
+picks between `MIN_REPRESENTATIVE_RUNS` (5) and `MAX_REPRESENTATIVE_RUNS`
+(8) accounts. It starts from the 5 preferred accounts in
+`config.PREFERRED_REPRESENTATIVE_ACCOUNT_IDS` (each a distinct case type --
+severe support escalation, renewal/value review, negative sentiment/
+declining adoption, healthy expansion, low usage reactivation) when present,
+then -- **never by hardcoding additional account ids** -- fills in up to 3
+more case types (quality review, intervention planning, complex escalation)
+from `config.ADDITIONAL_REPRESENTATIVE_CASE_TYPES`, each drawn from the
+matching deterministic preprocessing selector (`failed_or_weak_outputs`,
+`intervention_candidates`, `complex_escalation_candidates`). Any
+substitution or additional pick carries an explicit `reason` string, and
+that reasoning is echoed into both `workflow_summary.json` and
+`workflow_summary.md`.
+
+**Representative run JSON** (`outputs/representative_runs/<account_id>.json`):
+one file per representative account, grouping every simulated-stage trace
+that account went through (across all 37 stage_ids) into
+`account_review_outputs`, `prioritization_outputs`, `inbound_issue_outputs`,
+`checkin_outputs`, `quality_review_outputs`, `intervention_outputs`, and
+`routing_outputs` (routing_prompt + complex_escalation_prompt calls share
+this bucket), plus `evaluation_flags`, a `final_route` (the account's last
+routing/escalation decision), token/cost totals, and the full
+`stage_traces` list for auditability.
+
+**Portfolio-wide rollup CSVs** (filtered straight from the same trace list,
+one row per matching call): `quality_review_results.csv`,
+`routing_decisions.csv`, `intervention_plans.csv`.
+
+**Top-level summary**: `workflow_summary.json` (machine-readable) and
+`workflow_summary.md` (human-readable) cover the dataset used, the
+representative runs and any substitutions, workflow components/operating
+areas covered, portfolio-wide token/cost totals and per-run averages,
+quality/escalation/intervention counts, and each representative account's
+final route.
 
 ## Tests
 

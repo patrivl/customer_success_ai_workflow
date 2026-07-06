@@ -13,11 +13,27 @@ from pathlib import Path
 # Paths
 # ---------------------------------------------------------------------------
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+# outputs/ is the ONE final output directory for this project. Every report
+# that matters for the final deliverable (token/cost measurement,
+# representative end-to-end runs, quality/routing/intervention rollups, and
+# the top-level workflow summary) is written directly under here.
 DATA_DIR = PROJECT_ROOT / "data"
-OUTPUT_DIR = PROJECT_ROOT / "output"
-# Deterministic preprocessing layer writes here, separate from the Stage 1/2
-# simulated-LLM report outputs above, per the preprocessing spec.
-PREPROCESSING_OUTPUT_DIR = PROJECT_ROOT / "outputs" / "preprocessing"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
+
+# Deterministic preprocessing layer's own artifacts (account contexts,
+# scores, portfolio patterns, selectors) -- a subfolder of outputs/, not a
+# separate top-level directory.
+PREPROCESSING_OUTPUT_DIR = OUTPUT_DIR / "preprocessing"
+
+# One JSON file per representative end-to-end account run.
+REPRESENTATIVE_RUNS_DIR = OUTPUT_DIR / "representative_runs"
+
+# The original Stage 1/2 (briefing_generator.py / quality_reviewer.py)
+# reports are superseded by the token-math-plan-driven layer's per-stage
+# outputs, but are still handy for local debugging -- kept out of the way
+# in a legacy subfolder instead of a separate top-level output/ directory.
+LEGACY_STAGE_REPORTS_DIR = OUTPUT_DIR / "legacy_stage_reports"
 
 # Reference "today" used for renewal-window / ageing calculations across the
 # whole workflow (run_workflow.py and src/preprocessing.py both use this, so
@@ -140,6 +156,7 @@ FLAGGED_SUMMARY_MIN = 25                # target lower bound for select_flagged_
 FLAGGED_SUMMARY_MAX = 40                # target upper bound for select_flagged_account_summary_accounts
 MAX_ESCALATIONS_PER_DAY = 3             # daily token-budget cap for complex escalation candidates
 MIN_REPRESENTATIVE_RUNS = 5             # minimum end-to-end representative runs to select
+MAX_REPRESENTATIVE_RUNS = 8             # cap -- broaden case-type coverage without an unbounded list
 
 # Preferred representative accounts (used if present in the dataset), each
 # covering a distinct case type for a representative end-to-end demo.
@@ -150,6 +167,16 @@ REPRESENTATIVE_CASE_TYPES = {
     "A014": "negative_sentiment_declining_adoption_case",
     "A003": "healthy_expansion_opportunity_case",
     "A017": "low_usage_reactivation_intervention_case",
+}
+
+# Beyond the 5 preferred accounts above, these additional case types are
+# filled in (up to MAX_REPRESENTATIVE_RUNS) from the deterministic
+# preprocessing selectors' own populations -- never hardcoded account ids.
+# Maps case_type -> the `selected_workflow_items` selector key to draw from.
+ADDITIONAL_REPRESENTATIVE_CASE_TYPES = {
+    "quality_review_case": "failed_or_weak_outputs",
+    "intervention_planning_case": "intervention_candidates",
+    "complex_escalation_case": "complex_escalation_candidates",
 }
 
 # Deterministic keyword themes used for support-ticket / blocker pattern

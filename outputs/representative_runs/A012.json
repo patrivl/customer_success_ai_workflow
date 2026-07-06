@@ -1,0 +1,1509 @@
+{
+  "run_id": "rep-A012",
+  "account_id": "A012",
+  "account_name": "Lumen Energy",
+  "representative_case_type": "quality_review_case",
+  "selection_reason": "deterministic selector 'failed_or_weak_outputs' match for case type 'quality_review_case' (no preferred id available/uncovered): draft is short and/or uses vague filler phrasing (preliminary check)",
+  "stages_completed": [
+    "TM_001",
+    "TM_002",
+    "TM_003",
+    "TM_004",
+    "TM_005",
+    "TM_007",
+    "TM_008",
+    "TM_009",
+    "TM_010",
+    "TM_012",
+    "TM_013",
+    "TM_014",
+    "TM_015",
+    "TM_017",
+    "TM_018",
+    "TM_019",
+    "TM_020",
+    "TM_021",
+    "TM_022",
+    "TM_023",
+    "TM_024",
+    "TM_025",
+    "TM_026",
+    "TM_027",
+    "TM_028",
+    "TM_029",
+    "TM_030",
+    "TM_031",
+    "TM_032"
+  ],
+  "account_review_outputs": [
+    {
+      "stage_id": "TM_002",
+      "run_id": "TM_002-A012-00030",
+      "account_id": "A012",
+      "risk_level": "high",
+      "opportunity_level": "high",
+      "key_signals": [
+        "usage trend is declining",
+        "high ticket volume (8 in 30d)",
+        "low NPS (4)",
+        "expansion signal is medium",
+        "upcoming check-in scheduled"
+      ],
+      "summary": "Lumen Energy has a risk_score of 106.0 and an opportunity_score of 27.0. health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)",
+      "recommended_action": "Resolve the outstanding item (Provide permissions guide) before the next customer touchpoint.",
+      "confidence": 0.95,
+      "rationale": "health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)"
+    },
+    {
+      "stage_id": "TM_004",
+      "run_id": "TM_004-A012-00062",
+      "account_id": "A012",
+      "risk_level": "high",
+      "opportunity_level": "high",
+      "key_signals": [
+        "usage trend is declining",
+        "high ticket volume (8 in 30d)",
+        "low NPS (4)",
+        "expansion signal is medium",
+        "upcoming check-in scheduled"
+      ],
+      "summary": "Lumen Energy has a risk_score of 106.0 and an opportunity_score of 27.0. health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)",
+      "recommended_action": "Resolve the outstanding item (Provide permissions guide) before the next customer touchpoint.",
+      "confidence": 0.95,
+      "rationale": "health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)"
+    },
+    {
+      "stage_id": "TM_005",
+      "run_id": "TM_005-A012-00078",
+      "account_id": "A012",
+      "risk_level": "high",
+      "opportunity_level": "high",
+      "key_signals": [
+        "usage trend is declining",
+        "high ticket volume (8 in 30d)",
+        "low NPS (4)",
+        "expansion signal is medium",
+        "upcoming check-in scheduled"
+      ],
+      "summary": "Lumen Energy has a risk_score of 106.0 and an opportunity_score of 27.0. health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)",
+      "recommended_action": "Resolve the outstanding item (Provide permissions guide) before the next customer touchpoint.",
+      "confidence": 0.95,
+      "rationale": "health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)"
+    }
+  ],
+  "prioritization_outputs": [
+    {
+      "stage_id": "TM_003",
+      "run_id": "TM_003-A012-00043",
+      "item_id": "A012",
+      "item_type": "account",
+      "priority_rank": 7,
+      "priority_score": 86.4,
+      "reason": "priority_score=86.4 (risk_score=106.0, escalation_score=10.0); part of daily portfolio review cadence.",
+      "owner_or_next_step": "Assign to the primary CSM for a proactive check-in this cadence.",
+      "confidence": 0.93
+    },
+    {
+      "stage_id": "TM_009",
+      "run_id": "TM_009-A012-00128",
+      "item_id": "A012",
+      "item_type": "account",
+      "priority_rank": 7,
+      "priority_score": 86.4,
+      "reason": "priority_score=86.4 (risk_score=106.0, escalation_score=10.0); open follow-up commitment: Provide permissions guide; open ticket(s): T005.",
+      "owner_or_next_step": "Assign to the primary CSM for a proactive check-in this cadence.",
+      "confidence": 0.93
+    },
+    {
+      "stage_id": "TM_010",
+      "run_id": "TM_010-A012-00141",
+      "item_id": "A012",
+      "item_type": "account",
+      "priority_rank": 7,
+      "priority_score": 86.4,
+      "reason": "priority_score=86.4 (risk_score=106.0, escalation_score=10.0); ranked #7 of 18 by priority_score (86.4).",
+      "owner_or_next_step": "Assign to the primary CSM for a proactive check-in this cadence.",
+      "confidence": 0.93
+    },
+    {
+      "stage_id": "TM_020",
+      "run_id": "TM_020-C009-00251",
+      "item_id": "C009",
+      "item_type": "checkin",
+      "priority_rank": 6,
+      "priority_score": 86.4,
+      "reason": "priority_score=86.4 (risk_score=106.0, escalation_score=10.0); low priority 'Permissions enablement' check-in scheduled for 2026-05-08.",
+      "owner_or_next_step": "Assign to the primary CSM for a proactive check-in this cadence.",
+      "confidence": 0.93
+    },
+    {
+      "stage_id": "TM_030",
+      "run_id": "TM_030-A012-00331",
+      "item_id": "A012",
+      "item_type": "account",
+      "priority_rank": 7,
+      "priority_score": 86.4,
+      "reason": "priority_score=86.4 (risk_score=106.0, escalation_score=10.0); usage is declining; NPS is low (4).",
+      "owner_or_next_step": "Assign to the primary CSM for a proactive check-in this cadence.",
+      "confidence": 0.93
+    }
+  ],
+  "inbound_issue_outputs": [
+    {
+      "stage_id": "TM_012",
+      "run_id": "TM_012-T005-00163",
+      "ticket_id": "T005",
+      "account_id": "A012",
+      "issue_type": "permissions_access",
+      "severity_assessment": "low",
+      "customer_sentiment": "neutral",
+      "summary": "Ticket T005 (A012): Customer opened several how-to questions about advanced permissions",
+      "recommended_response": "Standard queue response addressing 'Customer opened several how-to questions about advanced permissions' within SLA.",
+      "route": "schedule_follow_up",
+      "confidence": 0.6,
+      "rationale": "severity=low, customer_sentiment=neutral, renewal_days_remaining=96. issue_summary=\"Customer opened several how-to questions about advanced permissions\"."
+    },
+    {
+      "stage_id": "TM_014",
+      "run_id": "TM_014-T005-00187",
+      "ticket_id": "T005",
+      "account_id": "A012",
+      "issue_type": "permissions_access",
+      "severity_assessment": "low",
+      "customer_sentiment": "neutral",
+      "summary": "Ticket T005 (A012): Customer opened several how-to questions about advanced permissions",
+      "recommended_response": "Standard queue response addressing 'Customer opened several how-to questions about advanced permissions' within SLA.",
+      "route": "schedule_follow_up",
+      "confidence": 0.6,
+      "rationale": "severity=low, customer_sentiment=neutral, renewal_days_remaining=96. issue_summary=\"Customer opened several how-to questions about advanced permissions\"."
+    }
+  ],
+  "checkin_outputs": [
+    {
+      "stage_id": "TM_018",
+      "run_id": "TM_018-C009-00230",
+      "checkin_id": "C009",
+      "account_id": "A012",
+      "agenda": [
+        "Admin training",
+        "permissions confusion",
+        "Status update on 1 open ticket(s)"
+      ],
+      "talking_points": [
+        "No material change since last contact -- confirm goals are still on track"
+      ],
+      "risks_to_discuss": [
+        "Open ticket T005 (low severity)"
+      ],
+      "opportunities_to_discuss": [
+        "Expansion signal is medium"
+      ],
+      "suggested_guidance": "Lead with the open risk(s) (Open ticket T005 (low severity)) before discussing growth.",
+      "follow_up_items": [
+        "Send recap and next steps for C009 within 2 business days"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "stage_id": "TM_019",
+      "run_id": "TM_019-C009-00242",
+      "checkin_id": "C009",
+      "account_id": "A012",
+      "agenda": [
+        "Admin training",
+        "permissions confusion",
+        "Status update on 1 open ticket(s)"
+      ],
+      "talking_points": [
+        "No material change since last contact -- confirm goals are still on track"
+      ],
+      "risks_to_discuss": [
+        "Open ticket T005 (low severity)"
+      ],
+      "opportunities_to_discuss": [
+        "Expansion signal is medium"
+      ],
+      "suggested_guidance": "Lead with the open risk(s) (Open ticket T005 (low severity)) before discussing growth.",
+      "follow_up_items": [
+        "Send recap and next steps for C009 within 2 business days"
+      ],
+      "confidence": 0.75
+    }
+  ],
+  "quality_review_outputs": [
+    {
+      "stage_id": "TM_023",
+      "run_id": "TM_023-O007-00284",
+      "output_id": "O007",
+      "account_id": "A012",
+      "passed": false,
+      "failed_standards": [
+        "QS001",
+        "QS002"
+      ],
+      "quality_score": 35.0,
+      "issues_found": [
+        "draft is short and/or uses vague filler phrasing"
+      ],
+      "correction_guidance": "Rewrite with specific account evidence (numbers, dates, named next steps) instead of generic filler language.",
+      "route": "human_approval_required",
+      "confidence": 0.65
+    },
+    {
+      "stage_id": "TM_024",
+      "run_id": "TM_024-O007-00289",
+      "output_id": "O007",
+      "account_id": "A012",
+      "passed": false,
+      "failed_standards": [
+        "QS001",
+        "QS002"
+      ],
+      "quality_score": 35.0,
+      "issues_found": [
+        "draft is short and/or uses vague filler phrasing"
+      ],
+      "correction_guidance": "Rewrite with specific account evidence (numbers, dates, named next steps) instead of generic filler language.",
+      "route": "human_approval_required",
+      "confidence": 0.65
+    },
+    {
+      "stage_id": "TM_031",
+      "run_id": "TM_031-A012-00340",
+      "output_id": "A012",
+      "account_id": "A012",
+      "passed": true,
+      "failed_standards": [],
+      "quality_score": 88.0,
+      "issues_found": [],
+      "correction_guidance": "Plan is grounded in observed decline signals.",
+      "route": "approve",
+      "confidence": 0.9
+    }
+  ],
+  "intervention_outputs": [
+    {
+      "stage_id": "TM_028",
+      "run_id": "TM_028-A012-00313",
+      "account_or_segment_id": "A012",
+      "problem_pattern": "Account shows sustained disengagement risk: declining product usage, low NPS (4.0).",
+      "likely_causes": [
+        "declining product usage",
+        "low NPS (4.0)"
+      ],
+      "intervention_actions": [
+        "Riley Patel to schedule an executive health-check call within 5 business days",
+        "Solutions engineer to review recent product usage and blockers within 10 business days"
+      ],
+      "owner": "Riley Patel",
+      "timeline": "30 days",
+      "success_measures": [
+        "current_health_score improves by at least 10 points within 60 days",
+        "product_usage_trend shifts from declining to stable or growing"
+      ],
+      "risks": [
+        "Customer disengages further if outreach is delayed"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "stage_id": "TM_029",
+      "run_id": "TM_029-A012-00322",
+      "account_or_segment_id": "A012",
+      "problem_pattern": "Account shows sustained disengagement risk: declining product usage, low NPS (4.0).",
+      "likely_causes": [
+        "declining product usage",
+        "low NPS (4.0)"
+      ],
+      "intervention_actions": [
+        "Riley Patel to schedule an executive health-check call within 5 business days",
+        "Solutions engineer to review recent product usage and blockers within 10 business days"
+      ],
+      "owner": "Riley Patel",
+      "timeline": "30 days",
+      "success_measures": [
+        "current_health_score improves by at least 10 points within 60 days",
+        "product_usage_trend shifts from declining to stable or growing"
+      ],
+      "risks": [
+        "Customer disengages further if outreach is delayed"
+      ],
+      "confidence": 0.95
+    }
+  ],
+  "routing_outputs": [
+    {
+      "stage_id": "TM_015",
+      "run_id": "TM_015-T005-00199",
+      "item_id": "T005",
+      "item_type": "ticket",
+      "route": "csm_review",
+      "owner": "Riley Patel",
+      "urgency": "high",
+      "reason": "escalation_score=10.0, risk_score=106.0, severity=low, customer_sentiment=neutral. low severity inbound ticket, sentiment=neutral",
+      "confidence": 0.65
+    },
+    {
+      "stage_id": "TM_025",
+      "run_id": "TM_025-O007-00293",
+      "item_id": "O007",
+      "item_type": "output",
+      "route": "csm_review",
+      "owner": "Primary CSM",
+      "urgency": "high",
+      "reason": "escalation_score=10.0, risk_score=106.0. draft is short and/or uses vague filler phrasing (preliminary check)",
+      "confidence": 0.65
+    }
+  ],
+  "evaluation_flags": [
+    {
+      "stage_id": "TM_023",
+      "passed": false,
+      "quality_score": 35.0,
+      "issues_found": [
+        "draft is short and/or uses vague filler phrasing"
+      ]
+    },
+    {
+      "stage_id": "TM_024",
+      "passed": false,
+      "quality_score": 35.0,
+      "issues_found": [
+        "draft is short and/or uses vague filler phrasing"
+      ]
+    },
+    {
+      "stage_id": "TM_031",
+      "passed": true,
+      "quality_score": 88.0,
+      "issues_found": []
+    }
+  ],
+  "final_route": {
+    "stage_id": "TM_025",
+    "route": "csm_review",
+    "owner": "Primary CSM",
+    "urgency": "high"
+  },
+  "total_measured_input_tokens": 12522,
+  "total_measured_output_tokens": 3259,
+  "total_measured_cost": 0.050978,
+  "total_adjusted_measured_cost": 0.081898,
+  "stage_traces": [
+    {
+      "run_id": "TM_001-A012-00012",
+      "stage_id": "TM_001",
+      "workflow_component": "Account review",
+      "operating_area": "Signal monitoring, context assembly & portfolio pattern detection",
+      "trigger_schedule": "Daily per-account context indexing",
+      "model": "text-embedding-3-small",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_001\nworkflow_component: Account review\noperating_area: Signal monitoring, context assembly & portfolio pattern detection\ntrigger_schedule: Daily per-account context indexing\nmodel: text-embedding-3-small\n\nTASK OBJECTIVE\nIndex compact context for item_id=A012 so later stages retrieve only what they need instead of the full record.\n\nINDEXED FIELDS (30): account_id, account_name, all_tickets_count, call_notes, contract_value, csm_owner, current_health_score, days_since_last_contact, expansion_signal, flags, health_score_delta, item_id, item_type, notes, nps_score, open_ticket_ids, open_tickets, previous_health_score, product_usage_trend, recent_usage_events, related_junior_outputs, renewal_date, renewal_days_remaining, score_reasons, scores, segment, selector_reason, support_ticket_count_30d, unresolved_follow_up_items, upcoming_checkins\ncontext_chars: 2983\n",
+      "result": {
+        "item_id": "A012",
+        "indexed_fields": [
+          "account_id",
+          "account_name",
+          "all_tickets_count",
+          "call_notes",
+          "contract_value",
+          "csm_owner",
+          "current_health_score",
+          "days_since_last_contact",
+          "expansion_signal",
+          "flags",
+          "health_score_delta",
+          "item_id",
+          "item_type",
+          "notes",
+          "nps_score",
+          "open_ticket_ids",
+          "open_tickets",
+          "previous_health_score",
+          "product_usage_trend",
+          "recent_usage_events",
+          "related_junior_outputs",
+          "renewal_date",
+          "renewal_days_remaining",
+          "score_reasons",
+          "scores",
+          "segment",
+          "selector_reason",
+          "support_ticket_count_30d",
+          "unresolved_follow_up_items",
+          "upcoming_checkins"
+        ],
+        "context_chars": 2983
+      },
+      "planned_input_tokens": 3000,
+      "planned_output_tokens": 0,
+      "measured_input_tokens": 220,
+      "measured_output_tokens": 154,
+      "planned_cost": 6e-05,
+      "measured_cost": 4.4e-06,
+      "retry_rate": 0.02,
+      "qa_eval_multiplier": 1.02,
+      "adjusted_measured_cost": 4.57776e-06,
+      "variance_pct": -92.67,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": null
+    },
+    {
+      "run_id": "TM_002-A012-00030",
+      "stage_id": "TM_002",
+      "workflow_component": "Account review",
+      "operating_area": "Intake, classification & triage",
+      "trigger_schedule": "Daily per-account risk/opportunity label",
+      "model": "Claude Haiku 4.5",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_002\nworkflow_component: Account review\noperating_area: Intake, classification & triage\ntrigger_schedule: Daily per-account risk/opportunity label\nmodel: Claude Haiku 4.5\n\nTASK OBJECTIVE\nReview this account's current risk and opportunity posture and recommend a\nconcrete next action for its CSM. Reason from the signals below, not from\nthe account's segment or name.\n\nINPUT CONTEXT\n- account_id: A012\n- account_name: Lumen Energy (Enterprise)\n- csm_owner: Riley Patel\n- contract_value: 190000.0\n- current_health_score: 63.0 (previous: 60.0, delta: 3.0)\n- product_usage_trend: flat\n- nps_score: 4.0\n- expansion_signal: medium\n- renewal_days_remaining: 96\n- open_tickets (1): T005[low/neutral]\n- upcoming_checkins (1): C009\n- notes: Many tickets but usage remains strong\n- deterministic flags: high_ticket_volume_flag, low_nps_flag, declining_usage_flag, expansion_opportunity_flag, unresolved_issue_flag, checkin_due_flag, quality_review_needed_flag, intervention_candidate_flag, high_value_account_flag\n- risk_score=106.0 opportunity_score=27.0 escalation_score=10.0 priority_score=86.4\n- selection reason: part of daily portfolio review cadence\n\nDATA FIELDS USED\naccount_id, account_name, segment, csm_owner, contract_value,\ncurrent_health_score, previous_health_score, product_usage_trend,\nnps_score, expansion_signal, renewal_days_remaining, open_tickets,\nupcoming_checkins, notes, deterministic flags, risk_score, opportunity_score,\nescalation_score, priority_score.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"account_id\": string\n  \"risk_level\": one of: low | medium | high\n  \"opportunity_level\": one of: low | medium | high\n  \"key_signals\": array of strings (specific, evidence-based signals, not generic labels)\n  \"summary\": string (2-4 sentences)\n  \"recommended_action\": string (specific, concrete next action for the CSM)\n  \"confidence\": number 0.0-1.0\n  \"rationale\": string citing specific account evidence (numbers, dates, quotes)\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nVALID LABELS / ROUTES\nrisk_level / opportunity_level: low, medium, high\n\nESCALATION CRITERIA\nEscalate (recommend manager review / CSM follow-up) when a severe health decline coincides with a near-term renewal, or when negative sentiment appears on an open ticket close to renewal.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "account_id": "A012",
+        "risk_level": "high",
+        "opportunity_level": "high",
+        "key_signals": [
+          "usage trend is declining",
+          "high ticket volume (8 in 30d)",
+          "low NPS (4)",
+          "expansion signal is medium",
+          "upcoming check-in scheduled"
+        ],
+        "summary": "Lumen Energy has a risk_score of 106.0 and an opportunity_score of 27.0. health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)",
+        "recommended_action": "Resolve the outstanding item (Provide permissions guide) before the next customer touchpoint.",
+        "confidence": 0.95,
+        "rationale": "health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)"
+      },
+      "planned_input_tokens": 3500,
+      "planned_output_tokens": 300,
+      "measured_input_tokens": 678,
+      "measured_output_tokens": 199,
+      "planned_cost": 0.005,
+      "measured_cost": 0.001673,
+      "retry_rate": 0.05,
+      "qa_eval_multiplier": 1.15,
+      "adjusted_measured_cost": 0.0020201474999999997,
+      "variance_pct": -66.54,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.95
+    },
+    {
+      "run_id": "TM_003-A012-00043",
+      "stage_id": "TM_003",
+      "workflow_component": "Account review",
+      "operating_area": "Prioritization & queue ranking",
+      "trigger_schedule": "Daily per-account priority score",
+      "model": "GPT-5.4",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_003\nworkflow_component: Account review\noperating_area: Prioritization & queue ranking\ntrigger_schedule: Daily per-account priority score\nmodel: GPT-5.4\n\nTASK OBJECTIVE\nAssign this item a priority rank and score within its batch, and explain\nthe ranking using the specific signals below (not a generic \"this is\nimportant\" statement).\n\nINPUT CONTEXT\n- item_id: A012\n- item_type: account\n- account_id: A012\n- priority_score: n/a\n- risk_score: n/a\n- opportunity_score: n/a\n- escalation_score: n/a\n- selection reason: part of daily portfolio review cadence\n\nDATA FIELDS USED\nitem_id, item_type, account_id, priority_score, risk_score,\nopportunity_score, escalation_score, selection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"item_id\": string\n  \"item_type\": string (e.g. account | ticket | checkin | intervention)\n  \"priority_rank\": integer, 1 = highest priority within this batch\n  \"priority_score\": number\n  \"reason\": string citing the specific signals driving this rank\n  \"owner_or_next_step\": string\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nESCALATION CRITERIA\nIf escalation_score materially exceeds risk_score, note that this item may need routing to a specialist/manager in owner_or_next_step rather than standard follow-up.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "item_id": "A012",
+        "item_type": "account",
+        "priority_rank": 7,
+        "priority_score": 86.4,
+        "reason": "priority_score=86.4 (risk_score=106.0, escalation_score=10.0); part of daily portfolio review cadence.",
+        "owner_or_next_step": "Assign to the primary CSM for a proactive check-in this cadence.",
+        "confidence": 0.93
+      },
+      "planned_input_tokens": 3000,
+      "planned_output_tokens": 250,
+      "measured_input_tokens": 428,
+      "measured_output_tokens": 79,
+      "planned_cost": 0.01125,
+      "measured_cost": 0.002255,
+      "retry_rate": 0.06,
+      "qa_eval_multiplier": 1.25,
+      "adjusted_measured_cost": 0.002987875,
+      "variance_pct": -79.96,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.93
+    },
+    {
+      "run_id": "TM_004-A012-00062",
+      "stage_id": "TM_004",
+      "workflow_component": "Account review",
+      "operating_area": "Synthesis & recommendation",
+      "trigger_schedule": "Daily second-pass high-risk/opportunity validation",
+      "model": "GPT-5.4",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_004\nworkflow_component: Account review\noperating_area: Synthesis & recommendation\ntrigger_schedule: Daily second-pass high-risk/opportunity validation\nmodel: GPT-5.4\n\nTASK OBJECTIVE\nReview this account's current risk and opportunity posture and recommend a\nconcrete next action for its CSM. Reason from the signals below, not from\nthe account's segment or name.\n\nINPUT CONTEXT\n- account_id: A012\n- account_name: Lumen Energy (Enterprise)\n- csm_owner: Riley Patel\n- contract_value: 190000.0\n- current_health_score: 63.0 (previous: 60.0, delta: 3.0)\n- product_usage_trend: flat\n- nps_score: 4.0\n- expansion_signal: medium\n- renewal_days_remaining: 96\n- open_tickets (1): T005[low/neutral]\n- upcoming_checkins (1): C009\n- notes: Many tickets but usage remains strong\n- deterministic flags: high_ticket_volume_flag, low_nps_flag, declining_usage_flag, expansion_opportunity_flag, unresolved_issue_flag, checkin_due_flag, quality_review_needed_flag, intervention_candidate_flag, high_value_account_flag\n- risk_score=106.0 opportunity_score=27.0 escalation_score=10.0 priority_score=86.4\n- selection reason: risk_score=106.0 / opportunity_score=27.0 clears second-pass threshold\n\nDATA FIELDS USED\naccount_id, account_name, segment, csm_owner, contract_value,\ncurrent_health_score, previous_health_score, product_usage_trend,\nnps_score, expansion_signal, renewal_days_remaining, open_tickets,\nupcoming_checkins, notes, deterministic flags, risk_score, opportunity_score,\nescalation_score, priority_score.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"account_id\": string\n  \"risk_level\": one of: low | medium | high\n  \"opportunity_level\": one of: low | medium | high\n  \"key_signals\": array of strings (specific, evidence-based signals, not generic labels)\n  \"summary\": string (2-4 sentences)\n  \"recommended_action\": string (specific, concrete next action for the CSM)\n  \"confidence\": number 0.0-1.0\n  \"rationale\": string citing specific account evidence (numbers, dates, quotes)\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nVALID LABELS / ROUTES\nrisk_level / opportunity_level: low, medium, high\n\nESCALATION CRITERIA\nEscalate (recommend manager review / CSM follow-up) when a severe health decline coincides with a near-term renewal, or when negative sentiment appears on an open ticket close to renewal.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "account_id": "A012",
+        "risk_level": "high",
+        "opportunity_level": "high",
+        "key_signals": [
+          "usage trend is declining",
+          "high ticket volume (8 in 30d)",
+          "low NPS (4)",
+          "expansion signal is medium",
+          "upcoming check-in scheduled"
+        ],
+        "summary": "Lumen Energy has a risk_score of 106.0 and an opportunity_score of 27.0. health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)",
+        "recommended_action": "Resolve the outstanding item (Provide permissions guide) before the next customer touchpoint.",
+        "confidence": 0.95,
+        "rationale": "health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)"
+      },
+      "planned_input_tokens": 6000,
+      "planned_output_tokens": 900,
+      "measured_input_tokens": 685,
+      "measured_output_tokens": 199,
+      "planned_cost": 0.028499999999999998,
+      "measured_cost": 0.0046975,
+      "retry_rate": 0.12,
+      "qa_eval_multiplier": 1.35,
+      "adjusted_measured_cost": 0.007102620000000001,
+      "variance_pct": -83.52,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.95
+    },
+    {
+      "run_id": "TM_005-A012-00078",
+      "stage_id": "TM_005",
+      "workflow_component": "Account review",
+      "operating_area": "Synthesis & recommendation",
+      "trigger_schedule": "Daily flagged-account summaries",
+      "model": "Claude Sonnet 4.6",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_005\nworkflow_component: Account review\noperating_area: Synthesis & recommendation\ntrigger_schedule: Daily flagged-account summaries\nmodel: Claude Sonnet 4.6\n\nTASK OBJECTIVE\nReview this account's current risk and opportunity posture and recommend a\nconcrete next action for its CSM. Reason from the signals below, not from\nthe account's segment or name.\n\nINPUT CONTEXT\n- account_id: A012\n- account_name: Lumen Energy (Enterprise)\n- csm_owner: Riley Patel\n- contract_value: 190000.0\n- current_health_score: 63.0 (previous: 60.0, delta: 3.0)\n- product_usage_trend: flat\n- nps_score: 4.0\n- expansion_signal: medium\n- renewal_days_remaining: 96\n- open_tickets (1): T005[low/neutral]\n- upcoming_checkins (1): C009\n- notes: Many tickets but usage remains strong\n- deterministic flags: high_ticket_volume_flag, low_nps_flag, declining_usage_flag, expansion_opportunity_flag, unresolved_issue_flag, checkin_due_flag, quality_review_needed_flag, intervention_candidate_flag, high_value_account_flag\n- risk_score=106.0 opportunity_score=27.0 escalation_score=10.0 priority_score=86.4\n- selection reason: ranked #7 of 18 by priority_score (86.4)\n\nDATA FIELDS USED\naccount_id, account_name, segment, csm_owner, contract_value,\ncurrent_health_score, previous_health_score, product_usage_trend,\nnps_score, expansion_signal, renewal_days_remaining, open_tickets,\nupcoming_checkins, notes, deterministic flags, risk_score, opportunity_score,\nescalation_score, priority_score.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"account_id\": string\n  \"risk_level\": one of: low | medium | high\n  \"opportunity_level\": one of: low | medium | high\n  \"key_signals\": array of strings (specific, evidence-based signals, not generic labels)\n  \"summary\": string (2-4 sentences)\n  \"recommended_action\": string (specific, concrete next action for the CSM)\n  \"confidence\": number 0.0-1.0\n  \"rationale\": string citing specific account evidence (numbers, dates, quotes)\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nVALID LABELS / ROUTES\nrisk_level / opportunity_level: low, medium, high\n\nESCALATION CRITERIA\nEscalate (recommend manager review / CSM follow-up) when a severe health decline coincides with a near-term renewal, or when negative sentiment appears on an open ticket close to renewal.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "account_id": "A012",
+        "risk_level": "high",
+        "opportunity_level": "high",
+        "key_signals": [
+          "usage trend is declining",
+          "high ticket volume (8 in 30d)",
+          "low NPS (4)",
+          "expansion signal is medium",
+          "upcoming check-in scheduled"
+        ],
+        "summary": "Lumen Energy has a risk_score of 106.0 and an opportunity_score of 27.0. health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)",
+        "recommended_action": "Resolve the outstanding item (Provide permissions guide) before the next customer touchpoint.",
+        "confidence": 0.95,
+        "rationale": "health_score_delta=3.0, risk_score=106.0, opportunity_score=27.0, renewal_days_remaining=96. usage trend is declining; high ticket volume (8 in 30d); low NPS (4)"
+      },
+      "planned_input_tokens": 12000,
+      "planned_output_tokens": 1800,
+      "measured_input_tokens": 675,
+      "measured_output_tokens": 199,
+      "planned_cost": 0.063,
+      "measured_cost": 0.0050100000000000006,
+      "retry_rate": 0.14,
+      "qa_eval_multiplier": 1.45,
+      "adjusted_measured_cost": 0.00828153,
+      "variance_pct": -92.05,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.95
+    },
+    {
+      "run_id": "TM_007-A012-00104",
+      "stage_id": "TM_007",
+      "workflow_component": "Account review",
+      "operating_area": "Deployment tracking & outcome measurement",
+      "trigger_schedule": "Daily unresolved-item check",
+      "model": "Claude Haiku 4.5",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_007\nworkflow_component: Account review\noperating_area: Deployment tracking & outcome measurement\ntrigger_schedule: Daily unresolved-item check\nmodel: Claude Haiku 4.5\n\nTASK OBJECTIVE\nAssess the current status of this previously-actioned item and decide\nwhether it needs to re-enter the prioritization queue.\n\nINPUT CONTEXT\n- item_id: A012\n- item_type: account\n- account_id: A012\n- unresolved_follow_up_items: Provide permissions guide\n- open_ticket_ids: T005\n- days_since_last_contact: 8\n- selection reason: open follow-up commitment: Provide permissions guide; open ticket(s): T005\n\nDATA FIELDS USED\nitem_id, item_type, account_id, unresolved_follow_up_items, open_ticket_ids,\ndays_since_last_contact, selection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"item_id\": string\n  \"current_status\": string\n  \"next_check_date_or_cycle\": string\n  \"unresolved_risk\": string\n  \"reenter_prioritization\": boolean\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nESCALATION CRITERIA\nreenter_prioritization=true when the item is still unresolved and days_since_last_contact exceeds the account's normal contact cadence.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "item_id": "A012",
+        "current_status": "unresolved",
+        "next_check_date_or_cycle": "Business day",
+        "unresolved_risk": "Open item(s) still pending: Provide permissions guide",
+        "reenter_prioritization": false,
+        "confidence": 0.85
+      },
+      "planned_input_tokens": 3000,
+      "planned_output_tokens": 250,
+      "measured_input_tokens": 397,
+      "measured_output_tokens": 56,
+      "planned_cost": 0.00425,
+      "measured_cost": 0.000677,
+      "retry_rate": 0.05,
+      "qa_eval_multiplier": 1.12,
+      "adjusted_measured_cost": 0.0007961520000000001,
+      "variance_pct": -84.07,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.85
+    },
+    {
+      "run_id": "TM_008-A012-00117",
+      "stage_id": "TM_008",
+      "workflow_component": "Prioritization",
+      "operating_area": "Signal monitoring, context assembly & portfolio pattern detection",
+      "trigger_schedule": "Daily priority context pull",
+      "model": "text-embedding-3-small",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_008\nworkflow_component: Prioritization\noperating_area: Signal monitoring, context assembly & portfolio pattern detection\ntrigger_schedule: Daily priority context pull\nmodel: text-embedding-3-small\n\nTASK OBJECTIVE\nIndex compact context for item_id=A012 so later stages retrieve only what they need instead of the full record.\n\nINDEXED FIELDS (30): account_id, account_name, all_tickets_count, call_notes, contract_value, csm_owner, current_health_score, days_since_last_contact, expansion_signal, flags, health_score_delta, item_id, item_type, notes, nps_score, open_ticket_ids, open_tickets, previous_health_score, product_usage_trend, recent_usage_events, related_junior_outputs, renewal_date, renewal_days_remaining, score_reasons, scores, segment, selector_reason, support_ticket_count_30d, unresolved_follow_up_items, upcoming_checkins\ncontext_chars: 3019\n",
+      "result": {
+        "item_id": "A012",
+        "indexed_fields": [
+          "account_id",
+          "account_name",
+          "all_tickets_count",
+          "call_notes",
+          "contract_value",
+          "csm_owner",
+          "current_health_score",
+          "days_since_last_contact",
+          "expansion_signal",
+          "flags",
+          "health_score_delta",
+          "item_id",
+          "item_type",
+          "notes",
+          "nps_score",
+          "open_ticket_ids",
+          "open_tickets",
+          "previous_health_score",
+          "product_usage_trend",
+          "recent_usage_events",
+          "related_junior_outputs",
+          "renewal_date",
+          "renewal_days_remaining",
+          "score_reasons",
+          "scores",
+          "segment",
+          "selector_reason",
+          "support_ticket_count_30d",
+          "unresolved_follow_up_items",
+          "upcoming_checkins"
+        ],
+        "context_chars": 3019
+      },
+      "planned_input_tokens": 3500,
+      "planned_output_tokens": 0,
+      "measured_input_tokens": 219,
+      "measured_output_tokens": 154,
+      "planned_cost": 7.000000000000001e-05,
+      "measured_cost": 4.38e-06,
+      "retry_rate": 0.02,
+      "qa_eval_multiplier": 1.02,
+      "adjusted_measured_cost": 4.556952e-06,
+      "variance_pct": -93.74,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": null
+    },
+    {
+      "run_id": "TM_009-A012-00128",
+      "stage_id": "TM_009",
+      "workflow_component": "Prioritization",
+      "operating_area": "Prioritization & queue ranking",
+      "trigger_schedule": "Daily cross-work queue ranking",
+      "model": "Claude Haiku 4.5",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_009\nworkflow_component: Prioritization\noperating_area: Prioritization & queue ranking\ntrigger_schedule: Daily cross-work queue ranking\nmodel: Claude Haiku 4.5\n\nTASK OBJECTIVE\nAssign this item a priority rank and score within its batch, and explain\nthe ranking using the specific signals below (not a generic \"this is\nimportant\" statement).\n\nINPUT CONTEXT\n- item_id: A012\n- item_type: account\n- account_id: A012\n- priority_score: n/a\n- risk_score: n/a\n- opportunity_score: n/a\n- escalation_score: n/a\n- selection reason: open follow-up commitment: Provide permissions guide; open ticket(s): T005\n\nDATA FIELDS USED\nitem_id, item_type, account_id, priority_score, risk_score,\nopportunity_score, escalation_score, selection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"item_id\": string\n  \"item_type\": string (e.g. account | ticket | checkin | intervention)\n  \"priority_rank\": integer, 1 = highest priority within this batch\n  \"priority_score\": number\n  \"reason\": string citing the specific signals driving this rank\n  \"owner_or_next_step\": string\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nESCALATION CRITERIA\nIf escalation_score materially exceeds risk_score, note that this item may need routing to a specialist/manager in owner_or_next_step rather than standard follow-up.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "item_id": "A012",
+        "item_type": "account",
+        "priority_rank": 7,
+        "priority_score": 86.4,
+        "reason": "priority_score=86.4 (risk_score=106.0, escalation_score=10.0); open follow-up commitment: Provide permissions guide; open ticket(s): T005.",
+        "owner_or_next_step": "Assign to the primary CSM for a proactive check-in this cadence.",
+        "confidence": 0.93
+      },
+      "planned_input_tokens": 4000,
+      "planned_output_tokens": 300,
+      "measured_input_tokens": 439,
+      "measured_output_tokens": 88,
+      "planned_cost": 0.0055,
+      "measured_cost": 0.000879,
+      "retry_rate": 0.06,
+      "qa_eval_multiplier": 1.2,
+      "adjusted_measured_cost": 0.001118088,
+      "variance_pct": -84.02,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.93
+    },
+    {
+      "run_id": "TM_010-A012-00141",
+      "stage_id": "TM_010",
+      "workflow_component": "Prioritization",
+      "operating_area": "Synthesis & recommendation",
+      "trigger_schedule": "Daily priority rationale generation",
+      "model": "GPT-5.4",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_010\nworkflow_component: Prioritization\noperating_area: Synthesis & recommendation\ntrigger_schedule: Daily priority rationale generation\nmodel: GPT-5.4\n\nTASK OBJECTIVE\nAssign this item a priority rank and score within its batch, and explain\nthe ranking using the specific signals below (not a generic \"this is\nimportant\" statement).\n\nINPUT CONTEXT\n- item_id: A012\n- item_type: account\n- account_id: A012\n- priority_score: n/a\n- risk_score: n/a\n- opportunity_score: n/a\n- escalation_score: n/a\n- selection reason: ranked #7 of 18 by priority_score (86.4)\n\nDATA FIELDS USED\nitem_id, item_type, account_id, priority_score, risk_score,\nopportunity_score, escalation_score, selection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"item_id\": string\n  \"item_type\": string (e.g. account | ticket | checkin | intervention)\n  \"priority_rank\": integer, 1 = highest priority within this batch\n  \"priority_score\": number\n  \"reason\": string citing the specific signals driving this rank\n  \"owner_or_next_step\": string\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nESCALATION CRITERIA\nIf escalation_score materially exceeds risk_score, note that this item may need routing to a specialist/manager in owner_or_next_step rather than standard follow-up.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "item_id": "A012",
+        "item_type": "account",
+        "priority_rank": 7,
+        "priority_score": 86.4,
+        "reason": "priority_score=86.4 (risk_score=106.0, escalation_score=10.0); ranked #7 of 18 by priority_score (86.4).",
+        "owner_or_next_step": "Assign to the primary CSM for a proactive check-in this cadence.",
+        "confidence": 0.93
+      },
+      "planned_input_tokens": 7000,
+      "planned_output_tokens": 900,
+      "measured_input_tokens": 429,
+      "measured_output_tokens": 79,
+      "planned_cost": 0.031,
+      "measured_cost": 0.0022575,
+      "retry_rate": 0.1,
+      "qa_eval_multiplier": 1.3,
+      "adjusted_measured_cost": 0.0032282250000000004,
+      "variance_pct": -92.72,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.93
+    },
+    {
+      "run_id": "TM_012-T005-00163",
+      "stage_id": "TM_012",
+      "workflow_component": "Inbound issue handling",
+      "operating_area": "Intake, classification & triage",
+      "trigger_schedule": "On new support issue",
+      "model": "Claude Haiku 4.5",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_012\nworkflow_component: Inbound issue handling\noperating_area: Intake, classification & triage\ntrigger_schedule: On new support issue\nmodel: Claude Haiku 4.5\n\nTASK OBJECTIVE\nClassify this inbound support ticket and recommend a specific customer\nresponse, grounded in the ticket text and the owning account's context.\n\nINPUT CONTEXT\n- ticket_id: T005\n- account_id: A012 (Lumen Energy)\n- severity (frontline): low\n- customer_sentiment (frontline): neutral\n- issue_summary: Customer opened several how-to questions about advanced permissions\n- frontline_notes: No outage; mostly enablement issue\n- current_status: new\n- date_received: 2026-04-27\n- account risk_score: 106.0 | renewal_days_remaining: 96\n\nDATA FIELDS USED\nticket_id, account_id, severity, customer_sentiment, issue_summary,\nfrontline_notes, current_status, date_received, account risk_score,\nrenewal_days_remaining.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"ticket_id\": string\n  \"account_id\": string\n  \"issue_type\": string\n  \"severity_assessment\": one of: low | medium | high\n  \"customer_sentiment\": string (e.g. positive | neutral | concerned | negative | frustrated)\n  \"summary\": string\n  \"recommended_response\": string (specific, not generic)\n  \"route\": one of: no_action | resolve_now | schedule_follow_up | csm_review | manager_escalation | specialist_escalation | revise_and_resubmit | human_approval_required\n  \"confidence\": number 0.0-1.0\n  \"rationale\": string citing specific ticket/account evidence\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nVALID LABELS / ROUTES\nroute: no_action, resolve_now, schedule_follow_up, csm_review, manager_escalation, specialist_escalation, revise_and_resubmit, human_approval_required\n\nESCALATION CRITERIA\nRoute to specialist_escalation/manager_escalation when severity is high AND customer_sentiment is negative or frustrated, or when the account's renewal_days_remaining is inside the urgent window.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "ticket_id": "T005",
+        "account_id": "A012",
+        "issue_type": "permissions_access",
+        "severity_assessment": "low",
+        "customer_sentiment": "neutral",
+        "summary": "Ticket T005 (A012): Customer opened several how-to questions about advanced permissions",
+        "recommended_response": "Standard queue response addressing 'Customer opened several how-to questions about advanced permissions' within SLA.",
+        "route": "schedule_follow_up",
+        "confidence": 0.6,
+        "rationale": "severity=low, customer_sentiment=neutral, renewal_days_remaining=96. issue_summary=\"Customer opened several how-to questions about advanced permissions\"."
+      },
+      "planned_input_tokens": 4500,
+      "planned_output_tokens": 450,
+      "measured_input_tokens": 588,
+      "measured_output_tokens": 153,
+      "planned_cost": 0.006749999999999999,
+      "measured_cost": 0.001353,
+      "retry_rate": 0.08,
+      "qa_eval_multiplier": 1.2,
+      "adjusted_measured_cost": 0.001753488,
+      "variance_pct": -79.96,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.6
+    },
+    {
+      "run_id": "TM_013-T005-00175",
+      "stage_id": "TM_013",
+      "workflow_component": "Inbound issue handling",
+      "operating_area": "Signal monitoring, context assembly & portfolio pattern detection",
+      "trigger_schedule": "On issue context lookup",
+      "model": "text-embedding-3-small",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_013\nworkflow_component: Inbound issue handling\noperating_area: Signal monitoring, context assembly & portfolio pattern detection\ntrigger_schedule: On issue context lookup\nmodel: text-embedding-3-small\n\nTASK OBJECTIVE\nIndex compact context for item_id=T005 so later stages retrieve only what they need instead of the full record.\n\nINDEXED FIELDS (18): account_id, account_name, csm_owner, current_status, customer_sentiment, date_received, escalation_score, frontline_notes, issue_summary, item_id, item_type, opportunity_score, priority_score, renewal_days_remaining, risk_score, selector_reason, severity, ticket_id\ncontext_chars: 595\n",
+      "result": {
+        "item_id": "T005",
+        "indexed_fields": [
+          "account_id",
+          "account_name",
+          "csm_owner",
+          "current_status",
+          "customer_sentiment",
+          "date_received",
+          "escalation_score",
+          "frontline_notes",
+          "issue_summary",
+          "item_id",
+          "item_type",
+          "opportunity_score",
+          "priority_score",
+          "renewal_days_remaining",
+          "risk_score",
+          "selector_reason",
+          "severity",
+          "ticket_id"
+        ],
+        "context_chars": 595
+      },
+      "planned_input_tokens": 5000,
+      "planned_output_tokens": 0,
+      "measured_input_tokens": 163,
+      "measured_output_tokens": 91,
+      "planned_cost": 0.0001,
+      "measured_cost": 3.26e-06,
+      "retry_rate": 0.03,
+      "qa_eval_multiplier": 1.05,
+      "adjusted_measured_cost": 3.5256900000000005e-06,
+      "variance_pct": -96.74,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": null
+    },
+    {
+      "run_id": "TM_014-T005-00187",
+      "stage_id": "TM_014",
+      "workflow_component": "Inbound issue handling",
+      "operating_area": "Synthesis & recommendation",
+      "trigger_schedule": "On issue summary/recommendation",
+      "model": "Claude Sonnet 4.6",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_014\nworkflow_component: Inbound issue handling\noperating_area: Synthesis & recommendation\ntrigger_schedule: On issue summary/recommendation\nmodel: Claude Sonnet 4.6\n\nTASK OBJECTIVE\nClassify this inbound support ticket and recommend a specific customer\nresponse, grounded in the ticket text and the owning account's context.\n\nINPUT CONTEXT\n- ticket_id: T005\n- account_id: A012 (Lumen Energy)\n- severity (frontline): low\n- customer_sentiment (frontline): neutral\n- issue_summary: Customer opened several how-to questions about advanced permissions\n- frontline_notes: No outage; mostly enablement issue\n- current_status: new\n- date_received: 2026-04-27\n- account risk_score: 106.0 | renewal_days_remaining: 96\n\nDATA FIELDS USED\nticket_id, account_id, severity, customer_sentiment, issue_summary,\nfrontline_notes, current_status, date_received, account risk_score,\nrenewal_days_remaining.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"ticket_id\": string\n  \"account_id\": string\n  \"issue_type\": string\n  \"severity_assessment\": one of: low | medium | high\n  \"customer_sentiment\": string (e.g. positive | neutral | concerned | negative | frustrated)\n  \"summary\": string\n  \"recommended_response\": string (specific, not generic)\n  \"route\": one of: no_action | resolve_now | schedule_follow_up | csm_review | manager_escalation | specialist_escalation | revise_and_resubmit | human_approval_required\n  \"confidence\": number 0.0-1.0\n  \"rationale\": string citing specific ticket/account evidence\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nVALID LABELS / ROUTES\nroute: no_action, resolve_now, schedule_follow_up, csm_review, manager_escalation, specialist_escalation, revise_and_resubmit, human_approval_required\n\nESCALATION CRITERIA\nRoute to specialist_escalation/manager_escalation when severity is high AND customer_sentiment is negative or frustrated, or when the account's renewal_days_remaining is inside the urgent window.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "ticket_id": "T005",
+        "account_id": "A012",
+        "issue_type": "permissions_access",
+        "severity_assessment": "low",
+        "customer_sentiment": "neutral",
+        "summary": "Ticket T005 (A012): Customer opened several how-to questions about advanced permissions",
+        "recommended_response": "Standard queue response addressing 'Customer opened several how-to questions about advanced permissions' within SLA.",
+        "route": "schedule_follow_up",
+        "confidence": 0.6,
+        "rationale": "severity=low, customer_sentiment=neutral, renewal_days_remaining=96. issue_summary=\"Customer opened several how-to questions about advanced permissions\"."
+      },
+      "planned_input_tokens": 10000,
+      "planned_output_tokens": 1800,
+      "measured_input_tokens": 590,
+      "measured_output_tokens": 153,
+      "planned_cost": 0.056999999999999995,
+      "measured_cost": 0.004065,
+      "retry_rate": 0.15,
+      "qa_eval_multiplier": 1.4,
+      "adjusted_measured_cost": 0.00654465,
+      "variance_pct": -92.87,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.6
+    },
+    {
+      "run_id": "TM_015-T005-00199",
+      "stage_id": "TM_015",
+      "workflow_component": "Inbound issue handling",
+      "operating_area": "Routing, handoff & escalation",
+      "trigger_schedule": "On issue routing decision",
+      "model": "Claude Haiku 4.5",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_015\nworkflow_component: Inbound issue handling\noperating_area: Routing, handoff & escalation\ntrigger_schedule: On issue routing decision\nmodel: Claude Haiku 4.5\n\nTASK OBJECTIVE\nDecide the correct handling route and owner for this item, and state the\nurgency, grounded in the evidence below.\n\nINPUT CONTEXT\n- item_id: T005\n- item_type: ticket\n- account_id: A012\n- escalation_score: 10.0\n- risk_score: 106.0\n- severity (if ticket): low\n- customer_sentiment (if ticket): neutral\n- selection reason: low severity inbound ticket, sentiment=neutral\n\nDATA FIELDS USED\nitem_id, item_type, account_id, escalation_score, risk_score, severity,\ncustomer_sentiment, selection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"item_id\": string\n  \"item_type\": string\n  \"route\": one of: no_action | resolve_now | schedule_follow_up | csm_review | manager_escalation | specialist_escalation | revise_and_resubmit | human_approval_required\n  \"owner\": string\n  \"urgency\": one of: low | medium | high | immediate\n  \"reason\": string citing specific evidence\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nVALID LABELS / ROUTES\nroute: no_action, resolve_now, schedule_follow_up, csm_review, manager_escalation, specialist_escalation, revise_and_resubmit, human_approval_required; urgency: low, medium, high, immediate\n\nESCALATION CRITERIA\nurgency=immediate and route in {manager_escalation, specialist_escalation} when escalation_score crosses the alert threshold or severity is high with negative sentiment.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "item_id": "T005",
+        "item_type": "ticket",
+        "route": "csm_review",
+        "owner": "Riley Patel",
+        "urgency": "high",
+        "reason": "escalation_score=10.0, risk_score=106.0, severity=low, customer_sentiment=neutral. low severity inbound ticket, sentiment=neutral",
+        "confidence": 0.65
+      },
+      "planned_input_tokens": 5000,
+      "planned_output_tokens": 500,
+      "measured_input_tokens": 491,
+      "measured_output_tokens": 68,
+      "planned_cost": 0.0075,
+      "measured_cost": 0.000831,
+      "retry_rate": 0.1,
+      "qa_eval_multiplier": 1.25,
+      "adjusted_measured_cost": 0.0011426250000000002,
+      "variance_pct": -88.92,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.65
+    },
+    {
+      "run_id": "TM_017-C009-00218",
+      "stage_id": "TM_017",
+      "workflow_component": "Customer check-in support",
+      "operating_area": "Signal monitoring, context assembly & portfolio pattern detection",
+      "trigger_schedule": "Before scheduled check-in",
+      "model": "text-embedding-3-small",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_017\nworkflow_component: Customer check-in support\noperating_area: Signal monitoring, context assembly & portfolio pattern detection\ntrigger_schedule: Before scheduled check-in\nmodel: text-embedding-3-small\n\nTASK OBJECTIVE\nIndex compact context for item_id=C009 so later stages retrieve only what they need instead of the full record.\n\nINDEXED FIELDS (20): account_id, account_name, checkin_id, checkin_type, escalation_score, expansion_signal, health_score_delta, item_id, item_type, notes, open_tickets, opportunity_score, priority, priority_score, product_usage_trend, renewal_days_remaining, risk_score, scheduled_date, selector_reason, topics_to_cover\ncontext_chars: 838\n",
+      "result": {
+        "item_id": "C009",
+        "indexed_fields": [
+          "account_id",
+          "account_name",
+          "checkin_id",
+          "checkin_type",
+          "escalation_score",
+          "expansion_signal",
+          "health_score_delta",
+          "item_id",
+          "item_type",
+          "notes",
+          "open_tickets",
+          "opportunity_score",
+          "priority",
+          "priority_score",
+          "product_usage_trend",
+          "renewal_days_remaining",
+          "risk_score",
+          "scheduled_date",
+          "selector_reason",
+          "topics_to_cover"
+        ],
+        "context_chars": 838
+      },
+      "planned_input_tokens": 7000,
+      "planned_output_tokens": 0,
+      "measured_input_tokens": 172,
+      "measured_output_tokens": 101,
+      "planned_cost": 0.00014000000000000001,
+      "measured_cost": 3.44e-06,
+      "retry_rate": 0.03,
+      "qa_eval_multiplier": 1.05,
+      "adjusted_measured_cost": 3.7203600000000006e-06,
+      "variance_pct": -97.54,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": null
+    },
+    {
+      "run_id": "TM_018-C009-00230",
+      "stage_id": "TM_018",
+      "workflow_component": "Customer check-in support",
+      "operating_area": "Customer check-in & communication support",
+      "trigger_schedule": "Before scheduled check-in",
+      "model": "Claude Sonnet 4.6",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_018\nworkflow_component: Customer check-in support\noperating_area: Customer check-in & communication support\ntrigger_schedule: Before scheduled check-in\nmodel: Claude Sonnet 4.6\n\nTASK OBJECTIVE\nPrepare the CSM for this scheduled customer check-in: a concrete agenda,\ntalking points, and guidance grounded in the account's current signals.\n\nINPUT CONTEXT\n- checkin_id: C009\n- account_id: A012 (Lumen Energy)\n- scheduled_date: 2026-05-08\n- checkin_type: Permissions enablement\n- priority: low\n- topics_to_cover: Admin training, permissions confusion\n- open_tickets (1): T005[low]\n- risk_score: 106.0 | opportunity_score: 27.0\n- renewal_days_remaining: 96\n- notes: Many tickets but usage remains strong\n\nDATA FIELDS USED\ncheckin_id, account_id, scheduled_date, checkin_type, priority,\ntopics_to_cover, open_tickets, risk_score, opportunity_score,\nrenewal_days_remaining, notes.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"checkin_id\": string\n  \"account_id\": string\n  \"agenda\": array of strings\n  \"talking_points\": array of strings\n  \"risks_to_discuss\": array of strings\n  \"opportunities_to_discuss\": array of strings\n  \"suggested_guidance\": string\n  \"follow_up_items\": array of strings\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "checkin_id": "C009",
+        "account_id": "A012",
+        "agenda": [
+          "Admin training",
+          "permissions confusion",
+          "Status update on 1 open ticket(s)"
+        ],
+        "talking_points": [
+          "No material change since last contact -- confirm goals are still on track"
+        ],
+        "risks_to_discuss": [
+          "Open ticket T005 (low severity)"
+        ],
+        "opportunities_to_discuss": [
+          "Expansion signal is medium"
+        ],
+        "suggested_guidance": "Lead with the open risk(s) (Open ticket T005 (low severity)) before discussing growth.",
+        "follow_up_items": [
+          "Send recap and next steps for C009 within 2 business days"
+        ],
+        "confidence": 0.75
+      },
+      "planned_input_tokens": 18000,
+      "planned_output_tokens": 3000,
+      "measured_input_tokens": 425,
+      "measured_output_tokens": 141,
+      "planned_cost": 0.09899999999999999,
+      "measured_cost": 0.00339,
+      "retry_rate": 0.15,
+      "qa_eval_multiplier": 1.45,
+      "adjusted_measured_cost": 0.005652824999999999,
+      "variance_pct": -96.58,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.75
+    },
+    {
+      "run_id": "TM_019-C009-00242",
+      "stage_id": "TM_019",
+      "workflow_component": "Customer check-in support",
+      "operating_area": "Synthesis & recommendation",
+      "trigger_schedule": "Before scheduled check-in",
+      "model": "GPT-5.4",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_019\nworkflow_component: Customer check-in support\noperating_area: Synthesis & recommendation\ntrigger_schedule: Before scheduled check-in\nmodel: GPT-5.4\n\nTASK OBJECTIVE\nPrepare the CSM for this scheduled customer check-in: a concrete agenda,\ntalking points, and guidance grounded in the account's current signals.\n\nINPUT CONTEXT\n- checkin_id: C009\n- account_id: A012 (Lumen Energy)\n- scheduled_date: 2026-05-08\n- checkin_type: Permissions enablement\n- priority: low\n- topics_to_cover: Admin training, permissions confusion\n- open_tickets (1): T005[low]\n- risk_score: 106.0 | opportunity_score: 27.0\n- renewal_days_remaining: 96\n- notes: Many tickets but usage remains strong\n\nDATA FIELDS USED\ncheckin_id, account_id, scheduled_date, checkin_type, priority,\ntopics_to_cover, open_tickets, risk_score, opportunity_score,\nrenewal_days_remaining, notes.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"checkin_id\": string\n  \"account_id\": string\n  \"agenda\": array of strings\n  \"talking_points\": array of strings\n  \"risks_to_discuss\": array of strings\n  \"opportunities_to_discuss\": array of strings\n  \"suggested_guidance\": string\n  \"follow_up_items\": array of strings\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "checkin_id": "C009",
+        "account_id": "A012",
+        "agenda": [
+          "Admin training",
+          "permissions confusion",
+          "Status update on 1 open ticket(s)"
+        ],
+        "talking_points": [
+          "No material change since last contact -- confirm goals are still on track"
+        ],
+        "risks_to_discuss": [
+          "Open ticket T005 (low severity)"
+        ],
+        "opportunities_to_discuss": [
+          "Expansion signal is medium"
+        ],
+        "suggested_guidance": "Lead with the open risk(s) (Open ticket T005 (low severity)) before discussing growth.",
+        "follow_up_items": [
+          "Send recap and next steps for C009 within 2 business days"
+        ],
+        "confidence": 0.75
+      },
+      "planned_input_tokens": 14000,
+      "planned_output_tokens": 1800,
+      "measured_input_tokens": 419,
+      "measured_output_tokens": 141,
+      "planned_cost": 0.062,
+      "measured_cost": 0.0031625000000000004,
+      "retry_rate": 0.12,
+      "qa_eval_multiplier": 1.35,
+      "adjusted_measured_cost": 0.004781700000000002,
+      "variance_pct": -94.9,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.75
+    },
+    {
+      "run_id": "TM_020-C009-00251",
+      "stage_id": "TM_020",
+      "workflow_component": "Customer check-in support",
+      "operating_area": "Prioritization & queue ranking",
+      "trigger_schedule": "Weekly check-in prioritization",
+      "model": "Claude Haiku 4.5",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_020\nworkflow_component: Customer check-in support\noperating_area: Prioritization & queue ranking\ntrigger_schedule: Weekly check-in prioritization\nmodel: Claude Haiku 4.5\n\nTASK OBJECTIVE\nAssign this item a priority rank and score within its batch, and explain\nthe ranking using the specific signals below (not a generic \"this is\nimportant\" statement).\n\nINPUT CONTEXT\n- item_id: C009\n- item_type: checkin\n- account_id: A012\n- priority_score: 86.4\n- risk_score: 106.0\n- opportunity_score: 27.0\n- escalation_score: 10.0\n- selection reason: low priority 'Permissions enablement' check-in scheduled for 2026-05-08\n\nDATA FIELDS USED\nitem_id, item_type, account_id, priority_score, risk_score,\nopportunity_score, escalation_score, selection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"item_id\": string\n  \"item_type\": string (e.g. account | ticket | checkin | intervention)\n  \"priority_rank\": integer, 1 = highest priority within this batch\n  \"priority_score\": number\n  \"reason\": string citing the specific signals driving this rank\n  \"owner_or_next_step\": string\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nESCALATION CRITERIA\nIf escalation_score materially exceeds risk_score, note that this item may need routing to a specialist/manager in owner_or_next_step rather than standard follow-up.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "item_id": "C009",
+        "item_type": "checkin",
+        "priority_rank": 6,
+        "priority_score": 86.4,
+        "reason": "priority_score=86.4 (risk_score=106.0, escalation_score=10.0); low priority 'Permissions enablement' check-in scheduled for 2026-05-08.",
+        "owner_or_next_step": "Assign to the primary CSM for a proactive check-in this cadence.",
+        "confidence": 0.93
+      },
+      "planned_input_tokens": 5000,
+      "planned_output_tokens": 350,
+      "measured_input_tokens": 442,
+      "measured_output_tokens": 87,
+      "planned_cost": 0.00675,
+      "measured_cost": 0.000877,
+      "retry_rate": 0.06,
+      "qa_eval_multiplier": 1.18,
+      "adjusted_measured_cost": 0.0010969516,
+      "variance_pct": -87.01,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.93
+    },
+    {
+      "run_id": "TM_021-C009-00266",
+      "stage_id": "TM_021",
+      "workflow_component": "Customer check-in support",
+      "operating_area": "Deployment tracking & outcome measurement",
+      "trigger_schedule": "After check-in/follow-up",
+      "model": "Claude Haiku 4.5",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_021\nworkflow_component: Customer check-in support\noperating_area: Deployment tracking & outcome measurement\ntrigger_schedule: After check-in/follow-up\nmodel: Claude Haiku 4.5\n\nTASK OBJECTIVE\nAssess the current status of this previously-actioned item and decide\nwhether it needs to re-enter the prioritization queue.\n\nINPUT CONTEXT\n- item_id: C009\n- item_type: checkin\n- account_id: A012\n- unresolved_follow_up_items: n/a\n- open_ticket_ids: none\n- days_since_last_contact: n/a\n- selection reason: low priority 'Permissions enablement' check-in scheduled for 2026-05-08\n\nDATA FIELDS USED\nitem_id, item_type, account_id, unresolved_follow_up_items, open_ticket_ids,\ndays_since_last_contact, selection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"item_id\": string\n  \"current_status\": string\n  \"next_check_date_or_cycle\": string\n  \"unresolved_risk\": string\n  \"reenter_prioritization\": boolean\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nESCALATION CRITERIA\nreenter_prioritization=true when the item is still unresolved and days_since_last_contact exceeds the account's normal contact cadence.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "item_id": "C009",
+        "current_status": "resolved",
+        "next_check_date_or_cycle": "Weekly",
+        "unresolved_risk": "No unresolved items outstanding.",
+        "reenter_prioritization": false,
+        "confidence": 0.7
+      },
+      "planned_input_tokens": 5000,
+      "planned_output_tokens": 500,
+      "measured_input_tokens": 393,
+      "measured_output_tokens": 49,
+      "planned_cost": 0.0075,
+      "measured_cost": 0.000638,
+      "retry_rate": 0.06,
+      "qa_eval_multiplier": 1.15,
+      "adjusted_measured_cost": 0.000777722,
+      "variance_pct": -91.49,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.7
+    },
+    {
+      "run_id": "TM_022-O007-00276",
+      "stage_id": "TM_022",
+      "workflow_component": "Quality review",
+      "operating_area": "Signal monitoring, context assembly & portfolio pattern detection",
+      "trigger_schedule": "Weekly standards/context retrieval",
+      "model": "text-embedding-3-small",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_022\nworkflow_component: Quality review\noperating_area: Signal monitoring, context assembly & portfolio pattern detection\ntrigger_schedule: Weekly standards/context retrieval\nmodel: text-embedding-3-small\n\nTASK OBJECTIVE\nIndex compact context for item_id=O007 so later stages retrieve only what they need instead of the full record.\n\nINDEXED FIELDS (13): account_id, draft_text, escalation_score, intended_customer_action, item_id, item_type, opportunity_score, output_id, output_type, priority_score, risk_score, selector_reason, standards\ncontext_chars: 814\n",
+      "result": {
+        "item_id": "O007",
+        "indexed_fields": [
+          "account_id",
+          "draft_text",
+          "escalation_score",
+          "intended_customer_action",
+          "item_id",
+          "item_type",
+          "opportunity_score",
+          "output_id",
+          "output_type",
+          "priority_score",
+          "risk_score",
+          "selector_reason",
+          "standards"
+        ],
+        "context_chars": 814
+      },
+      "planned_input_tokens": 5000,
+      "planned_output_tokens": 0,
+      "measured_input_tokens": 143,
+      "measured_output_tokens": 69,
+      "planned_cost": 0.0001,
+      "measured_cost": 2.86e-06,
+      "retry_rate": 0.03,
+      "qa_eval_multiplier": 1.05,
+      "adjusted_measured_cost": 3.0930900000000002e-06,
+      "variance_pct": -97.14,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": null
+    },
+    {
+      "run_id": "TM_023-O007-00284",
+      "stage_id": "TM_023",
+      "workflow_component": "Quality review",
+      "operating_area": "Quality evaluation & validation",
+      "trigger_schedule": "Weekly output review",
+      "model": "GPT-5.4",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_023\nworkflow_component: Quality review\noperating_area: Quality evaluation & validation\ntrigger_schedule: Weekly output review\nmodel: GPT-5.4\n\nTASK OBJECTIVE\nEvaluate the draft/plan below against the listed quality standards, using\nthe account context as ground truth, and give a pass/fail verdict per\nstandard plus an overall quality score and routing decision.\n\nINPUT CONTEXT\n- output_id: O007\n- account_id: A012\n- output_type: Permissions guide response\n- intended_customer_action: Resolve repeated permissions questions\n- draft_text: \"Here is a general permissions guide. Let us know if you have questions.\"\n- account risk_score: 106.0 | escalation_score: 10.0\n\nQUALITY STANDARDS TO APPLY\n  - [QS001] Customer-specific context: Output references the account's current situation, recent history, and relevant customer goal.\n  - [QS002] Actionability: Output gives concrete next steps, owner/path, and timing rather than generic advice.\n\nDATA FIELDS USED\noutput_id, account_id, output_type, intended_customer_action, draft_text,\nquality standards (standard_id/name/description), account risk_score,\nescalation_score.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"output_id\": string\n  \"account_id\": string\n  \"passed\": boolean\n  \"failed_standards\": array of strings (standard_id values)\n  \"quality_score\": number 0-100\n  \"issues_found\": array of strings\n  \"correction_guidance\": string (specific, actionable revision guidance)\n  \"route\": one of: approve | revise_and_resubmit | human_approval_required | escalate\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nVALID LABELS / ROUTES\nroute: approve, revise_and_resubmit, human_approval_required, escalate\n\nQUALITY / EVALUATION CRITERIA\npassed=true only if every listed standard is met; any failed standard forces passed=false and route in {revise_and_resubmit, human_approval_required, escalate}.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "output_id": "O007",
+        "account_id": "A012",
+        "passed": false,
+        "failed_standards": [
+          "QS001",
+          "QS002"
+        ],
+        "quality_score": 35.0,
+        "issues_found": [
+          "draft is short and/or uses vague filler phrasing"
+        ],
+        "correction_guidance": "Rewrite with specific account evidence (numbers, dates, named next steps) instead of generic filler language.",
+        "route": "human_approval_required",
+        "confidence": 0.65
+      },
+      "planned_input_tokens": 12000,
+      "planned_output_tokens": 1800,
+      "measured_input_tokens": 579,
+      "measured_output_tokens": 97,
+      "planned_cost": 0.056999999999999995,
+      "measured_cost": 0.0029024999999999997,
+      "retry_rate": 0.22,
+      "qa_eval_multiplier": 1.6,
+      "adjusted_measured_cost": 0.005665679999999999,
+      "variance_pct": -94.91,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.65
+    },
+    {
+      "run_id": "TM_024-O007-00289",
+      "stage_id": "TM_024",
+      "workflow_component": "Quality review",
+      "operating_area": "Synthesis & recommendation",
+      "trigger_schedule": "Weekly correction guidance",
+      "model": "Claude Sonnet 4.6",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_024\nworkflow_component: Quality review\noperating_area: Synthesis & recommendation\ntrigger_schedule: Weekly correction guidance\nmodel: Claude Sonnet 4.6\n\nTASK OBJECTIVE\nEvaluate the draft/plan below against the listed quality standards, using\nthe account context as ground truth, and give a pass/fail verdict per\nstandard plus an overall quality score and routing decision.\n\nINPUT CONTEXT\n- output_id: O007\n- account_id: A012\n- output_type: Permissions guide response\n- intended_customer_action: Resolve repeated permissions questions\n- draft_text: \"Here is a general permissions guide. Let us know if you have questions.\"\n- account risk_score: 106.0 | escalation_score: 10.0\n\nQUALITY STANDARDS TO APPLY\n  - [QS001] Customer-specific context: Output references the account's current situation, recent history, and relevant customer goal.\n  - [QS002] Actionability: Output gives concrete next steps, owner/path, and timing rather than generic advice.\n\nDATA FIELDS USED\noutput_id, account_id, output_type, intended_customer_action, draft_text,\nquality standards (standard_id/name/description), account risk_score,\nescalation_score.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"output_id\": string\n  \"account_id\": string\n  \"passed\": boolean\n  \"failed_standards\": array of strings (standard_id values)\n  \"quality_score\": number 0-100\n  \"issues_found\": array of strings\n  \"correction_guidance\": string (specific, actionable revision guidance)\n  \"route\": one of: approve | revise_and_resubmit | human_approval_required | escalate\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nVALID LABELS / ROUTES\nroute: approve, revise_and_resubmit, human_approval_required, escalate\n\nQUALITY / EVALUATION CRITERIA\npassed=true only if every listed standard is met; any failed standard forces passed=false and route in {revise_and_resubmit, human_approval_required, escalate}.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "output_id": "O007",
+        "account_id": "A012",
+        "passed": false,
+        "failed_standards": [
+          "QS001",
+          "QS002"
+        ],
+        "quality_score": 35.0,
+        "issues_found": [
+          "draft is short and/or uses vague filler phrasing"
+        ],
+        "correction_guidance": "Rewrite with specific account evidence (numbers, dates, named next steps) instead of generic filler language.",
+        "route": "human_approval_required",
+        "confidence": 0.65
+      },
+      "planned_input_tokens": 12000,
+      "planned_output_tokens": 2200,
+      "measured_input_tokens": 582,
+      "measured_output_tokens": 97,
+      "planned_cost": 0.069,
+      "measured_cost": 0.003201,
+      "retry_rate": 0.18,
+      "qa_eval_multiplier": 1.5,
+      "adjusted_measured_cost": 0.00566577,
+      "variance_pct": -95.36,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.65
+    },
+    {
+      "run_id": "TM_025-O007-00293",
+      "stage_id": "TM_025",
+      "workflow_component": "Quality review",
+      "operating_area": "Routing, handoff & escalation",
+      "trigger_schedule": "Weekly failed-output routing",
+      "model": "Claude Haiku 4.5",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_025\nworkflow_component: Quality review\noperating_area: Routing, handoff & escalation\ntrigger_schedule: Weekly failed-output routing\nmodel: Claude Haiku 4.5\n\nTASK OBJECTIVE\nDecide the correct handling route and owner for this item, and state the\nurgency, grounded in the evidence below.\n\nINPUT CONTEXT\n- item_id: O007\n- item_type: output\n- account_id: A012\n- escalation_score: 10.0\n- risk_score: 106.0\n- severity (if ticket): n/a\n- customer_sentiment (if ticket): n/a\n- selection reason: draft is short and/or uses vague filler phrasing (preliminary check)\n\nDATA FIELDS USED\nitem_id, item_type, account_id, escalation_score, risk_score, severity,\ncustomer_sentiment, selection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"item_id\": string\n  \"item_type\": string\n  \"route\": one of: no_action | resolve_now | schedule_follow_up | csm_review | manager_escalation | specialist_escalation | revise_and_resubmit | human_approval_required\n  \"owner\": string\n  \"urgency\": one of: low | medium | high | immediate\n  \"reason\": string citing specific evidence\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nVALID LABELS / ROUTES\nroute: no_action, resolve_now, schedule_follow_up, csm_review, manager_escalation, specialist_escalation, revise_and_resubmit, human_approval_required; urgency: low, medium, high, immediate\n\nESCALATION CRITERIA\nurgency=immediate and route in {manager_escalation, specialist_escalation} when escalation_score crosses the alert threshold or severity is high with negative sentiment.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "item_id": "O007",
+        "item_type": "output",
+        "route": "csm_review",
+        "owner": "Primary CSM",
+        "urgency": "high",
+        "reason": "escalation_score=10.0, risk_score=106.0. draft is short and/or uses vague filler phrasing (preliminary check)",
+        "confidence": 0.65
+      },
+      "planned_input_tokens": 4500,
+      "planned_output_tokens": 500,
+      "measured_input_tokens": 494,
+      "measured_output_tokens": 63,
+      "planned_cost": 0.006999999999999999,
+      "measured_cost": 0.000809,
+      "retry_rate": 0.1,
+      "qa_eval_multiplier": 1.25,
+      "adjusted_measured_cost": 0.001112375,
+      "variance_pct": -88.44,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.65
+    },
+    {
+      "run_id": "TM_026-O007-00297",
+      "stage_id": "TM_026",
+      "workflow_component": "Quality review",
+      "operating_area": "Deployment tracking & outcome measurement",
+      "trigger_schedule": "Weekly correction tracking",
+      "model": "Claude Haiku 4.5",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_026\nworkflow_component: Quality review\noperating_area: Deployment tracking & outcome measurement\ntrigger_schedule: Weekly correction tracking\nmodel: Claude Haiku 4.5\n\nTASK OBJECTIVE\nAssess the current status of this previously-actioned item and decide\nwhether it needs to re-enter the prioritization queue.\n\nINPUT CONTEXT\n- item_id: O007\n- item_type: output\n- account_id: A012\n- unresolved_follow_up_items: n/a\n- open_ticket_ids: none\n- days_since_last_contact: n/a\n- selection reason: draft is short and/or uses vague filler phrasing (preliminary check)\n\nDATA FIELDS USED\nitem_id, item_type, account_id, unresolved_follow_up_items, open_ticket_ids,\ndays_since_last_contact, selection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"item_id\": string\n  \"current_status\": string\n  \"next_check_date_or_cycle\": string\n  \"unresolved_risk\": string\n  \"reenter_prioritization\": boolean\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nESCALATION CRITERIA\nreenter_prioritization=true when the item is still unresolved and days_since_last_contact exceeds the account's normal contact cadence.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "item_id": "O007",
+        "current_status": "resolved",
+        "next_check_date_or_cycle": "Weekly",
+        "unresolved_risk": "No unresolved items outstanding.",
+        "reenter_prioritization": false,
+        "confidence": 0.7
+      },
+      "planned_input_tokens": 3500,
+      "planned_output_tokens": 350,
+      "measured_input_tokens": 390,
+      "measured_output_tokens": 49,
+      "planned_cost": 0.00525,
+      "measured_cost": 0.0006349999999999999,
+      "retry_rate": 0.06,
+      "qa_eval_multiplier": 1.15,
+      "adjusted_measured_cost": 0.0007740649999999999,
+      "variance_pct": -87.9,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.7
+    },
+    {
+      "run_id": "TM_027-A012-00304",
+      "stage_id": "TM_027",
+      "workflow_component": "Targeted intervention planning",
+      "operating_area": "Signal monitoring, context assembly & portfolio pattern detection",
+      "trigger_schedule": "Biweekly declining-account context retrieval",
+      "model": "text-embedding-3-small",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_027\nworkflow_component: Targeted intervention planning\noperating_area: Signal monitoring, context assembly & portfolio pattern detection\ntrigger_schedule: Biweekly declining-account context retrieval\nmodel: text-embedding-3-small\n\nTASK OBJECTIVE\nIndex compact context for item_id=A012 so later stages retrieve only what they need instead of the full record.\n\nINDEXED FIELDS (30): account_id, account_name, all_tickets_count, call_notes, contract_value, csm_owner, current_health_score, days_since_last_contact, expansion_signal, flags, health_score_delta, item_id, item_type, notes, nps_score, open_ticket_ids, open_tickets, previous_health_score, product_usage_trend, recent_usage_events, related_junior_outputs, renewal_date, renewal_days_remaining, score_reasons, scores, segment, selector_reason, support_ticket_count_30d, unresolved_follow_up_items, upcoming_checkins\ncontext_chars: 2979\n",
+      "result": {
+        "item_id": "A012",
+        "indexed_fields": [
+          "account_id",
+          "account_name",
+          "all_tickets_count",
+          "call_notes",
+          "contract_value",
+          "csm_owner",
+          "current_health_score",
+          "days_since_last_contact",
+          "expansion_signal",
+          "flags",
+          "health_score_delta",
+          "item_id",
+          "item_type",
+          "notes",
+          "nps_score",
+          "open_ticket_ids",
+          "open_tickets",
+          "previous_health_score",
+          "product_usage_trend",
+          "recent_usage_events",
+          "related_junior_outputs",
+          "renewal_date",
+          "renewal_days_remaining",
+          "score_reasons",
+          "scores",
+          "segment",
+          "selector_reason",
+          "support_ticket_count_30d",
+          "unresolved_follow_up_items",
+          "upcoming_checkins"
+        ],
+        "context_chars": 2979
+      },
+      "planned_input_tokens": 8000,
+      "planned_output_tokens": 0,
+      "measured_input_tokens": 227,
+      "measured_output_tokens": 154,
+      "planned_cost": 0.00016,
+      "measured_cost": 4.54e-06,
+      "retry_rate": 0.03,
+      "qa_eval_multiplier": 1.05,
+      "adjusted_measured_cost": 4.91001e-06,
+      "variance_pct": -97.16,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": null
+    },
+    {
+      "run_id": "TM_028-A012-00313",
+      "stage_id": "TM_028",
+      "workflow_component": "Targeted intervention planning",
+      "operating_area": "Intervention design",
+      "trigger_schedule": "Biweekly segment intervention planning",
+      "model": "Claude Sonnet 4.6",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_028\nworkflow_component: Targeted intervention planning\noperating_area: Intervention design\ntrigger_schedule: Biweekly segment intervention planning\nmodel: Claude Sonnet 4.6\n\nTASK OBJECTIVE\nDesign a specific, owned, time-boxed intervention for this declining\naccount/segment/issue-cluster -- not a generic \"monitor and follow up\".\n\nINPUT CONTEXT\n- account_or_segment_id: A012\n- theme / cluster: n/a\n- related_ticket_ids: none\n- declining_usage_flag: True\n- low_nps_flag: True (nps_score=4.0)\n- negative_sentiment_flag: False\n- severe_decline_flag: False (health_score_delta=3.0)\n- risk_score: 106.0\n- selection reason: usage is declining; NPS is low (4)\n\nDATA FIELDS USED\naccount_or_segment_id, theme/cluster, related_ticket_ids, declining_usage_flag,\nlow_nps_flag, negative_sentiment_flag, severe_decline_flag, risk_score,\nselection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"account_or_segment_id\": string\n  \"problem_pattern\": string\n  \"likely_causes\": array of strings\n  \"intervention_actions\": array of strings (specific, owned, time-boxed)\n  \"owner\": string\n  \"timeline\": string\n  \"success_measures\": array of strings\n  \"risks\": array of strings\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nQUALITY / EVALUATION CRITERIA\nintervention_actions must each name an owner and a timeline; success_measures must be observable (a metric or event), not a feeling.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "account_or_segment_id": "A012",
+        "problem_pattern": "Account shows sustained disengagement risk: declining product usage, low NPS (4.0).",
+        "likely_causes": [
+          "declining product usage",
+          "low NPS (4.0)"
+        ],
+        "intervention_actions": [
+          "Riley Patel to schedule an executive health-check call within 5 business days",
+          "Solutions engineer to review recent product usage and blockers within 10 business days"
+        ],
+        "owner": "Riley Patel",
+        "timeline": "30 days",
+        "success_measures": [
+          "current_health_score improves by at least 10 points within 60 days",
+          "product_usage_trend shifts from declining to stable or growing"
+        ],
+        "risks": [
+          "Customer disengages further if outreach is delayed"
+        ],
+        "confidence": 0.95
+      },
+      "planned_input_tokens": 40000,
+      "planned_output_tokens": 5000,
+      "measured_input_tokens": 461,
+      "measured_output_tokens": 173,
+      "planned_cost": 0.195,
+      "measured_cost": 0.003978,
+      "retry_rate": 0.22,
+      "qa_eval_multiplier": 1.7,
+      "adjusted_measured_cost": 0.008250371999999999,
+      "variance_pct": -97.96,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.95
+    },
+    {
+      "run_id": "TM_029-A012-00322",
+      "stage_id": "TM_029",
+      "workflow_component": "Targeted intervention planning",
+      "operating_area": "Synthesis & recommendation",
+      "trigger_schedule": "Biweekly account-level intervention tailoring",
+      "model": "GPT-5.4",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_029\nworkflow_component: Targeted intervention planning\noperating_area: Synthesis & recommendation\ntrigger_schedule: Biweekly account-level intervention tailoring\nmodel: GPT-5.4\n\nTASK OBJECTIVE\nDesign a specific, owned, time-boxed intervention for this declining\naccount/segment/issue-cluster -- not a generic \"monitor and follow up\".\n\nINPUT CONTEXT\n- account_or_segment_id: A012\n- theme / cluster: n/a\n- related_ticket_ids: none\n- declining_usage_flag: True\n- low_nps_flag: True (nps_score=4.0)\n- negative_sentiment_flag: False\n- severe_decline_flag: False (health_score_delta=3.0)\n- risk_score: 106.0\n- selection reason: usage is declining; NPS is low (4)\n\nDATA FIELDS USED\naccount_or_segment_id, theme/cluster, related_ticket_ids, declining_usage_flag,\nlow_nps_flag, negative_sentiment_flag, severe_decline_flag, risk_score,\nselection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"account_or_segment_id\": string\n  \"problem_pattern\": string\n  \"likely_causes\": array of strings\n  \"intervention_actions\": array of strings (specific, owned, time-boxed)\n  \"owner\": string\n  \"timeline\": string\n  \"success_measures\": array of strings\n  \"risks\": array of strings\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nQUALITY / EVALUATION CRITERIA\nintervention_actions must each name an owner and a timeline; success_measures must be observable (a metric or event), not a feeling.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "account_or_segment_id": "A012",
+        "problem_pattern": "Account shows sustained disengagement risk: declining product usage, low NPS (4.0).",
+        "likely_causes": [
+          "declining product usage",
+          "low NPS (4.0)"
+        ],
+        "intervention_actions": [
+          "Riley Patel to schedule an executive health-check call within 5 business days",
+          "Solutions engineer to review recent product usage and blockers within 10 business days"
+        ],
+        "owner": "Riley Patel",
+        "timeline": "30 days",
+        "success_measures": [
+          "current_health_score improves by at least 10 points within 60 days",
+          "product_usage_trend shifts from declining to stable or growing"
+        ],
+        "risks": [
+          "Customer disengages further if outreach is delayed"
+        ],
+        "confidence": 0.95
+      },
+      "planned_input_tokens": 18000,
+      "planned_output_tokens": 2500,
+      "measured_input_tokens": 462,
+      "measured_output_tokens": 173,
+      "planned_cost": 0.08249999999999999,
+      "measured_cost": 0.00375,
+      "retry_rate": 0.18,
+      "qa_eval_multiplier": 1.5,
+      "adjusted_measured_cost": 0.006637499999999999,
+      "variance_pct": -95.45,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.95
+    },
+    {
+      "run_id": "TM_030-A012-00331",
+      "stage_id": "TM_030",
+      "workflow_component": "Targeted intervention planning",
+      "operating_area": "Prioritization & queue ranking",
+      "trigger_schedule": "Biweekly intervention ranking",
+      "model": "Claude Haiku 4.5",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_030\nworkflow_component: Targeted intervention planning\noperating_area: Prioritization & queue ranking\ntrigger_schedule: Biweekly intervention ranking\nmodel: Claude Haiku 4.5\n\nTASK OBJECTIVE\nAssign this item a priority rank and score within its batch, and explain\nthe ranking using the specific signals below (not a generic \"this is\nimportant\" statement).\n\nINPUT CONTEXT\n- item_id: A012\n- item_type: account\n- account_id: A012\n- priority_score: n/a\n- risk_score: n/a\n- opportunity_score: n/a\n- escalation_score: n/a\n- selection reason: usage is declining; NPS is low (4)\n\nDATA FIELDS USED\nitem_id, item_type, account_id, priority_score, risk_score,\nopportunity_score, escalation_score, selection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"item_id\": string\n  \"item_type\": string (e.g. account | ticket | checkin | intervention)\n  \"priority_rank\": integer, 1 = highest priority within this batch\n  \"priority_score\": number\n  \"reason\": string citing the specific signals driving this rank\n  \"owner_or_next_step\": string\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nESCALATION CRITERIA\nIf escalation_score materially exceeds risk_score, note that this item may need routing to a specialist/manager in owner_or_next_step rather than standard follow-up.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "item_id": "A012",
+        "item_type": "account",
+        "priority_rank": 7,
+        "priority_score": 86.4,
+        "reason": "priority_score=86.4 (risk_score=106.0, escalation_score=10.0); usage is declining; NPS is low (4).",
+        "owner_or_next_step": "Assign to the primary CSM for a proactive check-in this cadence.",
+        "confidence": 0.93
+      },
+      "planned_input_tokens": 7000,
+      "planned_output_tokens": 600,
+      "measured_input_tokens": 433,
+      "measured_output_tokens": 78,
+      "planned_cost": 0.01,
+      "measured_cost": 0.000823,
+      "retry_rate": 0.1,
+      "qa_eval_multiplier": 1.25,
+      "adjusted_measured_cost": 0.001131625,
+      "variance_pct": -91.77,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.93
+    },
+    {
+      "run_id": "TM_031-A012-00340",
+      "stage_id": "TM_031",
+      "workflow_component": "Targeted intervention planning",
+      "operating_area": "Quality evaluation & validation",
+      "trigger_schedule": "Biweekly plan validation",
+      "model": "Claude Sonnet 4.6",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_031\nworkflow_component: Targeted intervention planning\noperating_area: Quality evaluation & validation\ntrigger_schedule: Biweekly plan validation\nmodel: Claude Sonnet 4.6\n\nTASK OBJECTIVE\nEvaluate the draft/plan below against the listed quality standards, using\nthe account context as ground truth, and give a pass/fail verdict per\nstandard plus an overall quality score and routing decision.\n\nINPUT CONTEXT\n- output_id: A012\n- account_id: A012\n- output_type: n/a\n- intended_customer_action: n/a\n- draft_text: \"n/a\"\n- account risk_score: n/a | escalation_score: n/a\n\nQUALITY STANDARDS TO APPLY\n  - (no standards attached -- use general CS quality judgement)\n\nDATA FIELDS USED\noutput_id, account_id, output_type, intended_customer_action, draft_text,\nquality standards (standard_id/name/description), account risk_score,\nescalation_score.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"output_id\": string\n  \"account_id\": string\n  \"passed\": boolean\n  \"failed_standards\": array of strings (standard_id values)\n  \"quality_score\": number 0-100\n  \"issues_found\": array of strings\n  \"correction_guidance\": string (specific, actionable revision guidance)\n  \"route\": one of: approve | revise_and_resubmit | human_approval_required | escalate\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nVALID LABELS / ROUTES\nroute: approve, revise_and_resubmit, human_approval_required, escalate\n\nQUALITY / EVALUATION CRITERIA\npassed=true only if every listed standard is met; any failed standard forces passed=false and route in {revise_and_resubmit, human_approval_required, escalate}.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "output_id": "A012",
+        "account_id": "A012",
+        "passed": true,
+        "failed_standards": [],
+        "quality_score": 88.0,
+        "issues_found": [],
+        "correction_guidance": "Plan is grounded in observed decline signals.",
+        "route": "approve",
+        "confidence": 0.9
+      },
+      "planned_input_tokens": 16000,
+      "planned_output_tokens": 2000,
+      "measured_input_tokens": 509,
+      "measured_output_tokens": 60,
+      "planned_cost": 0.078,
+      "measured_cost": 0.0024270000000000003,
+      "retry_rate": 0.18,
+      "qa_eval_multiplier": 1.55,
+      "adjusted_measured_cost": 0.0044389830000000005,
+      "variance_pct": -96.89,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.9
+    },
+    {
+      "run_id": "TM_032-A012-00349",
+      "stage_id": "TM_032",
+      "workflow_component": "Targeted intervention planning",
+      "operating_area": "Deployment tracking & outcome measurement",
+      "trigger_schedule": "Biweekly outcome check",
+      "model": "Claude Haiku 4.5",
+      "account_id": "A012",
+      "prompt_text": "stage_id: TM_032\nworkflow_component: Targeted intervention planning\noperating_area: Deployment tracking & outcome measurement\ntrigger_schedule: Biweekly outcome check\nmodel: Claude Haiku 4.5\n\nTASK OBJECTIVE\nAssess the current status of this previously-actioned item and decide\nwhether it needs to re-enter the prioritization queue.\n\nINPUT CONTEXT\n- item_id: A012\n- item_type: account\n- account_id: A012\n- unresolved_follow_up_items: Provide permissions guide\n- open_ticket_ids: T005\n- days_since_last_contact: 8\n- selection reason: usage is declining; NPS is low (4)\n\nDATA FIELDS USED\nitem_id, item_type, account_id, unresolved_follow_up_items, open_ticket_ids,\ndays_since_last_contact, selection reason.\n\nEXPECTED OUTPUT (JSON)\n{\n  \"item_id\": string\n  \"current_status\": string\n  \"next_check_date_or_cycle\": string\n  \"unresolved_risk\": string\n  \"reenter_prioritization\": boolean\n  \"confidence\": number 0.0-1.0\n}\n\nCONFIDENCE SCORE REQUIREMENT\nInclude a `confidence` field (0.0-1.0) that reflects how well the evidence above actually supports this output. Do not default to a fixed value -- ambiguous or thin evidence must produce a lower score.\n\nESCALATION CRITERIA\nreenter_prioritization=true when the item is still unresolved and days_since_last_contact exceeds the account's normal contact cadence.\n\nINSTRUCTIONS\n- Do not give generic recommendations; every recommendation/action must be specific to the evidence presented above.\n- Cite or account for the relevant account evidence (numbers, dates, quotes, ticket/segment ids) directly in the rationale.\n",
+      "result": {
+        "item_id": "A012",
+        "current_status": "unresolved",
+        "next_check_date_or_cycle": "Biweekly",
+        "unresolved_risk": "Open item(s) still pending: Provide permissions guide",
+        "reenter_prioritization": false,
+        "confidence": 0.85
+      },
+      "planned_input_tokens": 6000,
+      "planned_output_tokens": 700,
+      "measured_input_tokens": 389,
+      "measured_output_tokens": 55,
+      "planned_cost": 0.0095,
+      "measured_cost": 0.0006640000000000001,
+      "retry_rate": 0.1,
+      "qa_eval_multiplier": 1.25,
+      "adjusted_measured_cost": 0.0009130000000000002,
+      "variance_pct": -93.01,
+      "review_flag": "High variance: estimate too conservative",
+      "confidence": 0.85
+    }
+  ]
+}

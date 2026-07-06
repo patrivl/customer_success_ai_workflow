@@ -1,0 +1,22 @@
+run_id,stage_id,account_or_segment_id,problem_pattern,owner,timeline,num_actions,num_success_measures,confidence
+TM_016-integration_sync-00207,TM_016,integration_sync,Recurring 'integration_sync' issues across 2 ticket(s) suggest a systemic product/process gap.,Support engineering lead,10 business days,2,1,0.5
+TM_016-onboarding_mobile-00208,TM_016,onboarding_mobile,Recurring 'onboarding_mobile' issues across 2 ticket(s) suggest a systemic product/process gap.,Support engineering lead,10 business days,2,1,0.5
+TM_016-reporting_dashboard-00209,TM_016,reporting_dashboard,Recurring 'reporting_dashboard' issues across 2 ticket(s) suggest a systemic product/process gap.,Support engineering lead,10 business days,2,1,0.5
+TM_028-A001-00307,TM_028,A001,"Account shows sustained disengagement risk: declining product usage, low NPS (6.0), negative/concerned sentiment on an open ticket.",Taylor Chen,30 days,2,2,0.95
+TM_028-A002-00308,TM_028,A002,"Account shows sustained disengagement risk: declining product usage, low NPS (4.0), negative/concerned sentiment on an open ticket.",Taylor Chen,30 days,2,2,0.95
+TM_028-A004-00309,TM_028,A004,"Account shows sustained disengagement risk: declining product usage, low NPS (3.0), severe health decline (-19.0 points).",Riley Patel,30 days,2,2,0.95
+TM_028-A005-00310,TM_028,A005,"Account shows sustained disengagement risk: declining product usage, low NPS (5.0), negative/concerned sentiment on an open ticket.",Morgan Lee,30 days,2,2,0.95
+TM_028-A008-00311,TM_028,A008,"Account shows sustained disengagement risk: declining product usage, low NPS (2.0), negative/concerned sentiment on an open ticket, severe health decline (-18.0 points).",Morgan Lee,30 days,2,2,0.95
+TM_028-A010-00312,TM_028,A010,"Account shows sustained disengagement risk: declining product usage, low NPS (5.0).",Taylor Chen,30 days,2,2,0.95
+TM_028-A012-00313,TM_028,A012,"Account shows sustained disengagement risk: declining product usage, low NPS (4.0).",Riley Patel,30 days,2,2,0.95
+TM_028-A014-00314,TM_028,A014,"Account shows sustained disengagement risk: declining product usage, low NPS (3.0), negative/concerned sentiment on an open ticket, severe health decline (-19.0 points).",Morgan Lee,30 days,2,2,0.95
+TM_028-A017-00315,TM_028,A017,"Account shows sustained disengagement risk: declining product usage, low NPS (2.0), negative/concerned sentiment on an open ticket, severe health decline (-18.0 points).",Morgan Lee,30 days,2,2,0.95
+TM_029-A001-00316,TM_029,A001,"Account shows sustained disengagement risk: declining product usage, low NPS (6.0), negative/concerned sentiment on an open ticket.",Taylor Chen,30 days,2,2,0.95
+TM_029-A002-00317,TM_029,A002,"Account shows sustained disengagement risk: declining product usage, low NPS (4.0), negative/concerned sentiment on an open ticket.",Taylor Chen,30 days,2,2,0.95
+TM_029-A004-00318,TM_029,A004,"Account shows sustained disengagement risk: declining product usage, low NPS (3.0), severe health decline (-19.0 points).",Riley Patel,30 days,2,2,0.95
+TM_029-A005-00319,TM_029,A005,"Account shows sustained disengagement risk: declining product usage, low NPS (5.0), negative/concerned sentiment on an open ticket.",Morgan Lee,30 days,2,2,0.95
+TM_029-A008-00320,TM_029,A008,"Account shows sustained disengagement risk: declining product usage, low NPS (2.0), negative/concerned sentiment on an open ticket, severe health decline (-18.0 points).",Morgan Lee,30 days,2,2,0.95
+TM_029-A010-00321,TM_029,A010,"Account shows sustained disengagement risk: declining product usage, low NPS (5.0).",Taylor Chen,30 days,2,2,0.95
+TM_029-A012-00322,TM_029,A012,"Account shows sustained disengagement risk: declining product usage, low NPS (4.0).",Riley Patel,30 days,2,2,0.95
+TM_029-A014-00323,TM_029,A014,"Account shows sustained disengagement risk: declining product usage, low NPS (3.0), negative/concerned sentiment on an open ticket, severe health decline (-19.0 points).",Morgan Lee,30 days,2,2,0.95
+TM_029-A017-00324,TM_029,A017,"Account shows sustained disengagement risk: declining product usage, low NPS (2.0), negative/concerned sentiment on an open ticket, severe health decline (-18.0 points).",Morgan Lee,30 days,2,2,0.95

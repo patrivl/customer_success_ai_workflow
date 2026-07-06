@@ -1,0 +1,379 @@
+run_id,stage_id,workflow_component,operating_area,item_id,model,planned_input_tokens,planned_output_tokens,measured_input_tokens,measured_output_tokens
+TM_001-A001-00001,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A001,text-embedding-3-small,3000,0,220,154
+TM_001-A002-00002,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A002,text-embedding-3-small,3000,0,220,154
+TM_001-A003-00003,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A003,text-embedding-3-small,3000,0,220,154
+TM_001-A004-00004,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A004,text-embedding-3-small,3000,0,220,154
+TM_001-A005-00005,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A005,text-embedding-3-small,3000,0,220,154
+TM_001-A006-00006,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A006,text-embedding-3-small,3000,0,220,154
+TM_001-A007-00007,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A007,text-embedding-3-small,3000,0,220,154
+TM_001-A008-00008,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A008,text-embedding-3-small,3000,0,220,154
+TM_001-A009-00009,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A009,text-embedding-3-small,3000,0,220,154
+TM_001-A010-00010,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A010,text-embedding-3-small,3000,0,220,154
+TM_001-A011-00011,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A011,text-embedding-3-small,3000,0,220,154
+TM_001-A012-00012,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A012,text-embedding-3-small,3000,0,220,154
+TM_001-A013-00013,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A013,text-embedding-3-small,3000,0,220,154
+TM_001-A014-00014,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A014,text-embedding-3-small,3000,0,220,154
+TM_001-A015-00015,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A015,text-embedding-3-small,3000,0,220,154
+TM_001-A016-00016,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A016,text-embedding-3-small,3000,0,220,154
+TM_001-A017-00017,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A017,text-embedding-3-small,3000,0,220,154
+TM_001-A018-00018,TM_001,Account review,"Signal monitoring, context assembly & portfolio pattern detection",A018,text-embedding-3-small,3000,0,220,154
+TM_002-A001-00019,TM_002,Account review,"Intake, classification & triage",A001,Claude Haiku 4.5,3500,300,668,224
+TM_002-A002-00020,TM_002,Account review,"Intake, classification & triage",A002,Claude Haiku 4.5,3500,300,680,218
+TM_002-A003-00021,TM_002,Account review,"Intake, classification & triage",A003,Claude Haiku 4.5,3500,300,656,197
+TM_002-A004-00022,TM_002,Account review,"Intake, classification & triage",A004,Claude Haiku 4.5,3500,300,665,197
+TM_002-A005-00023,TM_002,Account review,"Intake, classification & triage",A005,Claude Haiku 4.5,3500,300,689,237
+TM_002-A006-00024,TM_002,Account review,"Intake, classification & triage",A006,Claude Haiku 4.5,3500,300,647,208
+TM_002-A007-00025,TM_002,Account review,"Intake, classification & triage",A007,Claude Haiku 4.5,3500,300,631,178
+TM_002-A008-00026,TM_002,Account review,"Intake, classification & triage",A008,Claude Haiku 4.5,3500,300,700,231
+TM_002-A009-00027,TM_002,Account review,"Intake, classification & triage",A009,Claude Haiku 4.5,3500,300,628,166
+TM_002-A010-00028,TM_002,Account review,"Intake, classification & triage",A010,Claude Haiku 4.5,3500,300,685,220
+TM_002-A011-00029,TM_002,Account review,"Intake, classification & triage",A011,Claude Haiku 4.5,3500,300,631,165
+TM_002-A012-00030,TM_002,Account review,"Intake, classification & triage",A012,Claude Haiku 4.5,3500,300,678,199
+TM_002-A013-00031,TM_002,Account review,"Intake, classification & triage",A013,Claude Haiku 4.5,3500,300,629,166
+TM_002-A014-00032,TM_002,Account review,"Intake, classification & triage",A014,Claude Haiku 4.5,3500,300,685,232
+TM_002-A015-00033,TM_002,Account review,"Intake, classification & triage",A015,Claude Haiku 4.5,3500,300,662,216
+TM_002-A016-00034,TM_002,Account review,"Intake, classification & triage",A016,Claude Haiku 4.5,3500,300,637,171
+TM_002-A017-00035,TM_002,Account review,"Intake, classification & triage",A017,Claude Haiku 4.5,3500,300,686,212
+TM_002-A018-00036,TM_002,Account review,"Intake, classification & triage",A018,Claude Haiku 4.5,3500,300,649,205
+TM_003-A008-00037,TM_003,Account review,Prioritization & queue ranking,A008,GPT-5.4,3000,250,428,81
+TM_003-A014-00038,TM_003,Account review,Prioritization & queue ranking,A014,GPT-5.4,3000,250,428,79
+TM_003-A017-00039,TM_003,Account review,Prioritization & queue ranking,A017,GPT-5.4,3000,250,428,81
+TM_003-A005-00040,TM_003,Account review,Prioritization & queue ranking,A005,GPT-5.4,3000,250,428,82
+TM_003-A002-00041,TM_003,Account review,Prioritization & queue ranking,A002,GPT-5.4,3000,250,428,81
+TM_003-A004-00042,TM_003,Account review,Prioritization & queue ranking,A004,GPT-5.4,3000,250,428,78
+TM_003-A012-00043,TM_003,Account review,Prioritization & queue ranking,A012,GPT-5.4,3000,250,428,79
+TM_003-A010-00044,TM_003,Account review,Prioritization & queue ranking,A010,GPT-5.4,3000,250,428,78
+TM_003-A001-00045,TM_003,Account review,Prioritization & queue ranking,A001,GPT-5.4,3000,250,428,79
+TM_003-A015-00046,TM_003,Account review,Prioritization & queue ranking,A015,GPT-5.4,3000,250,428,79
+TM_003-A018-00047,TM_003,Account review,Prioritization & queue ranking,A018,GPT-5.4,3000,250,428,75
+TM_003-A003-00048,TM_003,Account review,Prioritization & queue ranking,A003,GPT-5.4,3000,250,428,75
+TM_003-A006-00049,TM_003,Account review,Prioritization & queue ranking,A006,GPT-5.4,3000,250,428,78
+TM_003-A016-00050,TM_003,Account review,Prioritization & queue ranking,A016,GPT-5.4,3000,250,428,78
+TM_003-A011-00051,TM_003,Account review,Prioritization & queue ranking,A011,GPT-5.4,3000,250,428,75
+TM_003-A009-00052,TM_003,Account review,Prioritization & queue ranking,A009,GPT-5.4,3000,250,428,78
+TM_003-A007-00053,TM_003,Account review,Prioritization & queue ranking,A007,GPT-5.4,3000,250,428,75
+TM_003-A013-00054,TM_003,Account review,Prioritization & queue ranking,A013,GPT-5.4,3000,250,428,75
+TM_004-A008-00055,TM_004,Account review,Synthesis & recommendation,A008,GPT-5.4,6000,900,707,231
+TM_004-A014-00056,TM_004,Account review,Synthesis & recommendation,A014,GPT-5.4,6000,900,691,232
+TM_004-A017-00057,TM_004,Account review,Synthesis & recommendation,A017,GPT-5.4,6000,900,693,212
+TM_004-A004-00058,TM_004,Account review,Synthesis & recommendation,A004,GPT-5.4,6000,900,672,197
+TM_004-A002-00059,TM_004,Account review,Synthesis & recommendation,A002,GPT-5.4,6000,900,687,218
+TM_004-A005-00060,TM_004,Account review,Synthesis & recommendation,A005,GPT-5.4,6000,900,696,237
+TM_004-A010-00061,TM_004,Account review,Synthesis & recommendation,A010,GPT-5.4,6000,900,692,220
+TM_004-A012-00062,TM_004,Account review,Synthesis & recommendation,A012,GPT-5.4,6000,900,685,199
+TM_004-A001-00063,TM_004,Account review,Synthesis & recommendation,A001,GPT-5.4,6000,900,674,224
+TM_004-A018-00064,TM_004,Account review,Synthesis & recommendation,A018,GPT-5.4,6000,900,656,205
+TM_004-A003-00065,TM_004,Account review,Synthesis & recommendation,A003,GPT-5.4,6000,900,663,197
+TM_004-A006-00066,TM_004,Account review,Synthesis & recommendation,A006,GPT-5.4,6000,900,653,208
+TM_004-A015-00067,TM_004,Account review,Synthesis & recommendation,A015,GPT-5.4,6000,900,669,216
+TM_004-A016-00068,TM_004,Account review,Synthesis & recommendation,A016,GPT-5.4,6000,900,644,171
+TM_004-A009-00069,TM_004,Account review,Synthesis & recommendation,A009,GPT-5.4,6000,900,634,166
+TM_004-A011-00070,TM_004,Account review,Synthesis & recommendation,A011,GPT-5.4,6000,900,637,165
+TM_004-A013-00071,TM_004,Account review,Synthesis & recommendation,A013,GPT-5.4,6000,900,636,166
+TM_005-A008-00072,TM_005,Account review,Synthesis & recommendation,A008,Claude Sonnet 4.6,12000,1800,697,231
+TM_005-A014-00073,TM_005,Account review,Synthesis & recommendation,A014,Claude Sonnet 4.6,12000,1800,682,232
+TM_005-A017-00074,TM_005,Account review,Synthesis & recommendation,A017,Claude Sonnet 4.6,12000,1800,684,212
+TM_005-A005-00075,TM_005,Account review,Synthesis & recommendation,A005,Claude Sonnet 4.6,12000,1800,686,237
+TM_005-A002-00076,TM_005,Account review,Synthesis & recommendation,A002,Claude Sonnet 4.6,12000,1800,678,218
+TM_005-A004-00077,TM_005,Account review,Synthesis & recommendation,A004,Claude Sonnet 4.6,12000,1800,663,197
+TM_005-A012-00078,TM_005,Account review,Synthesis & recommendation,A012,Claude Sonnet 4.6,12000,1800,675,199
+TM_005-A010-00079,TM_005,Account review,Synthesis & recommendation,A010,Claude Sonnet 4.6,12000,1800,682,220
+TM_005-A001-00080,TM_005,Account review,Synthesis & recommendation,A001,Claude Sonnet 4.6,12000,1800,665,224
+TM_005-A015-00081,TM_005,Account review,Synthesis & recommendation,A015,Claude Sonnet 4.6,12000,1800,660,216
+TM_005-A018-00082,TM_005,Account review,Synthesis & recommendation,A018,Claude Sonnet 4.6,12000,1800,646,205
+TM_005-A003-00083,TM_005,Account review,Synthesis & recommendation,A003,Claude Sonnet 4.6,12000,1800,653,197
+TM_005-A006-00084,TM_005,Account review,Synthesis & recommendation,A006,Claude Sonnet 4.6,12000,1800,644,208
+TM_005-A016-00085,TM_005,Account review,Synthesis & recommendation,A016,Claude Sonnet 4.6,12000,1800,635,171
+TM_005-A011-00086,TM_005,Account review,Synthesis & recommendation,A011,Claude Sonnet 4.6,12000,1800,628,165
+TM_005-A009-00087,TM_005,Account review,Synthesis & recommendation,A009,Claude Sonnet 4.6,12000,1800,625,166
+TM_005-A007-00088,TM_005,Account review,Synthesis & recommendation,A007,Claude Sonnet 4.6,12000,1800,629,178
+TM_005-A013-00089,TM_005,Account review,Synthesis & recommendation,A013,Claude Sonnet 4.6,12000,1800,627,166
+TM_006-A002-00090,TM_006,Account review,"Routing, handoff & escalation",A002,Claude Haiku 4.5,4000,400,488,65
+TM_006-A004-00091,TM_006,Account review,"Routing, handoff & escalation",A004,Claude Haiku 4.5,4000,400,484,55
+TM_006-A005-00092,TM_006,Account review,"Routing, handoff & escalation",A005,Claude Haiku 4.5,4000,400,499,74
+TM_006-A008-00093,TM_006,Account review,"Routing, handoff & escalation",A008,Claude Haiku 4.5,4000,400,508,83
+TM_006-A014-00094,TM_006,Account review,"Routing, handoff & escalation",A014,Claude Haiku 4.5,4000,400,495,66
+TM_006-A017-00095,TM_006,Account review,"Routing, handoff & escalation",A017,Claude Haiku 4.5,4000,400,497,74
+TM_007-A001-00096,TM_007,Account review,Deployment tracking & outcome measurement,A001,Claude Haiku 4.5,3000,250,400,58
+TM_007-A002-00097,TM_007,Account review,Deployment tracking & outcome measurement,A002,Claude Haiku 4.5,3000,250,397,56
+TM_007-A003-00098,TM_007,Account review,Deployment tracking & outcome measurement,A003,Claude Haiku 4.5,3000,250,393,55
+TM_007-A004-00099,TM_007,Account review,Deployment tracking & outcome measurement,A004,Claude Haiku 4.5,3000,250,378,51
+TM_007-A005-00100,TM_007,Account review,Deployment tracking & outcome measurement,A005,Claude Haiku 4.5,3000,250,399,58
+TM_007-A006-00101,TM_007,Account review,Deployment tracking & outcome measurement,A006,Claude Haiku 4.5,3000,250,400,58
+TM_007-A008-00102,TM_007,Account review,Deployment tracking & outcome measurement,A008,Claude Haiku 4.5,3000,250,403,60
+TM_007-A010-00103,TM_007,Account review,Deployment tracking & outcome measurement,A010,Claude Haiku 4.5,3000,250,400,58
+TM_007-A012-00104,TM_007,Account review,Deployment tracking & outcome measurement,A012,Claude Haiku 4.5,3000,250,397,56
+TM_007-A014-00105,TM_007,Account review,Deployment tracking & outcome measurement,A014,Claude Haiku 4.5,3000,250,398,57
+TM_007-A015-00106,TM_007,Account review,Deployment tracking & outcome measurement,A015,Claude Haiku 4.5,3000,250,402,59
+TM_007-A017-00107,TM_007,Account review,Deployment tracking & outcome measurement,A017,Claude Haiku 4.5,3000,250,403,59
+TM_007-A018-00108,TM_007,Account review,Deployment tracking & outcome measurement,A018,Claude Haiku 4.5,3000,250,393,57
+TM_008-A001-00109,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A001,text-embedding-3-small,3500,0,219,154
+TM_008-A002-00110,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A002,text-embedding-3-small,3500,0,219,154
+TM_008-A003-00111,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A003,text-embedding-3-small,3500,0,219,154
+TM_008-A004-00112,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A004,text-embedding-3-small,3500,0,219,154
+TM_008-A005-00113,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A005,text-embedding-3-small,3500,0,219,154
+TM_008-A006-00114,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A006,text-embedding-3-small,3500,0,219,154
+TM_008-A008-00115,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A008,text-embedding-3-small,3500,0,219,154
+TM_008-A010-00116,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A010,text-embedding-3-small,3500,0,219,154
+TM_008-A012-00117,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A012,text-embedding-3-small,3500,0,219,154
+TM_008-A014-00118,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A014,text-embedding-3-small,3500,0,219,154
+TM_008-A015-00119,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A015,text-embedding-3-small,3500,0,219,154
+TM_008-A017-00120,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A017,text-embedding-3-small,3500,0,219,154
+TM_008-A018-00121,TM_008,Prioritization,"Signal monitoring, context assembly & portfolio pattern detection",A018,text-embedding-3-small,3500,0,219,154
+TM_009-A008-00122,TM_009,Prioritization,Prioritization & queue ranking,A008,Claude Haiku 4.5,4000,300,442,93
+TM_009-A014-00123,TM_009,Prioritization,Prioritization & queue ranking,A014,Claude Haiku 4.5,4000,300,440,89
+TM_009-A017-00124,TM_009,Prioritization,Prioritization & queue ranking,A017,Claude Haiku 4.5,4000,300,442,93
+TM_009-A005-00125,TM_009,Prioritization,Prioritization & queue ranking,A005,Claude Haiku 4.5,4000,300,440,92
+TM_009-A002-00126,TM_009,Prioritization,Prioritization & queue ranking,A002,Claude Haiku 4.5,4000,300,439,90
+TM_009-A004-00127,TM_009,Prioritization,Prioritization & queue ranking,A004,Claude Haiku 4.5,4000,300,426,74
+TM_009-A012-00128,TM_009,Prioritization,Prioritization & queue ranking,A012,Claude Haiku 4.5,4000,300,439,88
+TM_009-A010-00129,TM_009,Prioritization,Prioritization & queue ranking,A010,Claude Haiku 4.5,4000,300,441,89
+TM_009-A001-00130,TM_009,Prioritization,Prioritization & queue ranking,A001,Claude Haiku 4.5,4000,300,441,89
+TM_009-A015-00131,TM_009,Prioritization,Prioritization & queue ranking,A015,Claude Haiku 4.5,4000,300,442,90
+TM_009-A018-00132,TM_009,Prioritization,Prioritization & queue ranking,A018,Claude Haiku 4.5,4000,300,435,80
+TM_009-A003-00133,TM_009,Prioritization,Prioritization & queue ranking,A003,Claude Haiku 4.5,4000,300,437,83
+TM_009-A006-00134,TM_009,Prioritization,Prioritization & queue ranking,A006,Claude Haiku 4.5,4000,300,441,89
+TM_010-A008-00135,TM_010,Prioritization,Synthesis & recommendation,A008,GPT-5.4,7000,900,429,82
+TM_010-A014-00136,TM_010,Prioritization,Synthesis & recommendation,A014,GPT-5.4,7000,900,429,80
+TM_010-A017-00137,TM_010,Prioritization,Synthesis & recommendation,A017,GPT-5.4,7000,900,429,82
+TM_010-A005-00138,TM_010,Prioritization,Synthesis & recommendation,A005,GPT-5.4,7000,900,429,83
+TM_010-A002-00139,TM_010,Prioritization,Synthesis & recommendation,A002,GPT-5.4,7000,900,429,82
+TM_010-A004-00140,TM_010,Prioritization,Synthesis & recommendation,A004,GPT-5.4,7000,900,429,79
+TM_010-A012-00141,TM_010,Prioritization,Synthesis & recommendation,A012,GPT-5.4,7000,900,429,79
+TM_010-A010-00142,TM_010,Prioritization,Synthesis & recommendation,A010,GPT-5.4,7000,900,429,79
+TM_010-A001-00143,TM_010,Prioritization,Synthesis & recommendation,A001,GPT-5.4,7000,900,429,79
+TM_010-A015-00144,TM_010,Prioritization,Synthesis & recommendation,A015,GPT-5.4,7000,900,429,79
+TM_010-A018-00145,TM_010,Prioritization,Synthesis & recommendation,A018,GPT-5.4,7000,900,429,76
+TM_010-A003-00146,TM_010,Prioritization,Synthesis & recommendation,A003,GPT-5.4,7000,900,429,76
+TM_010-A006-00147,TM_010,Prioritization,Synthesis & recommendation,A006,GPT-5.4,7000,900,429,79
+TM_010-A016-00148,TM_010,Prioritization,Synthesis & recommendation,A016,GPT-5.4,7000,900,429,79
+TM_010-A011-00149,TM_010,Prioritization,Synthesis & recommendation,A011,GPT-5.4,7000,900,429,76
+TM_010-A009-00150,TM_010,Prioritization,Synthesis & recommendation,A009,GPT-5.4,7000,900,429,79
+TM_010-A007-00151,TM_010,Prioritization,Synthesis & recommendation,A007,GPT-5.4,7000,900,429,76
+TM_010-A013-00152,TM_010,Prioritization,Synthesis & recommendation,A013,GPT-5.4,7000,900,429,76
+TM_011-A002-00153,TM_011,Prioritization,"Routing, handoff & escalation",A002,Claude Haiku 4.5,3500,350,487,65
+TM_011-A004-00154,TM_011,Prioritization,"Routing, handoff & escalation",A004,Claude Haiku 4.5,3500,350,483,55
+TM_011-A005-00155,TM_011,Prioritization,"Routing, handoff & escalation",A005,Claude Haiku 4.5,3500,350,499,74
+TM_011-A008-00156,TM_011,Prioritization,"Routing, handoff & escalation",A008,Claude Haiku 4.5,3500,350,508,83
+TM_011-A014-00157,TM_011,Prioritization,"Routing, handoff & escalation",A014,Claude Haiku 4.5,3500,350,495,66
+TM_011-A017-00158,TM_011,Prioritization,"Routing, handoff & escalation",A017,Claude Haiku 4.5,3500,350,496,74
+TM_012-T001-00159,TM_012,Inbound issue handling,"Intake, classification & triage",A008,Claude Haiku 4.5,4500,450,594,172
+TM_012-T002-00160,TM_012,Inbound issue handling,"Intake, classification & triage",A002,Claude Haiku 4.5,4500,450,594,160
+TM_012-T003-00161,TM_012,Inbound issue handling,"Intake, classification & triage",A014,Claude Haiku 4.5,4500,450,590,159
+TM_012-T004-00162,TM_012,Inbound issue handling,"Intake, classification & triage",A010,Claude Haiku 4.5,4500,450,590,146
+TM_012-T005-00163,TM_012,Inbound issue handling,"Intake, classification & triage",A012,Claude Haiku 4.5,4500,450,588,153
+TM_012-T006-00164,TM_012,Inbound issue handling,"Intake, classification & triage",A017,Claude Haiku 4.5,4500,450,588,174
+TM_012-T007-00165,TM_012,Inbound issue handling,"Intake, classification & triage",A005,Claude Haiku 4.5,4500,450,587,153
+TM_012-T008-00166,TM_012,Inbound issue handling,"Intake, classification & triage",A004,Claude Haiku 4.5,4500,450,588,154
+TM_012-T009-00167,TM_012,Inbound issue handling,"Intake, classification & triage",A015,Claude Haiku 4.5,4500,450,587,143
+TM_012-T010-00168,TM_012,Inbound issue handling,"Intake, classification & triage",A001,Claude Haiku 4.5,4500,450,588,163
+TM_012-T011-00169,TM_012,Inbound issue handling,"Intake, classification & triage",A006,Claude Haiku 4.5,4500,450,581,143
+TM_012-T012-00170,TM_012,Inbound issue handling,"Intake, classification & triage",A003,Claude Haiku 4.5,4500,450,584,149
+TM_013-T001-00171,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T001,text-embedding-3-small,5000,0,163,91
+TM_013-T002-00172,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T002,text-embedding-3-small,5000,0,163,91
+TM_013-T003-00173,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T003,text-embedding-3-small,5000,0,163,91
+TM_013-T004-00174,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T004,text-embedding-3-small,5000,0,163,91
+TM_013-T005-00175,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T005,text-embedding-3-small,5000,0,163,91
+TM_013-T006-00176,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T006,text-embedding-3-small,5000,0,163,91
+TM_013-T007-00177,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T007,text-embedding-3-small,5000,0,163,91
+TM_013-T008-00178,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T008,text-embedding-3-small,5000,0,163,91
+TM_013-T009-00179,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T009,text-embedding-3-small,5000,0,163,91
+TM_013-T010-00180,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T010,text-embedding-3-small,5000,0,163,91
+TM_013-T011-00181,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T011,text-embedding-3-small,5000,0,163,91
+TM_013-T012-00182,TM_013,Inbound issue handling,"Signal monitoring, context assembly & portfolio pattern detection",T012,text-embedding-3-small,5000,0,163,91
+TM_014-T001-00183,TM_014,Inbound issue handling,Synthesis & recommendation,A008,Claude Sonnet 4.6,10000,1800,596,172
+TM_014-T002-00184,TM_014,Inbound issue handling,Synthesis & recommendation,A002,Claude Sonnet 4.6,10000,1800,596,160
+TM_014-T003-00185,TM_014,Inbound issue handling,Synthesis & recommendation,A014,Claude Sonnet 4.6,10000,1800,592,159
+TM_014-T004-00186,TM_014,Inbound issue handling,Synthesis & recommendation,A010,Claude Sonnet 4.6,10000,1800,592,146
+TM_014-T005-00187,TM_014,Inbound issue handling,Synthesis & recommendation,A012,Claude Sonnet 4.6,10000,1800,590,153
+TM_014-T006-00188,TM_014,Inbound issue handling,Synthesis & recommendation,A017,Claude Sonnet 4.6,10000,1800,589,174
+TM_014-T007-00189,TM_014,Inbound issue handling,Synthesis & recommendation,A005,Claude Sonnet 4.6,10000,1800,588,153
+TM_014-T008-00190,TM_014,Inbound issue handling,Synthesis & recommendation,A004,Claude Sonnet 4.6,10000,1800,589,154
+TM_014-T009-00191,TM_014,Inbound issue handling,Synthesis & recommendation,A015,Claude Sonnet 4.6,10000,1800,588,143
+TM_014-T010-00192,TM_014,Inbound issue handling,Synthesis & recommendation,A001,Claude Sonnet 4.6,10000,1800,590,163
+TM_014-T011-00193,TM_014,Inbound issue handling,Synthesis & recommendation,A006,Claude Sonnet 4.6,10000,1800,583,143
+TM_014-T012-00194,TM_014,Inbound issue handling,Synthesis & recommendation,A003,Claude Sonnet 4.6,10000,1800,586,149
+TM_015-T001-00195,TM_015,Inbound issue handling,"Routing, handoff & escalation",T001,Claude Haiku 4.5,5000,500,493,73
+TM_015-T002-00196,TM_015,Inbound issue handling,"Routing, handoff & escalation",T002,Claude Haiku 4.5,5000,500,492,75
+TM_015-T003-00197,TM_015,Inbound issue handling,"Routing, handoff & escalation",T003,Claude Haiku 4.5,5000,500,493,70
+TM_015-T004-00198,TM_015,Inbound issue handling,"Routing, handoff & escalation",T004,Claude Haiku 4.5,5000,500,492,69
+TM_015-T005-00199,TM_015,Inbound issue handling,"Routing, handoff & escalation",T005,Claude Haiku 4.5,5000,500,491,68
+TM_015-T006-00200,TM_015,Inbound issue handling,"Routing, handoff & escalation",T006,Claude Haiku 4.5,5000,500,492,75
+TM_015-T007-00201,TM_015,Inbound issue handling,"Routing, handoff & escalation",T007,Claude Haiku 4.5,5000,500,492,73
+TM_015-T008-00202,TM_015,Inbound issue handling,"Routing, handoff & escalation",T008,Claude Haiku 4.5,5000,500,492,69
+TM_015-T009-00203,TM_015,Inbound issue handling,"Routing, handoff & escalation",T009,Claude Haiku 4.5,5000,500,492,69
+TM_015-T010-00204,TM_015,Inbound issue handling,"Routing, handoff & escalation",T010,Claude Haiku 4.5,5000,500,494,71
+TM_015-T011-00205,TM_015,Inbound issue handling,"Routing, handoff & escalation",T011,Claude Haiku 4.5,5000,500,491,68
+TM_015-T012-00206,TM_015,Inbound issue handling,"Routing, handoff & escalation",T012,Claude Haiku 4.5,5000,500,491,70
+TM_016-integration_sync-00207,TM_016,Inbound issue handling,Intervention design,integration_sync,GPT-5.4,14000,2200,468,180
+TM_016-onboarding_mobile-00208,TM_016,Inbound issue handling,Intervention design,onboarding_mobile,GPT-5.4,14000,2200,469,181
+TM_016-reporting_dashboard-00209,TM_016,Inbound issue handling,Intervention design,reporting_dashboard,GPT-5.4,14000,2200,470,184
+TM_017-C001-00210,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C001,text-embedding-3-small,7000,0,172,101
+TM_017-C002-00211,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C002,text-embedding-3-small,7000,0,172,101
+TM_017-C003-00212,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C003,text-embedding-3-small,7000,0,172,101
+TM_017-C004-00213,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C004,text-embedding-3-small,7000,0,172,101
+TM_017-C005-00214,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C005,text-embedding-3-small,7000,0,172,101
+TM_017-C006-00215,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C006,text-embedding-3-small,7000,0,172,101
+TM_017-C007-00216,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C007,text-embedding-3-small,7000,0,172,101
+TM_017-C008-00217,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C008,text-embedding-3-small,7000,0,172,101
+TM_017-C009-00218,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C009,text-embedding-3-small,7000,0,172,101
+TM_017-C010-00219,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C010,text-embedding-3-small,7000,0,172,101
+TM_017-C011-00220,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C011,text-embedding-3-small,7000,0,172,101
+TM_017-C012-00221,TM_017,Customer check-in support,"Signal monitoring, context assembly & portfolio pattern detection",C012,text-embedding-3-small,7000,0,172,101
+TM_018-C001-00222,TM_018,Customer check-in support,Customer check-in & communication support,A008,Claude Sonnet 4.6,18000,3000,436,156
+TM_018-C002-00223,TM_018,Customer check-in support,Customer check-in & communication support,A005,Claude Sonnet 4.6,18000,3000,431,160
+TM_018-C003-00224,TM_018,Customer check-in support,Customer check-in & communication support,A014,Claude Sonnet 4.6,18000,3000,430,154
+TM_018-C004-00225,TM_018,Customer check-in support,Customer check-in & communication support,A003,Claude Sonnet 4.6,18000,3000,430,154
+TM_018-C005-00226,TM_018,Customer check-in support,Customer check-in & communication support,A006,Claude Sonnet 4.6,18000,3000,432,152
+TM_018-C006-00227,TM_018,Customer check-in support,Customer check-in & communication support,A010,Claude Sonnet 4.6,18000,3000,434,150
+TM_018-C007-00228,TM_018,Customer check-in support,Customer check-in & communication support,A017,Claude Sonnet 4.6,18000,3000,430,144
+TM_018-C008-00229,TM_018,Customer check-in support,Customer check-in & communication support,A015,Claude Sonnet 4.6,18000,3000,432,144
+TM_018-C009-00230,TM_018,Customer check-in support,Customer check-in & communication support,A012,Claude Sonnet 4.6,18000,3000,425,141
+TM_018-C010-00231,TM_018,Customer check-in support,Customer check-in & communication support,A018,Claude Sonnet 4.6,18000,3000,429,133
+TM_018-C011-00232,TM_018,Customer check-in support,Customer check-in & communication support,A001,Claude Sonnet 4.6,18000,3000,429,144
+TM_018-C012-00233,TM_018,Customer check-in support,Customer check-in & communication support,A002,Claude Sonnet 4.6,18000,3000,429,148
+TM_019-C001-00234,TM_019,Customer check-in support,Synthesis & recommendation,A008,GPT-5.4,14000,1800,429,156
+TM_019-C002-00235,TM_019,Customer check-in support,Synthesis & recommendation,A005,GPT-5.4,14000,1800,425,160
+TM_019-C003-00236,TM_019,Customer check-in support,Synthesis & recommendation,A014,GPT-5.4,14000,1800,424,154
+TM_019-C004-00237,TM_019,Customer check-in support,Synthesis & recommendation,A003,GPT-5.4,14000,1800,423,154
+TM_019-C005-00238,TM_019,Customer check-in support,Synthesis & recommendation,A006,GPT-5.4,14000,1800,426,152
+TM_019-C006-00239,TM_019,Customer check-in support,Synthesis & recommendation,A010,GPT-5.4,14000,1800,428,150
+TM_019-C007-00240,TM_019,Customer check-in support,Synthesis & recommendation,A017,GPT-5.4,14000,1800,424,144
+TM_019-C008-00241,TM_019,Customer check-in support,Synthesis & recommendation,A015,GPT-5.4,14000,1800,426,144
+TM_019-C009-00242,TM_019,Customer check-in support,Synthesis & recommendation,A012,GPT-5.4,14000,1800,419,141
+TM_019-C010-00243,TM_019,Customer check-in support,Synthesis & recommendation,A018,GPT-5.4,14000,1800,423,133
+TM_019-C011-00244,TM_019,Customer check-in support,Synthesis & recommendation,A001,GPT-5.4,14000,1800,423,144
+TM_019-C012-00245,TM_019,Customer check-in support,Synthesis & recommendation,A002,GPT-5.4,14000,1800,423,148
+TM_020-C001-00246,TM_020,Customer check-in support,Prioritization & queue ranking,C001,Claude Haiku 4.5,5000,350,443,90
+TM_020-C003-00247,TM_020,Customer check-in support,Prioritization & queue ranking,C003,Claude Haiku 4.5,5000,350,442,87
+TM_020-C007-00248,TM_020,Customer check-in support,Prioritization & queue ranking,C007,Claude Haiku 4.5,5000,350,440,87
+TM_020-C002-00249,TM_020,Customer check-in support,Prioritization & queue ranking,C002,Claude Haiku 4.5,5000,350,443,90
+TM_020-C012-00250,TM_020,Customer check-in support,Prioritization & queue ranking,C012,Claude Haiku 4.5,5000,350,444,90
+TM_020-C009-00251,TM_020,Customer check-in support,Prioritization & queue ranking,C009,Claude Haiku 4.5,5000,350,442,87
+TM_020-C006-00252,TM_020,Customer check-in support,Prioritization & queue ranking,C006,Claude Haiku 4.5,5000,350,443,88
+TM_020-C011-00253,TM_020,Customer check-in support,Prioritization & queue ranking,C011,Claude Haiku 4.5,5000,350,442,87
+TM_020-C008-00254,TM_020,Customer check-in support,Prioritization & queue ranking,C008,Claude Haiku 4.5,5000,350,444,88
+TM_020-C010-00255,TM_020,Customer check-in support,Prioritization & queue ranking,C010,Claude Haiku 4.5,5000,350,443,85
+TM_020-C004-00256,TM_020,Customer check-in support,Prioritization & queue ranking,C004,Claude Haiku 4.5,5000,350,444,86
+TM_020-C005-00257,TM_020,Customer check-in support,Prioritization & queue ranking,C005,Claude Haiku 4.5,5000,350,445,89
+TM_021-C001-00258,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C001,Claude Haiku 4.5,5000,500,393,49
+TM_021-C002-00259,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C002,Claude Haiku 4.5,5000,500,393,49
+TM_021-C003-00260,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C003,Claude Haiku 4.5,5000,500,393,49
+TM_021-C004-00261,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C004,Claude Haiku 4.5,5000,500,395,49
+TM_021-C005-00262,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C005,Claude Haiku 4.5,5000,500,396,49
+TM_021-C006-00263,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C006,Claude Haiku 4.5,5000,500,394,49
+TM_021-C007-00264,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C007,Claude Haiku 4.5,5000,500,391,49
+TM_021-C008-00265,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C008,Claude Haiku 4.5,5000,500,395,49
+TM_021-C009-00266,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C009,Claude Haiku 4.5,5000,500,393,49
+TM_021-C010-00267,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C010,Claude Haiku 4.5,5000,500,394,49
+TM_021-C011-00268,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C011,Claude Haiku 4.5,5000,500,393,49
+TM_021-C012-00269,TM_021,Customer check-in support,Deployment tracking & outcome measurement,C012,Claude Haiku 4.5,5000,500,394,49
+TM_022-O001-00270,TM_022,Quality review,"Signal monitoring, context assembly & portfolio pattern detection",O001,text-embedding-3-small,5000,0,144,69
+TM_022-O002-00271,TM_022,Quality review,"Signal monitoring, context assembly & portfolio pattern detection",O002,text-embedding-3-small,5000,0,143,69
+TM_022-O003-00272,TM_022,Quality review,"Signal monitoring, context assembly & portfolio pattern detection",O003,text-embedding-3-small,5000,0,144,69
+TM_022-O004-00273,TM_022,Quality review,"Signal monitoring, context assembly & portfolio pattern detection",O004,text-embedding-3-small,5000,0,143,69
+TM_022-O005-00274,TM_022,Quality review,"Signal monitoring, context assembly & portfolio pattern detection",O005,text-embedding-3-small,5000,0,143,69
+TM_022-O006-00275,TM_022,Quality review,"Signal monitoring, context assembly & portfolio pattern detection",O006,text-embedding-3-small,5000,0,144,69
+TM_022-O007-00276,TM_022,Quality review,"Signal monitoring, context assembly & portfolio pattern detection",O007,text-embedding-3-small,5000,0,143,69
+TM_022-O008-00277,TM_022,Quality review,"Signal monitoring, context assembly & portfolio pattern detection",O008,text-embedding-3-small,5000,0,143,69
+TM_023-O001-00278,TM_023,Quality review,Quality evaluation & validation,A008,GPT-5.4,12000,1800,651,101
+TM_023-O002-00279,TM_023,Quality review,Quality evaluation & validation,A005,GPT-5.4,12000,1800,610,99
+TM_023-O003-00280,TM_023,Quality review,Quality evaluation & validation,A014,GPT-5.4,12000,1800,615,54
+TM_023-O004-00281,TM_023,Quality review,Quality evaluation & validation,A017,GPT-5.4,12000,1800,610,99
+TM_023-O005-00282,TM_023,Quality review,Quality evaluation & validation,A003,GPT-5.4,12000,1800,577,54
+TM_023-O006-00283,TM_023,Quality review,Quality evaluation & validation,A010,GPT-5.4,12000,1800,620,54
+TM_023-O007-00284,TM_023,Quality review,Quality evaluation & validation,A012,GPT-5.4,12000,1800,579,97
+TM_023-O008-00285,TM_023,Quality review,Quality evaluation & validation,A015,GPT-5.4,12000,1800,611,54
+TM_024-O001-00286,TM_024,Quality review,Synthesis & recommendation,A008,Claude Sonnet 4.6,12000,2200,654,101
+TM_024-O002-00287,TM_024,Quality review,Synthesis & recommendation,A005,Claude Sonnet 4.6,12000,2200,612,99
+TM_024-O004-00288,TM_024,Quality review,Synthesis & recommendation,A017,Claude Sonnet 4.6,12000,2200,613,99
+TM_024-O007-00289,TM_024,Quality review,Synthesis & recommendation,A012,Claude Sonnet 4.6,12000,2200,582,97
+TM_025-O001-00290,TM_025,Quality review,"Routing, handoff & escalation",O001,Claude Haiku 4.5,4500,500,494,66
+TM_025-O002-00291,TM_025,Quality review,"Routing, handoff & escalation",O002,Claude Haiku 4.5,4500,500,494,67
+TM_025-O004-00292,TM_025,Quality review,"Routing, handoff & escalation",O004,Claude Haiku 4.5,4500,500,494,69
+TM_025-O007-00293,TM_025,Quality review,"Routing, handoff & escalation",O007,Claude Haiku 4.5,4500,500,494,63
+TM_026-O001-00294,TM_026,Quality review,Deployment tracking & outcome measurement,O001,Claude Haiku 4.5,3500,350,390,49
+TM_026-O002-00295,TM_026,Quality review,Deployment tracking & outcome measurement,O002,Claude Haiku 4.5,3500,350,390,49
+TM_026-O004-00296,TM_026,Quality review,Deployment tracking & outcome measurement,O004,Claude Haiku 4.5,3500,350,390,49
+TM_026-O007-00297,TM_026,Quality review,Deployment tracking & outcome measurement,O007,Claude Haiku 4.5,3500,350,390,49
+TM_027-A001-00298,TM_027,Targeted intervention planning,"Signal monitoring, context assembly & portfolio pattern detection",A001,text-embedding-3-small,8000,0,227,154
+TM_027-A002-00299,TM_027,Targeted intervention planning,"Signal monitoring, context assembly & portfolio pattern detection",A002,text-embedding-3-small,8000,0,227,154
+TM_027-A004-00300,TM_027,Targeted intervention planning,"Signal monitoring, context assembly & portfolio pattern detection",A004,text-embedding-3-small,8000,0,227,154
+TM_027-A005-00301,TM_027,Targeted intervention planning,"Signal monitoring, context assembly & portfolio pattern detection",A005,text-embedding-3-small,8000,0,227,154
+TM_027-A008-00302,TM_027,Targeted intervention planning,"Signal monitoring, context assembly & portfolio pattern detection",A008,text-embedding-3-small,8000,0,227,154
+TM_027-A010-00303,TM_027,Targeted intervention planning,"Signal monitoring, context assembly & portfolio pattern detection",A010,text-embedding-3-small,8000,0,227,154
+TM_027-A012-00304,TM_027,Targeted intervention planning,"Signal monitoring, context assembly & portfolio pattern detection",A012,text-embedding-3-small,8000,0,227,154
+TM_027-A014-00305,TM_027,Targeted intervention planning,"Signal monitoring, context assembly & portfolio pattern detection",A014,text-embedding-3-small,8000,0,227,154
+TM_027-A017-00306,TM_027,Targeted intervention planning,"Signal monitoring, context assembly & portfolio pattern detection",A017,text-embedding-3-small,8000,0,227,154
+TM_028-A001-00307,TM_028,Targeted intervention planning,Intervention design,A001,Claude Sonnet 4.6,40000,5000,473,197
+TM_028-A002-00308,TM_028,Targeted intervention planning,Intervention design,A002,Claude Sonnet 4.6,40000,5000,473,197
+TM_028-A004-00309,TM_028,Targeted intervention planning,Intervention design,A004,Claude Sonnet 4.6,40000,5000,470,192
+TM_028-A005-00310,TM_028,Targeted intervention planning,Intervention design,A005,Claude Sonnet 4.6,40000,5000,473,197
+TM_028-A008-00311,TM_028,Targeted intervention planning,Intervention design,A008,Claude Sonnet 4.6,40000,5000,482,216
+TM_028-A010-00312,TM_028,Targeted intervention planning,Intervention design,A010,Claude Sonnet 4.6,40000,5000,461,173
+TM_028-A012-00313,TM_028,Targeted intervention planning,Intervention design,A012,Claude Sonnet 4.6,40000,5000,461,173
+TM_028-A014-00314,TM_028,Targeted intervention planning,Intervention design,A014,Claude Sonnet 4.6,40000,5000,482,216
+TM_028-A017-00315,TM_028,Targeted intervention planning,Intervention design,A017,Claude Sonnet 4.6,40000,5000,482,216
+TM_029-A001-00316,TM_029,Targeted intervention planning,Synthesis & recommendation,A001,GPT-5.4,18000,2500,474,197
+TM_029-A002-00317,TM_029,Targeted intervention planning,Synthesis & recommendation,A002,GPT-5.4,18000,2500,474,197
+TM_029-A004-00318,TM_029,Targeted intervention planning,Synthesis & recommendation,A004,GPT-5.4,18000,2500,471,192
+TM_029-A005-00319,TM_029,Targeted intervention planning,Synthesis & recommendation,A005,GPT-5.4,18000,2500,474,197
+TM_029-A008-00320,TM_029,Targeted intervention planning,Synthesis & recommendation,A008,GPT-5.4,18000,2500,483,216
+TM_029-A010-00321,TM_029,Targeted intervention planning,Synthesis & recommendation,A010,GPT-5.4,18000,2500,462,173
+TM_029-A012-00322,TM_029,Targeted intervention planning,Synthesis & recommendation,A012,GPT-5.4,18000,2500,462,173
+TM_029-A014-00323,TM_029,Targeted intervention planning,Synthesis & recommendation,A014,GPT-5.4,18000,2500,483,216
+TM_029-A017-00324,TM_029,Targeted intervention planning,Synthesis & recommendation,A017,GPT-5.4,18000,2500,483,216
+TM_030-A008-00325,TM_030,Targeted intervention planning,Prioritization & queue ranking,A008,Claude Haiku 4.5,7000,600,454,101
+TM_030-A014-00326,TM_030,Targeted intervention planning,Prioritization & queue ranking,A014,Claude Haiku 4.5,7000,600,454,99
+TM_030-A017-00327,TM_030,Targeted intervention planning,Prioritization & queue ranking,A017,Claude Haiku 4.5,7000,600,454,101
+TM_030-A005-00328,TM_030,Targeted intervention planning,Prioritization & queue ranking,A005,Claude Haiku 4.5,7000,600,445,93
+TM_030-A002-00329,TM_030,Targeted intervention planning,Prioritization & queue ranking,A002,Claude Haiku 4.5,7000,600,445,92
+TM_030-A004-00330,TM_030,Targeted intervention planning,Prioritization & queue ranking,A004,Claude Haiku 4.5,7000,600,442,86
+TM_030-A012-00331,TM_030,Targeted intervention planning,Prioritization & queue ranking,A012,Claude Haiku 4.5,7000,600,433,78
+TM_030-A010-00332,TM_030,Targeted intervention planning,Prioritization & queue ranking,A010,Claude Haiku 4.5,7000,600,433,77
+TM_030-A001-00333,TM_030,Targeted intervention planning,Prioritization & queue ranking,A001,Claude Haiku 4.5,7000,600,445,90
+TM_031-A001-00334,TM_031,Targeted intervention planning,Quality evaluation & validation,A001,Claude Sonnet 4.6,16000,2000,509,60
+TM_031-A002-00335,TM_031,Targeted intervention planning,Quality evaluation & validation,A002,Claude Sonnet 4.6,16000,2000,509,60
+TM_031-A004-00336,TM_031,Targeted intervention planning,Quality evaluation & validation,A004,Claude Sonnet 4.6,16000,2000,509,60
+TM_031-A005-00337,TM_031,Targeted intervention planning,Quality evaluation & validation,A005,Claude Sonnet 4.6,16000,2000,509,60
+TM_031-A008-00338,TM_031,Targeted intervention planning,Quality evaluation & validation,A008,Claude Sonnet 4.6,16000,2000,509,60
+TM_031-A010-00339,TM_031,Targeted intervention planning,Quality evaluation & validation,A010,Claude Sonnet 4.6,16000,2000,509,60
+TM_031-A012-00340,TM_031,Targeted intervention planning,Quality evaluation & validation,A012,Claude Sonnet 4.6,16000,2000,509,60
+TM_031-A014-00341,TM_031,Targeted intervention planning,Quality evaluation & validation,A014,Claude Sonnet 4.6,16000,2000,509,60
+TM_031-A017-00342,TM_031,Targeted intervention planning,Quality evaluation & validation,A017,Claude Sonnet 4.6,16000,2000,509,60
+TM_032-A001-00343,TM_032,Targeted intervention planning,Deployment tracking & outcome measurement,A001,Claude Haiku 4.5,6000,700,403,57
+TM_032-A002-00344,TM_032,Targeted intervention planning,Deployment tracking & outcome measurement,A002,Claude Haiku 4.5,6000,700,402,55
+TM_032-A004-00345,TM_032,Targeted intervention planning,Deployment tracking & outcome measurement,A004,Claude Haiku 4.5,6000,700,393,50
+TM_032-A005-00346,TM_032,Targeted intervention planning,Deployment tracking & outcome measurement,A005,Claude Haiku 4.5,6000,700,403,57
+TM_032-A008-00347,TM_032,Targeted intervention planning,Deployment tracking & outcome measurement,A008,Claude Haiku 4.5,6000,700,414,59
+TM_032-A010-00348,TM_032,Targeted intervention planning,Deployment tracking & outcome measurement,A010,Claude Haiku 4.5,6000,700,391,57
+TM_032-A012-00349,TM_032,Targeted intervention planning,Deployment tracking & outcome measurement,A012,Claude Haiku 4.5,6000,700,389,55
+TM_032-A014-00350,TM_032,Targeted intervention planning,Deployment tracking & outcome measurement,A014,Claude Haiku 4.5,6000,700,411,56
+TM_032-A017-00351,TM_032,Targeted intervention planning,Deployment tracking & outcome measurement,A017,Claude Haiku 4.5,6000,700,414,58
+TM_033-A002-00352,TM_033,"Routing for resolution, follow-up, or escalation","Intake, classification & triage",A002,Claude Haiku 4.5,5000,450,686,218
+TM_033-A004-00353,TM_033,"Routing for resolution, follow-up, or escalation","Intake, classification & triage",A004,Claude Haiku 4.5,5000,450,667,197
+TM_033-A005-00354,TM_033,"Routing for resolution, follow-up, or escalation","Intake, classification & triage",A005,Claude Haiku 4.5,5000,450,706,237
+TM_033-A008-00355,TM_033,"Routing for resolution, follow-up, or escalation","Intake, classification & triage",A008,Claude Haiku 4.5,5000,450,726,231
+TM_033-A014-00356,TM_033,"Routing for resolution, follow-up, or escalation","Intake, classification & triage",A014,Claude Haiku 4.5,5000,450,698,232
+TM_033-A017-00357,TM_033,"Routing for resolution, follow-up, or escalation","Intake, classification & triage",A017,Claude Haiku 4.5,5000,450,701,212
+TM_034-A002-00358,TM_034,"Routing for resolution, follow-up, or escalation","Routing, handoff & escalation",A002,Claude Haiku 4.5,6000,600,496,65
+TM_034-A004-00359,TM_034,"Routing for resolution, follow-up, or escalation","Routing, handoff & escalation",A004,Claude Haiku 4.5,6000,600,492,55
+TM_034-A005-00360,TM_034,"Routing for resolution, follow-up, or escalation","Routing, handoff & escalation",A005,Claude Haiku 4.5,6000,600,507,74
+TM_034-A008-00361,TM_034,"Routing for resolution, follow-up, or escalation","Routing, handoff & escalation",A008,Claude Haiku 4.5,6000,600,516,83
+TM_034-A014-00362,TM_034,"Routing for resolution, follow-up, or escalation","Routing, handoff & escalation",A014,Claude Haiku 4.5,6000,600,503,66
+TM_034-A017-00363,TM_034,"Routing for resolution, follow-up, or escalation","Routing, handoff & escalation",A017,Claude Haiku 4.5,6000,600,505,74
+TM_035-A008-00364,TM_035,"Routing for resolution, follow-up, or escalation",Prioritization & queue ranking,A008,Claude Haiku 4.5,5000,400,463,105
+TM_035-A014-00365,TM_035,"Routing for resolution, follow-up, or escalation",Prioritization & queue ranking,A014,Claude Haiku 4.5,5000,400,450,90
+TM_035-A017-00366,TM_035,"Routing for resolution, follow-up, or escalation",Prioritization & queue ranking,A017,Claude Haiku 4.5,5000,400,452,93
+TM_035-A005-00367,TM_035,"Routing for resolution, follow-up, or escalation",Prioritization & queue ranking,A005,Claude Haiku 4.5,5000,400,454,96
+TM_035-A002-00368,TM_035,"Routing for resolution, follow-up, or escalation",Prioritization & queue ranking,A002,Claude Haiku 4.5,5000,400,443,84
+TM_035-A004-00369,TM_035,"Routing for resolution, follow-up, or escalation",Prioritization & queue ranking,A004,Claude Haiku 4.5,5000,400,439,77
+TM_036-A002-00370,TM_036,"Routing for resolution, follow-up, or escalation",Deployment tracking & outcome measurement,A002,Claude Haiku 4.5,4000,350,401,56
+TM_036-A004-00371,TM_036,"Routing for resolution, follow-up, or escalation",Deployment tracking & outcome measurement,A004,Claude Haiku 4.5,4000,350,391,51
+TM_036-A005-00372,TM_036,"Routing for resolution, follow-up, or escalation",Deployment tracking & outcome measurement,A005,Claude Haiku 4.5,4000,350,413,58
+TM_036-A008-00373,TM_036,"Routing for resolution, follow-up, or escalation",Deployment tracking & outcome measurement,A008,Claude Haiku 4.5,4000,350,425,60
+TM_036-A014-00374,TM_036,"Routing for resolution, follow-up, or escalation",Deployment tracking & outcome measurement,A014,Claude Haiku 4.5,4000,350,409,57
+TM_036-A017-00375,TM_036,"Routing for resolution, follow-up, or escalation",Deployment tracking & outcome measurement,A017,Claude Haiku 4.5,4000,350,413,59
+TM_037-A008-00376,TM_037,"Routing for resolution, follow-up, or escalation",Synthesis & recommendation,A008,GPT-5.5,30000,5000,549,162
+TM_037-A005-00377,TM_037,"Routing for resolution, follow-up, or escalation",Synthesis & recommendation,A005,GPT-5.5,30000,5000,538,162
+TM_037-A002-00378,TM_037,"Routing for resolution, follow-up, or escalation",Synthesis & recommendation,A002,GPT-5.5,30000,5000,530,162

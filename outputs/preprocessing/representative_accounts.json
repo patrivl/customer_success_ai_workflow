@@ -48,5 +48,35 @@
     "opportunity_score": 5.0,
     "priority_score": 131.0,
     "escalation_score": 50.0
+  },
+  {
+    "account_id": "A012",
+    "account_name": "Lumen Energy",
+    "case_type": "quality_review_case",
+    "reason": "deterministic selector 'failed_or_weak_outputs' match for case type 'quality_review_case' (no preferred id available/uncovered): draft is short and/or uses vague filler phrasing (preliminary check)",
+    "risk_score": 106.0,
+    "opportunity_score": 27.0,
+    "priority_score": 86.4,
+    "escalation_score": 10.0
+  },
+  {
+    "account_id": "A001",
+    "account_name": "Acme Retail",
+    "case_type": "intervention_planning_case",
+    "reason": "deterministic selector 'intervention_candidates' match for case type 'intervention_planning_case' (no preferred id available/uncovered): usage is declining; NPS is low (6); negative/concerned sentiment on an open ticket",
+    "risk_score": 102.0,
+    "opportunity_score": 5.0,
+    "priority_score": 73.2,
+    "escalation_score": 25.0
+  },
+  {
+    "account_id": "A002",
+    "account_name": "BrightPath Logistics",
+    "case_type": "complex_escalation_case",
+    "reason": "deterministic selector 'complex_escalation_candidates' match for case type 'complex_escalation_case' (no preferred id available/uncovered): escalation_score=50.0 (top 3 under daily cap)",
+    "risk_score": 135.0,
+    "opportunity_score": 17.0,
+    "priority_score": 110.8,
+    "escalation_score": 50.0
   }
 ]

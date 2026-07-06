@@ -867,55 +867,85 @@ def build_portfolio_patterns(contexts: Dict[str, Dict[str, Any]], normalized: Ra
 # 7. Representative run selection
 # ---------------------------------------------------------------------------
 
-def select_representative_runs(contexts: Dict[str, Dict[str, Any]]) -> List[dict]:
+def _representative_entry(ctx: Dict[str, Any], case_type: str, reason: str) -> dict:
+    return {
+        "account_id": ctx["account_id"],
+        "account_name": ctx["account_name"],
+        "case_type": case_type,
+        "reason": reason,
+        "risk_score": ctx["scores"]["risk_score"],
+        "opportunity_score": ctx["scores"]["opportunity_score"],
+        "priority_score": ctx["scores"]["priority_score"],
+        "escalation_score": ctx["scores"]["escalation_score"],
+    }
+
+
+def select_representative_runs(contexts: Dict[str, Dict[str, Any]],
+                                selected_items: Optional[Dict[str, List[dict]]] = None,
+                                min_n: int = config.MIN_REPRESENTATIVE_RUNS,
+                                max_n: int = config.MAX_REPRESENTATIVE_RUNS) -> List[dict]:
     """
-    Returns >= config.MIN_REPRESENTATIVE_RUNS representative accounts,
-    preferring config.PREFERRED_REPRESENTATIVE_ACCOUNT_IDS (each covering a
-    distinct case type) when present, and otherwise filling remaining
-    slots with the closest matches by priority_score.
+    Returns between min_n and max_n representative account runs.
+
+    Preferring config.PREFERRED_REPRESENTATIVE_ACCOUNT_IDS (each covering a
+    distinct case type) when present. If `selected_items` (the
+    preprocessing selectors' own populations) is supplied, additional
+    case types beyond the preferred 5 (config.ADDITIONAL_REPRESENTATIVE_CASE_TYPES
+    -- quality review, intervention planning, complex escalation) are
+    filled in deterministically from those same selectors, never from a
+    hardcoded account id, up to max_n total. Any substitution (a preferred
+    id missing, or an additional case type filled from a selector) carries
+    an explicit `reason` string for traceability.
     """
     result = []
     chosen_ids = set()
+    covered_case_types = set()
 
     for aid in config.PREFERRED_REPRESENTATIVE_ACCOUNT_IDS:
         ctx = contexts.get(aid)
         if ctx is None:
             continue
         case_type = config.REPRESENTATIVE_CASE_TYPES[aid]
-        result.append({
-            "account_id": aid,
-            "account_name": ctx["account_name"],
-            "case_type": case_type,
-            "reason": f"preferred representative account for case type '{case_type}'",
-            "risk_score": ctx["scores"]["risk_score"],
-            "opportunity_score": ctx["scores"]["opportunity_score"],
-            "priority_score": ctx["scores"]["priority_score"],
-            "escalation_score": ctx["scores"]["escalation_score"],
-        })
+        result.append(_representative_entry(
+            ctx, case_type, f"preferred representative account for case type '{case_type}'",
+        ))
         chosen_ids.add(aid)
+        covered_case_types.add(case_type)
 
-    if len(result) < config.MIN_REPRESENTATIVE_RUNS:
+    if selected_items is not None:
+        for case_type, selector_key in config.ADDITIONAL_REPRESENTATIVE_CASE_TYPES.items():
+            if len(result) >= max_n or case_type in covered_case_types:
+                continue
+            for entry in selected_items.get(selector_key, []):
+                aid = entry.get("account_id")
+                if not aid or aid in chosen_ids or aid not in contexts:
+                    continue
+                ctx = contexts[aid]
+                result.append(_representative_entry(
+                    ctx, case_type,
+                    f"deterministic selector '{selector_key}' match for case type "
+                    f"'{case_type}' (no preferred id available/uncovered): {entry.get('reason', '')}",
+                ))
+                chosen_ids.add(aid)
+                covered_case_types.add(case_type)
+                break
+
+    if len(result) < min_n:
         remaining = sorted(
             (c for aid, c in contexts.items() if aid not in chosen_ids),
             key=lambda c: c["scores"]["priority_score"],
             reverse=True,
         )
         for ctx in remaining:
-            if len(result) >= config.MIN_REPRESENTATIVE_RUNS:
+            if len(result) >= min_n:
                 break
-            result.append({
-                "account_id": ctx["account_id"],
-                "account_name": ctx["account_name"],
-                "case_type": "closest_match_by_priority_score",
-                "reason": "a preferred representative account was unavailable; selected as the closest match by priority_score",
-                "risk_score": ctx["scores"]["risk_score"],
-                "opportunity_score": ctx["scores"]["opportunity_score"],
-                "priority_score": ctx["scores"]["priority_score"],
-                "escalation_score": ctx["scores"]["escalation_score"],
-            })
+            result.append(_representative_entry(
+                ctx, "closest_match_by_priority_score",
+                "a preferred representative account was unavailable; selected as the closest match by priority_score",
+            ))
             chosen_ids.add(ctx["account_id"])
 
-    return result
+    return result[:max_n]
 
 
 # ---------------------------------------------------------------------------
@@ -997,7 +1027,7 @@ def run_preprocessing(tables: RawTables, reference_date: Optional[datetime] = No
     account_scores_df = _account_scores_dataframe(contexts)
     portfolio_patterns = build_portfolio_patterns(contexts, normalized)
     selected_items = build_selected_workflow_items(contexts, normalized, outputs_precheck)
-    representative_runs = select_representative_runs(contexts)
+    representative_runs = select_representative_runs(contexts, selected_items)
 
     save_outputs(contexts, account_scores_df, portfolio_patterns, selected_items, representative_runs)
 
