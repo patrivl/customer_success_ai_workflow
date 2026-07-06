@@ -288,19 +288,48 @@ def write_cost_summary(traces: List[dict], out_dir=config.OUTPUT_DIR):
     return path
 
 
-def write_token_math_measurement_summary(traces: List[dict], out_dir=config.OUTPUT_DIR):
-    """One row per stage_id, formatted for direct copy into the token math
-    spreadsheet's measurement columns."""
-    out_dir.mkdir(parents=True, exist_ok=True)
-    path = out_dir / "token_math_measurement_summary.csv"
-    fieldnames = [
-        "stage_id", "workflow_component", "operating_area", "trigger_schedule", "model",
-        "num_calls", "avg_measured_input_tokens", "avg_measured_output_tokens",
-        "avg_measured_cost_per_run", "planned_input_tokens_per_run",
-        "planned_output_tokens_per_run", "planned_cost_per_run",
-        "variance_pct", "review_flag", "source_output_file",
-    ]
+# token_math_measurement_summary.csv column order. The first block
+# (through review_flag/source_measurement_link) matches the Token Math
+# Template's spreadsheet measurement columns (see README's "Spreadsheet
+# export" section); the rest are supporting detail.
+MEASUREMENT_SUMMARY_FIELDNAMES = [
+    "stage_id", "workflow_component", "operating_area", "trigger_schedule", "model",
+    "num_calls",
+    "avg_measured_input_tokens", "avg_measured_output_tokens",
+    "avg_measured_cost_per_run", "avg_adjusted_measured_cost_per_run",
+    "notebook_measured_avg_cost_per_run",
+    "planned_input_tokens_per_run", "planned_output_tokens_per_run", "planned_cost_per_run",
+    "variance_pct", "estimate_vs_measured_variance",
+    "review_flag", "source_measurement_link", "source_output_file",
+]
 
+# The Token Math Template's measurement columns (Notebook measured avg
+# cost/run, Estimate vs measured variance, Source / measurement link,
+# Review flag) -- see outputs/token_math_spreadsheet_export.csv. These 5
+# are the actual-measured-sample columns and must not be reordered/
+# removed: they're the spreadsheet copy-back source of truth. `exercised`
+# (Yes/No) is kept alongside as a simple, non-projected flag for whether
+# this stage had any calls in this run.
+SPREADSHEET_COPY_BACK_FIELDNAMES = [
+    "stage_id", "notebook_measured_avg_cost_per_run", "estimate_vs_measured_variance",
+    "source_measurement_link", "review_flag",
+]
+SPREADSHEET_EXPORT_FIELDNAMES = SPREADSHEET_COPY_BACK_FIELDNAMES + ["exercised"]
+
+
+def _build_measurement_rows(traces: List[dict]) -> List[dict]:
+    """One row per stage_id in config/token_math_plan.csv -- including
+    stage_ids with zero calls in this run, so the Token Math Template's
+    measurement columns always have a full 37-row export to copy from.
+
+    `notebook_measured_avg_cost_per_run` is the average cost per call
+    INCLUDING the stage's retry/QA-eval overhead (adjusted_measured_cost),
+    since that's the realistic "what would this actually cost" figure the
+    spreadsheet wants. `estimate_vs_measured_variance` and `review_flag` are
+    computed on that same adjusted basis for internal consistency; the
+    unadjusted `avg_measured_cost_per_run` / `variance_pct` are kept
+    alongside as supporting, non-adjusted detail.
+    """
     by_stage: Dict[str, List[dict]] = {}
     for t in traces:
         by_stage.setdefault(t["stage_id"], []).append(t)
@@ -313,17 +342,26 @@ def write_token_math_measurement_summary(traces: List[dict], out_dir=config.OUTP
             stage.planned_input_tokens_per_run, stage.planned_output_tokens_per_run,
             stage.input_price_per_1m, stage.output_price_per_1m,
         )
+
         if stage_traces:
             n = len(stage_traces)
             avg_input = sum(t["measured_input_tokens"] for t in stage_traces) / n
             avg_output = sum(t["measured_output_tokens"] for t in stage_traces) / n
             avg_cost = sum(t["measured_cost"] for t in stage_traces) / n
+            avg_adjusted_cost = sum(t["adjusted_measured_cost"] for t in stage_traces) / n
             variance_pct = token_costs.calculate_variance(planned_cost_per_run, avg_cost)
-            review_flag = token_costs.assign_review_flag(variance_pct)
+            adjusted_variance_pct = token_costs.calculate_variance(planned_cost_per_run, avg_adjusted_cost)
+            review_flag = token_costs.assign_review_flag(adjusted_variance_pct)
+            notebook_measured_avg_cost_per_run = round(avg_adjusted_cost, 6)
+            estimate_vs_measured_variance = token_costs.format_variance_pct(adjusted_variance_pct)
+            source_measurement_link = "outputs/stage_token_counts.csv"
         else:
-            avg_input = avg_output = avg_cost = None
-            variance_pct = None
-            review_flag = token_costs.assign_review_flag(None)
+            avg_input = avg_output = avg_cost = avg_adjusted_cost = None
+            variance_pct = adjusted_variance_pct = None
+            review_flag = token_costs.REVIEW_FLAG_NOT_EXERCISED
+            notebook_measured_avg_cost_per_run = "Not exercised"
+            estimate_vs_measured_variance = "Not exercised"
+            source_measurement_link = "No representative call in sample"
 
         rows.append({
             "stage_id": stage.stage_id,
@@ -335,18 +373,52 @@ def write_token_math_measurement_summary(traces: List[dict], out_dir=config.OUTP
             "avg_measured_input_tokens": round(avg_input, 1) if avg_input is not None else "",
             "avg_measured_output_tokens": round(avg_output, 1) if avg_output is not None else "",
             "avg_measured_cost_per_run": round(avg_cost, 6) if avg_cost is not None else "",
+            "avg_adjusted_measured_cost_per_run": round(avg_adjusted_cost, 6) if avg_adjusted_cost is not None else "",
+            "notebook_measured_avg_cost_per_run": notebook_measured_avg_cost_per_run,
             "planned_input_tokens_per_run": stage.planned_input_tokens_per_run,
             "planned_output_tokens_per_run": stage.planned_output_tokens_per_run,
             "planned_cost_per_run": round(planned_cost_per_run, 6),
             "variance_pct": round(variance_pct, 2) if variance_pct is not None else "",
+            "estimate_vs_measured_variance": estimate_vs_measured_variance,
             "review_flag": review_flag,
+            "source_measurement_link": source_measurement_link,
             "source_output_file": "outputs/stage_token_counts.csv",
+            "exercised": "Yes" if stage_traces else "No",
         })
 
+    return rows
+
+
+def write_token_math_measurement_summary(traces: List[dict], out_dir=config.OUTPUT_DIR):
+    """One row per stage_id (all 37, exercised or not), formatted for direct
+    copy into the Token Math Template's measurement columns."""
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / "token_math_measurement_summary.csv"
+    rows = _build_measurement_rows(traces)
     with open(path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=MEASUREMENT_SUMMARY_FIELDNAMES)
         writer.writeheader()
-        writer.writerows(rows)
+        for row in rows:
+            writer.writerow({k: row[k] for k in MEASUREMENT_SUMMARY_FIELDNAMES})
+    return path
+
+
+def write_token_math_spreadsheet_export(traces: List[dict], out_dir=config.OUTPUT_DIR):
+    """Exactly one row per stage_id, limited to the copy-ready measured
+    columns that map directly onto the Token Math Template's measurement
+    columns (plus `exercised`) -- meant to be pasted straight back into the
+    spreadsheet. No production-scale projection columns: measured costs
+    here reflect this runnable sample's short synthetic prompts, not full
+    production context, so a projected annual figure would not improve
+    interpretation of this small sample."""
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / "token_math_spreadsheet_export.csv"
+    rows = _build_measurement_rows(traces)
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=SPREADSHEET_EXPORT_FIELDNAMES)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({k: row[k] for k in SPREADSHEET_EXPORT_FIELDNAMES})
     return path
 
 
@@ -358,6 +430,7 @@ def run_token_math_layer(preproc: Dict[str, Any]) -> Dict[str, Any]:
     stage_counts_path = write_stage_token_counts(traces)
     cost_summary_path = write_cost_summary(traces)
     measurement_summary_path = write_token_math_measurement_summary(traces)
+    spreadsheet_export_path = write_token_math_spreadsheet_export(traces)
 
     total_planned_cost = sum(t["planned_cost"] for t in traces)
     total_measured_cost = sum(t["measured_cost"] for t in traces)
@@ -376,4 +449,5 @@ def run_token_math_layer(preproc: Dict[str, Any]) -> Dict[str, Any]:
         "stage_token_counts_path": stage_counts_path,
         "cost_summary_path": cost_summary_path,
         "measurement_summary_path": measurement_summary_path,
+        "spreadsheet_export_path": spreadsheet_export_path,
     }

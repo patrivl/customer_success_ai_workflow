@@ -168,6 +168,7 @@ def main() -> int:
         token_math_summary["stage_token_counts_path"],
         token_math_summary["cost_summary_path"],
         token_math_summary["measurement_summary_path"],
+        token_math_summary["spreadsheet_export_path"],
     ):
         print(f"  wrote {path.relative_to(config.PROJECT_ROOT)}")
 

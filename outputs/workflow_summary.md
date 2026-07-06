@@ -1,6 +1,6 @@
 # Customer Success AI Workflow — Final Run Summary
 
-_Generated: 2026-07-06T16:20:30+00:00_
+_Generated: 2026-07-06T17:47:21+00:00_
 
 **No external AI APIs are called anywhere in this workflow.** Every stage below is executed by the deterministic simulated model layer (`src/model_simulator.py`), grounded in real joined account/ticket/check-in/output data.
 
@@ -41,6 +41,11 @@ Operating areas: Customer check-in & communication support, Deployment tracking 
 
 Detailed per-call and per-stage figures: `outputs/stage_token_counts.csv`, `outputs/cost_summary.csv`, `outputs/token_math_measurement_summary.csv`.
 
+## Measurement methodology & Token Math Template export
+`outputs/token_math_measurement_summary.csv` has one row for every one of the 37 `stage_id`s in `config/token_math_plan.csv` -- including any that had zero calls in a given run (marked `Not exercised in representative runs`). Its `notebook_measured_avg_cost_per_run` column is the average cost per call **including** each stage's planned retry rate and QA/eval multiplier (the realistic per-run cost), and `estimate_vs_measured_variance` is the percent difference between that figure and the planned cost per run, using the same bands as `review_flag` (±20% = OK, +20/+50% = Review: above estimate, >+50% = High variance: revise assumptions, -20/-50% = Review: overestimated, <-50% = High variance: estimate too conservative). `outputs/token_math_spreadsheet_export.csv` is the same data narrowed to exactly the Token Math Template's measurement columns (`stage_id`, `notebook_measured_avg_cost_per_run`, `estimate_vs_measured_variance`, `source_measurement_link`, `review_flag`, plus `exercised`) -- one row per stage, ready to paste back into the spreadsheet.
+
+Measured costs are based on the runnable synthetic dataset and therefore reflect short sample prompts, not full production context. The Token Math Template remains the conservative production budget. The measured columns verify that the workflow logs tokens, costs, and variance correctly; they are not intended to replace the production-scale budget estimate.
+
 ## Quality review summary
 - Quality flags (failed review) across the portfolio: 8
 - Full detail: `outputs/quality_review_results.csv`
@@ -66,6 +71,7 @@ Detailed per-call and per-stage figures: `outputs/stage_token_counts.csv`, `outp
 - `outputs/stage_token_counts.csv`
 - `outputs/cost_summary.csv`
 - `outputs/token_math_measurement_summary.csv`
+- `outputs/token_math_spreadsheet_export.csv`
 - `outputs/quality_review_results.csv`
 - `outputs/routing_decisions.csv`
 - `outputs/intervention_plans.csv`

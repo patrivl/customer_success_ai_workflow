@@ -123,7 +123,8 @@ outputs/                      # THE single final output directory (everything be
   workflow_summary.md         # top-level human-readable run summary
   stage_token_counts.csv      # one row per simulated call: planned vs. measured tokens
   cost_summary.csv            # one row per simulated call: planned/measured/adjusted cost + variance
-  token_math_measurement_summary.csv  # one row per stage_id, spreadsheet-ready
+  token_math_measurement_summary.csv  # one row per stage_id (all 37), spreadsheet-ready
+  token_math_spreadsheet_export.csv   # 5 copy-back columns + optional 'exercised' flag
   quality_review_results.csv  # every quality_review_prompt call, portfolio-wide
   routing_decisions.csv       # every routing_prompt / complex_escalation_prompt call, portfolio-wide
   intervention_plans.csv      # every intervention_planning_prompt call, portfolio-wide
@@ -351,18 +352,59 @@ a lightweight `context_indexing` pseudo-template instead of a JSON verdict.
   measured input/output tokens.
 - `cost_summary.csv` -- one row per simulated call: planned/measured/
   adjusted cost, retry_rate, qa_eval_multiplier, variance_pct, review_flag.
-- `token_math_measurement_summary.csv` -- one row per `stage_id`,
-  formatted for direct copy into the planning spreadsheet's measurement
-  columns (`num_calls`, average measured tokens/cost, planned tokens/cost,
-  `variance_pct`, `review_flag`).
+- `token_math_measurement_summary.csv` -- one row for **every** `stage_id`
+  in `config/token_math_plan.csv` (all 37, whether or not that stage had a
+  call in this run), formatted for direct copy into the Token Math
+  Template's measurement columns. See "Spreadsheet export" below for the
+  exact column meanings.
+- `token_math_spreadsheet_export.csv` -- the same one-row-per-`stage_id`
+  data narrowed to just the 5 spreadsheet copy-back columns (plus an
+  optional `exercised` flag). See "Spreadsheet export" below.
 
-**Expected variance on this repo's synthetic sample data:** `token_math_plan.csv`'s
-planned token counts assume a full production portfolio's richer prompts;
-this repo's 7 synthetic CSVs are a small illustrative sample, so measured
-prompts are shorter and every stage currently reports
-`High variance: estimate too conservative`. That's the correct, honest
-signal this layer is built to produce -- on a real, larger portfolio the
-same wiring will show whichever stages are actually over/under-planned.
+### Spreadsheet export: populating the Token Math Template's measurement columns
+
+`token_math_measurement_summary.csv` and `token_math_spreadsheet_export.csv`
+are both built by `src/token_measurement.py::_build_measurement_rows()` (one
+function, so the two files can never drift apart) and map onto the Token
+Math Template's measurement columns as follows:
+
+| Spreadsheet column | CSV column | How it's computed |
+|---|---|---|
+| Notebook measured avg cost/run | `notebook_measured_avg_cost_per_run` | Average **adjusted** measured cost per call for that `stage_id` (`adjusted_measured_cost` = measured cost × (1 + retry_rate) × qa_eval_multiplier) -- the realistic per-run cost, not just the raw token cost. |
+| Estimate vs measured variance | `estimate_vs_measured_variance` | `(notebook_measured_avg_cost_per_run − planned_cost_per_run) / planned_cost_per_run`, formatted as a signed percentage string (e.g. `-59.6%`, `+18.7%`). |
+| Source / measurement link | `source_measurement_link` | `outputs/stage_token_counts.csv` for any stage with at least one call in this run (aggregated rows point at the per-call detail file); `No representative call in sample` if the stage had zero calls. |
+| Review flag | `review_flag` | The variance bands below, applied to `estimate_vs_measured_variance`'s underlying number; `Not exercised in representative runs` if the stage had zero calls. |
+
+Supporting (non-spreadsheet) columns on `token_math_measurement_summary.csv`
+give the unadjusted view for context: `avg_measured_cost_per_run` (no
+retry/QA overhead), `avg_adjusted_measured_cost_per_run` (same value as
+`notebook_measured_avg_cost_per_run`, named literally), `variance_pct`
+(numeric, unadjusted-basis variance), plus `avg_measured_input_tokens`,
+`avg_measured_output_tokens`, the stage's planned tokens/cost, and
+`source_output_file`.
+
+**Review-flag bands** (`src/token_costs.assign_review_flag`): within
+±20% variance = `OK`; +20% to +50% = `Review: above estimate`; above +50%
+= `High variance: revise assumptions`; -20% to -50% =
+`Review: overestimated`; below -50% =
+`High variance: estimate too conservative`; a `stage_id` with zero calls in
+this run = `Not exercised in representative runs`.
+
+**`outputs/token_math_spreadsheet_export.csv`** narrows
+`token_math_measurement_summary.csv` down to exactly the 5 copy-ready
+columns above, plus one optional `exercised` (`Yes`/`No`) flag for whether
+this run measured at least one call for that `stage_id` -- one row per
+`stage_id`, ready to paste straight back into the spreadsheet. It
+intentionally does **not** include any production-scaled annual
+projection (no `planned_annual_cost`, no annualized variance): projecting
+this small sample up to production scale didn't improve its
+interpretation, so the export stays focused on what was actually measured.
+
+Measured costs are based on the runnable synthetic dataset and therefore
+reflect short sample prompts, not full production context. The Token Math
+Template remains the conservative production budget. The measured columns
+verify that the workflow logs tokens, costs, and variance correctly; they
+are not intended to replace the production-scale budget estimate.
 
 ## Final output (`outputs/`) and `src/final_report.py`
 

@@ -200,7 +200,7 @@ def test_simulate_model_call_produces_full_trace():
 
 def test_token_measurement_runs_all_stages_and_writes_outputs(tmp_path=None):
     from src import config as cfg
-    from src import preprocessing, token_measurement
+    from src import preprocessing, token_costs, token_measurement
 
     tables = load_all_tables()
     preproc = preprocessing.run_preprocessing(tables)
@@ -219,6 +219,7 @@ def test_token_measurement_runs_all_stages_and_writes_outputs(tmp_path=None):
         summary["stage_token_counts_path"],
         summary["cost_summary_path"],
         summary["measurement_summary_path"],
+        summary["spreadsheet_export_path"],
     ):
         assert path.exists()
 
@@ -226,6 +227,51 @@ def test_token_measurement_runs_all_stages_and_writes_outputs(tmp_path=None):
         rows = list(csv.DictReader(f))
     assert len(rows) == 37
     assert {r["stage_id"] for r in rows} == set(STAGE_RUNTIME_MAP.keys())
+    # The Token Math Template's measurement columns must be present (exact
+    # snake_case names), and every row must have a real (non-empty) value
+    # since this dataset's selectors return non-empty populations for all
+    # 37 stages -- i.e. nothing here should read "Not exercised".
+    required_columns = {
+        "stage_id", "workflow_component", "operating_area", "trigger_schedule", "model",
+        "num_calls", "notebook_measured_avg_cost_per_run", "estimate_vs_measured_variance",
+        "source_measurement_link", "review_flag",
+    }
+    assert required_columns.issubset(rows[0].keys())
+    for r in rows:
+        assert r["num_calls"] != "0", f"{r['stage_id']} has zero calls in this run"
+        assert r["notebook_measured_avg_cost_per_run"] != "Not exercised"
+        assert r["estimate_vs_measured_variance"] != "Not exercised"
+        assert r["review_flag"] != "Not exercised in representative runs"
+        assert r["source_measurement_link"] == "outputs/stage_token_counts.csv"
+
+    with open(cfg.OUTPUT_DIR / "token_math_spreadsheet_export.csv") as f:
+        export_rows = list(csv.DictReader(f))
+    assert len(export_rows) == 37
+    assert {r["stage_id"] for r in export_rows} == set(STAGE_RUNTIME_MAP.keys())
+
+    # The spreadsheet export must contain only the copy-ready measured
+    # columns (plus the optional 'exercised' flag) -- no production-scaled
+    # projection columns, since they don't improve interpretation of this
+    # small synthetic sample.
+    copy_back_columns = {
+        "stage_id", "notebook_measured_avg_cost_per_run", "estimate_vs_measured_variance",
+        "source_measurement_link", "review_flag",
+    }
+    assert copy_back_columns.issubset(export_rows[0].keys())
+    assert set(export_rows[0].keys()) == copy_back_columns | {"exercised"}
+
+    projection_columns = {
+        "planned_annual_cost", "scaled_measured_annual_cost",
+        "scaled_vs_planned_annual_variance", "projection_review_flag", "projection_note",
+    }
+    assert not (projection_columns & set(export_rows[0].keys())), (
+        "token_math_spreadsheet_export.csv should not contain production-scaled projection columns"
+    )
+
+    for r in export_rows:
+        assert r["exercised"] == "Yes"  # this dataset exercises every stage
+        assert r["notebook_measured_avg_cost_per_run"] != "Not exercised"
+        assert r["review_flag"] != token_costs.REVIEW_FLAG_NOT_EXERCISED
 
 
 def test_final_report_writes_representative_runs_and_rollup_csvs():
@@ -277,6 +323,15 @@ def test_final_report_writes_representative_runs_and_rollup_csvs():
     ):
         assert field in summary, f"workflow summary missing field {field}"
 
+    # Production-scaled annual-cost projection fields were removed -- they
+    # didn't improve interpretation of this small synthetic sample.
+    for field in (
+        "full_plan_annual_cost", "exercised_plan_annual_cost", "unexercised_plan_annual_cost",
+        "exercised_stage_count", "unexercised_stage_count", "scaled_measured_annual_cost",
+        "scaled_vs_exercised_plan_variance",
+    ):
+        assert field not in summary, f"workflow summary should not contain removed projection field {field}"
+
 
 def test_run_workflow_end_to_end_creates_all_final_outputs():
     """The real acceptance test: `python3 run_workflow.py` end-to-end,
@@ -300,9 +355,26 @@ def test_run_workflow_end_to_end_creates_all_final_outputs():
 
     for filename in (
         "stage_token_counts.csv", "cost_summary.csv", "token_math_measurement_summary.csv",
+        "token_math_spreadsheet_export.csv",
         "quality_review_results.csv", "routing_decisions.csv", "intervention_plans.csv",
     ):
         assert (out / filename).exists(), f"missing outputs/{filename}"
+
+    with open(out / "token_math_spreadsheet_export.csv") as f:
+        export_rows = list(csv.DictReader(f))
+    assert len(export_rows) == 37
+    for col in (
+        "stage_id", "notebook_measured_avg_cost_per_run", "estimate_vs_measured_variance",
+        "source_measurement_link", "review_flag",
+    ):
+        assert col in export_rows[0], f"token_math_spreadsheet_export.csv missing column {col}"
+    # No production-scaled projection columns -- removed as not useful for
+    # interpreting this small synthetic sample.
+    for col in (
+        "planned_annual_cost", "scaled_measured_annual_cost",
+        "scaled_vs_planned_annual_variance", "projection_review_flag", "projection_note",
+    ):
+        assert col not in export_rows[0], f"token_math_spreadsheet_export.csv should not have column {col}"
 
     assert not (proj_root / "output").exists(), "stale top-level output/ directory should no longer be written"
 

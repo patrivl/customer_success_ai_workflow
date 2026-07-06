@@ -19,6 +19,11 @@ REVIEW_FLAG_HIGH_ABOVE = "High variance: revise assumptions"
 REVIEW_FLAG_OVERESTIMATED = "Review: overestimated"
 REVIEW_FLAG_HIGH_BELOW = "High variance: estimate too conservative"
 REVIEW_FLAG_PENDING = "Pending measurement"
+# Used specifically by the stage-level token_math_measurement_summary.csv
+# aggregation (src/token_measurement.py) when a stage_id had zero calls in
+# this run -- distinct from REVIEW_FLAG_PENDING, which covers a per-call
+# variance that couldn't be computed (e.g. zero planned cost).
+REVIEW_FLAG_NOT_EXERCISED = "Not exercised in representative runs"
 
 
 def estimate_tokens(text: str) -> int:
@@ -80,3 +85,14 @@ def assign_review_flag(variance_pct: float | None) -> str:
     if variance_pct >= -50:
         return REVIEW_FLAG_OVERESTIMATED
     return REVIEW_FLAG_HIGH_BELOW
+
+
+def format_variance_pct(variance_pct: float | None) -> str:
+    """Formats a variance percentage as a spreadsheet-ready signed string,
+    e.g. "+18.7%" or "-42.3%". Returns "N/A" for missing/non-finite values
+    (callers with a genuinely "not exercised" stage should use the literal
+    "Not exercised" string instead, not this function)."""
+    if variance_pct is None or variance_pct in (float("inf"), float("-inf")):
+        return "N/A"
+    sign = "+" if variance_pct >= 0 else ""
+    return f"{sign}{variance_pct:.1f}%"
