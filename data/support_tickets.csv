@@ -1,0 +1,13 @@
+ticket_id,account_id,date_received,issue_summary,severity,customer_sentiment,frontline_notes,current_status
+T001,A008,2026-04-30,Executive sponsor says implementation is blocked by SSO failures,High,frustrated,Support confirmed recurring SSO error for admin users,open
+T002,A002,2026-04-29,Customer asks why integration sync has failed three times this week,High,concerned,Frontline team has logs but no root cause yet,open
+T003,A014,2026-04-28,Admin reports mobile users cannot complete onboarding steps,Medium,negative,Bug may affect renewals; renewal is soon,open
+T004,A010,2026-04-28,Power user wants help interpreting usage dashboard drop,Medium,neutral,Usage drop confirmed in reporting module,open
+T005,A012,2026-04-27,Customer opened several how-to questions about advanced permissions,Low,neutral,No outage; mostly enablement issue,new
+T006,A017,2026-04-27,Customer says team has stopped using the platform and needs a reset,High,negative,No recent champion identified,open
+T007,A005,2026-04-26,Executive sponsor requests renewal usage summary by Friday,High,concerned,Renewal in less than 45 days,new
+T008,A004,2026-04-26,New admin asks for onboarding materials after former champion left,Medium,neutral,Ownership transition risk,new
+T009,A015,2026-04-25,Platform team asks for update on integration roadmap,Medium,neutral,Strategic account; roadmap dependency,open
+T010,A001,2026-04-24,Customer asks why dashboard exports are missing recent data,Medium,frustrated,Reporting adoption already declining,open
+T011,A006,2026-04-24,Customer asks about premium automation feature limits,Low,positive,Expansion signal,new
+T012,A003,2026-04-23,Analytics team asks for best-practice setup for new department,Low,positive,Expansion opportunity,new

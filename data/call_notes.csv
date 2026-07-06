@@ -1,0 +1,13 @@
+account_id,call_date,participants,summary,customer_goal,risk_or_blocker,follow_up_items
+A008,2026-04-17,"VP Ops, Admin Lead",Implementation progress review,Resolve SSO and complete rollout,SSO blockers delaying launch,CSM to coordinate technical escalation
+A005,2026-04-23,"Exec sponsor, RevOps lead",Renewal check-in,Demonstrate measurable usage value,Sponsor wants concise ROI summary,Prepare renewal value snapshot
+A014,2026-04-16,"Admin, Regional manager",Mobile adoption check,Increase field-team onboarding,Mobile onboarding friction,Send mobile onboarding plan
+A017,2026-04-09,Operations manager,Reactivation call,Rebuild use case and assign owner,No clear champion,Identify new sponsor and propose reset
+A003,2026-04-25,Analytics director,Expansion discussion,Roll platform out to analytics team,Need best-practice configuration,Share rollout plan
+A006,2026-04-22,Product operations lead,Automation review,Assess premium automation use case,Budget approval needed,Send premium automation options
+A010,2026-04-24,Department admin,Usage dashboard review,Understand drop in reporting usage,Report exports not trusted,Investigate data freshness issue
+A012,2026-04-23,Support manager,Permissions troubleshooting,Reduce admin confusion,Permission model unclear,Provide permissions guide
+A015,2026-04-25,Platform director,Roadmap alignment,Confirm integrations roadmap,Roadmap dependency for next rollout,Escalate roadmap question to product
+A001,2026-04-21,Operations lead,Reporting workflow review,Restore reporting adoption,Missing dashboard exports,Investigate reporting data issue
+A002,2026-04-18,IT manager,Integration stability call,Stabilize data sync,Repeated sync failures,Escalate integration logs
+A018,2026-04-26,Platform team,Expansion exploration,Assess multi-team rollout,Need governance plan,Draft phased rollout approach

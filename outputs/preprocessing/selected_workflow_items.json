@@ -1,0 +1,566 @@
+{
+  "daily_account_review": [
+    {
+      "account_id": "A001",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A002",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A003",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A004",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A005",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A006",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A007",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A008",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A009",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A010",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A011",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A012",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A013",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A014",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A015",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A016",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A017",
+      "reason": "part of daily portfolio review cadence"
+    },
+    {
+      "account_id": "A018",
+      "reason": "part of daily portfolio review cadence"
+    }
+  ],
+  "second_pass_validation": [
+    {
+      "account_id": "A008",
+      "reason": "risk_score=222.5 / opportunity_score=25.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A014",
+      "reason": "risk_score=182.5 / opportunity_score=5.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A017",
+      "reason": "risk_score=170.0 / opportunity_score=5.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A004",
+      "reason": "risk_score=143.0 / opportunity_score=0.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A002",
+      "reason": "risk_score=135.0 / opportunity_score=17.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A005",
+      "reason": "risk_score=131.25 / opportunity_score=17.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A010",
+      "reason": "risk_score=111.0 / opportunity_score=17.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A012",
+      "reason": "risk_score=106.0 / opportunity_score=27.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A001",
+      "reason": "risk_score=102.0 / opportunity_score=5.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A018",
+      "reason": "risk_score=28.0 / opportunity_score=65.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A003",
+      "reason": "risk_score=24.0 / opportunity_score=63.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A006",
+      "reason": "risk_score=32.0 / opportunity_score=63.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A015",
+      "reason": "risk_score=47.0 / opportunity_score=40.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A016",
+      "reason": "risk_score=47.0 / opportunity_score=12.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A009",
+      "reason": "risk_score=45.0 / opportunity_score=0.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A011",
+      "reason": "risk_score=18.0 / opportunity_score=40.0 clears second-pass threshold"
+    },
+    {
+      "account_id": "A013",
+      "reason": "risk_score=9.0 / opportunity_score=27.0 clears second-pass threshold"
+    }
+  ],
+  "flagged_account_summary": [
+    {
+      "account_id": "A008",
+      "reason": "ranked #1 of 18 by priority_score (179.5)"
+    },
+    {
+      "account_id": "A014",
+      "reason": "ranked #2 of 18 by priority_score (153.0)"
+    },
+    {
+      "account_id": "A017",
+      "reason": "ranked #3 of 18 by priority_score (131.0)"
+    },
+    {
+      "account_id": "A005",
+      "reason": "ranked #4 of 18 by priority_score (126.55)"
+    },
+    {
+      "account_id": "A002",
+      "reason": "ranked #5 of 18 by priority_score (110.8)"
+    },
+    {
+      "account_id": "A004",
+      "reason": "ranked #6 of 18 by priority_score (96.3)"
+    },
+    {
+      "account_id": "A012",
+      "reason": "ranked #7 of 18 by priority_score (86.4)"
+    },
+    {
+      "account_id": "A010",
+      "reason": "ranked #8 of 18 by priority_score (83.4)"
+    },
+    {
+      "account_id": "A001",
+      "reason": "ranked #9 of 18 by priority_score (73.2)"
+    },
+    {
+      "account_id": "A015",
+      "reason": "ranked #10 of 18 by priority_score (64.2)"
+    },
+    {
+      "account_id": "A018",
+      "reason": "ranked #11 of 18 by priority_score (55.8)"
+    },
+    {
+      "account_id": "A003",
+      "reason": "ranked #12 of 18 by priority_score (54.6)"
+    },
+    {
+      "account_id": "A006",
+      "reason": "ranked #13 of 18 by priority_score (49.4)"
+    },
+    {
+      "account_id": "A016",
+      "reason": "ranked #14 of 18 by priority_score (33.0)"
+    },
+    {
+      "account_id": "A011",
+      "reason": "ranked #15 of 18 by priority_score (29.3)"
+    },
+    {
+      "account_id": "A009",
+      "reason": "ranked #16 of 18 by priority_score (27.0)"
+    },
+    {
+      "account_id": "A007",
+      "reason": "ranked #17 of 18 by priority_score (24.6)"
+    },
+    {
+      "account_id": "A013",
+      "reason": "ranked #18 of 18 by priority_score (16.2)"
+    }
+  ],
+  "csm_alerts": [
+    {
+      "account_id": "A002",
+      "reason": "escalation_score=50.0 crosses alert threshold (40)"
+    },
+    {
+      "account_id": "A004",
+      "reason": "health score declined by 19 points"
+    },
+    {
+      "account_id": "A005",
+      "reason": "renewal within 45 days and negative sentiment; escalation_score=60.0 crosses alert threshold (40)"
+    },
+    {
+      "account_id": "A008",
+      "reason": "health score declined by 18 points; renewal within 45 days and negative sentiment; escalation_score=70.0 crosses alert threshold (40)"
+    },
+    {
+      "account_id": "A014",
+      "reason": "health score declined by 19 points; renewal within 45 days and negative sentiment"
+    },
+    {
+      "account_id": "A017",
+      "reason": "health score declined by 18 points; escalation_score=50.0 crosses alert threshold (40)"
+    }
+  ],
+  "unresolved_items": [
+    {
+      "account_id": "A001",
+      "reason": "open follow-up commitment: Investigate reporting data issue; open ticket(s): T010"
+    },
+    {
+      "account_id": "A002",
+      "reason": "open follow-up commitment: Escalate integration logs; open ticket(s): T002"
+    },
+    {
+      "account_id": "A003",
+      "reason": "open follow-up commitment: Share rollout plan; open ticket(s): T012"
+    },
+    {
+      "account_id": "A004",
+      "reason": "open ticket(s): T008"
+    },
+    {
+      "account_id": "A005",
+      "reason": "open follow-up commitment: Prepare renewal value snapshot; open ticket(s): T007"
+    },
+    {
+      "account_id": "A006",
+      "reason": "open follow-up commitment: Send premium automation options; open ticket(s): T011"
+    },
+    {
+      "account_id": "A008",
+      "reason": "open follow-up commitment: CSM to coordinate technical escalation; open ticket(s): T001"
+    },
+    {
+      "account_id": "A010",
+      "reason": "open follow-up commitment: Investigate data freshness issue; open ticket(s): T004"
+    },
+    {
+      "account_id": "A012",
+      "reason": "open follow-up commitment: Provide permissions guide; open ticket(s): T005"
+    },
+    {
+      "account_id": "A014",
+      "reason": "open follow-up commitment: Send mobile onboarding plan; open ticket(s): T003"
+    },
+    {
+      "account_id": "A015",
+      "reason": "open follow-up commitment: Escalate roadmap question to product; open ticket(s): T009"
+    },
+    {
+      "account_id": "A017",
+      "reason": "open follow-up commitment: Identify new sponsor and propose reset; open ticket(s): T006"
+    },
+    {
+      "account_id": "A018",
+      "reason": "open follow-up commitment: Draft phased rollout approach"
+    }
+  ],
+  "inbound_issues": [
+    {
+      "ticket_id": "T001",
+      "account_id": "A008",
+      "reason": "high severity inbound ticket, sentiment=frustrated"
+    },
+    {
+      "ticket_id": "T002",
+      "account_id": "A002",
+      "reason": "high severity inbound ticket, sentiment=concerned"
+    },
+    {
+      "ticket_id": "T003",
+      "account_id": "A014",
+      "reason": "medium severity inbound ticket, sentiment=negative"
+    },
+    {
+      "ticket_id": "T004",
+      "account_id": "A010",
+      "reason": "medium severity inbound ticket, sentiment=neutral"
+    },
+    {
+      "ticket_id": "T005",
+      "account_id": "A012",
+      "reason": "low severity inbound ticket, sentiment=neutral"
+    },
+    {
+      "ticket_id": "T006",
+      "account_id": "A017",
+      "reason": "high severity inbound ticket, sentiment=negative"
+    },
+    {
+      "ticket_id": "T007",
+      "account_id": "A005",
+      "reason": "high severity inbound ticket, sentiment=concerned"
+    },
+    {
+      "ticket_id": "T008",
+      "account_id": "A004",
+      "reason": "medium severity inbound ticket, sentiment=neutral"
+    },
+    {
+      "ticket_id": "T009",
+      "account_id": "A015",
+      "reason": "medium severity inbound ticket, sentiment=neutral"
+    },
+    {
+      "ticket_id": "T010",
+      "account_id": "A001",
+      "reason": "medium severity inbound ticket, sentiment=frustrated"
+    },
+    {
+      "ticket_id": "T011",
+      "account_id": "A006",
+      "reason": "low severity inbound ticket, sentiment=positive"
+    },
+    {
+      "ticket_id": "T012",
+      "account_id": "A003",
+      "reason": "low severity inbound ticket, sentiment=positive"
+    }
+  ],
+  "issue_pattern_review": [
+    {
+      "theme": "integration_sync",
+      "ticket_ids": [
+        "T002",
+        "T009"
+      ],
+      "reason": "2 ticket(s) share the 'integration_sync' theme, indicating a possible broader pattern"
+    },
+    {
+      "theme": "onboarding_mobile",
+      "ticket_ids": [
+        "T003",
+        "T008"
+      ],
+      "reason": "2 ticket(s) share the 'onboarding_mobile' theme, indicating a possible broader pattern"
+    },
+    {
+      "theme": "reporting_dashboard",
+      "ticket_ids": [
+        "T004",
+        "T010"
+      ],
+      "reason": "2 ticket(s) share the 'reporting_dashboard' theme, indicating a possible broader pattern"
+    }
+  ],
+  "scheduled_checkins": [
+    {
+      "checkin_id": "C001",
+      "account_id": "A008",
+      "reason": "high priority 'Implementation recovery' check-in scheduled for 2026-05-04"
+    },
+    {
+      "checkin_id": "C002",
+      "account_id": "A005",
+      "reason": "high priority 'Renewal value review' check-in scheduled for 2026-05-05"
+    },
+    {
+      "checkin_id": "C003",
+      "account_id": "A014",
+      "reason": "high priority 'Mobile adoption plan' check-in scheduled for 2026-05-05"
+    },
+    {
+      "checkin_id": "C004",
+      "account_id": "A003",
+      "reason": "medium priority 'Analytics expansion planning' check-in scheduled for 2026-05-06"
+    },
+    {
+      "checkin_id": "C005",
+      "account_id": "A006",
+      "reason": "medium priority 'Premium automation exploration' check-in scheduled for 2026-05-06"
+    },
+    {
+      "checkin_id": "C006",
+      "account_id": "A010",
+      "reason": "medium priority 'Usage dashboard recovery' check-in scheduled for 2026-05-07"
+    },
+    {
+      "checkin_id": "C007",
+      "account_id": "A017",
+      "reason": "high priority 'Account reset' check-in scheduled for 2026-05-07"
+    },
+    {
+      "checkin_id": "C008",
+      "account_id": "A015",
+      "reason": "medium priority 'Integration roadmap review' check-in scheduled for 2026-05-08"
+    },
+    {
+      "checkin_id": "C009",
+      "account_id": "A012",
+      "reason": "low priority 'Permissions enablement' check-in scheduled for 2026-05-08"
+    },
+    {
+      "checkin_id": "C010",
+      "account_id": "A018",
+      "reason": "medium priority 'Expansion rollout design' check-in scheduled for 2026-05-11"
+    },
+    {
+      "checkin_id": "C011",
+      "account_id": "A001",
+      "reason": "medium priority 'Reporting recovery' check-in scheduled for 2026-05-11"
+    },
+    {
+      "checkin_id": "C012",
+      "account_id": "A002",
+      "reason": "high priority 'Integration stabilization' check-in scheduled for 2026-05-12"
+    }
+  ],
+  "quality_review_outputs": [
+    {
+      "output_id": "O001",
+      "account_id": "A008",
+      "reason": "assigned 4 quality standard(s) for review"
+    },
+    {
+      "output_id": "O002",
+      "account_id": "A005",
+      "reason": "assigned 3 quality standard(s) for review"
+    },
+    {
+      "output_id": "O003",
+      "account_id": "A014",
+      "reason": "assigned 3 quality standard(s) for review"
+    },
+    {
+      "output_id": "O004",
+      "account_id": "A017",
+      "reason": "assigned 3 quality standard(s) for review"
+    },
+    {
+      "output_id": "O005",
+      "account_id": "A003",
+      "reason": "assigned 2 quality standard(s) for review"
+    },
+    {
+      "output_id": "O006",
+      "account_id": "A010",
+      "reason": "assigned 3 quality standard(s) for review"
+    },
+    {
+      "output_id": "O007",
+      "account_id": "A012",
+      "reason": "assigned 2 quality standard(s) for review"
+    },
+    {
+      "output_id": "O008",
+      "account_id": "A015",
+      "reason": "assigned 3 quality standard(s) for review"
+    }
+  ],
+  "failed_or_weak_outputs": [
+    {
+      "output_id": "O001",
+      "account_id": "A008",
+      "reason": "draft is short and/or uses vague filler phrasing (preliminary check)"
+    },
+    {
+      "output_id": "O002",
+      "account_id": "A005",
+      "reason": "draft is short and/or uses vague filler phrasing (preliminary check)"
+    },
+    {
+      "output_id": "O004",
+      "account_id": "A017",
+      "reason": "draft is short and/or uses vague filler phrasing (preliminary check)"
+    },
+    {
+      "output_id": "O007",
+      "account_id": "A012",
+      "reason": "draft is short and/or uses vague filler phrasing (preliminary check)"
+    }
+  ],
+  "intervention_candidates": [
+    {
+      "account_id": "A001",
+      "reason": "usage is declining; NPS is low (6); negative/concerned sentiment on an open ticket"
+    },
+    {
+      "account_id": "A002",
+      "reason": "usage is declining; NPS is low (4); negative/concerned sentiment on an open ticket"
+    },
+    {
+      "account_id": "A004",
+      "reason": "usage is declining; NPS is low (3); severe health decline (-19 points)"
+    },
+    {
+      "account_id": "A005",
+      "reason": "usage is declining; NPS is low (5); negative/concerned sentiment on an open ticket"
+    },
+    {
+      "account_id": "A008",
+      "reason": "usage is declining; NPS is low (2); negative/concerned sentiment on an open ticket; severe health decline (-18 points)"
+    },
+    {
+      "account_id": "A010",
+      "reason": "usage is declining; NPS is low (5)"
+    },
+    {
+      "account_id": "A012",
+      "reason": "usage is declining; NPS is low (4)"
+    },
+    {
+      "account_id": "A014",
+      "reason": "usage is declining; NPS is low (3); negative/concerned sentiment on an open ticket; severe health decline (-19 points)"
+    },
+    {
+      "account_id": "A017",
+      "reason": "usage is declining; NPS is low (2); negative/concerned sentiment on an open ticket; severe health decline (-18 points)"
+    }
+  ],
+  "complex_escalation_candidates": [
+    {
+      "account_id": "A008",
+      "reason": "escalation_score=70.0 (top 3 under daily cap)"
+    },
+    {
+      "account_id": "A005",
+      "reason": "escalation_score=60.0 (top 3 under daily cap)"
+    },
+    {
+      "account_id": "A002",
+      "reason": "escalation_score=50.0 (top 3 under daily cap)"
+    }
+  ]
+}

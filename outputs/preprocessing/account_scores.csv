@@ -1,0 +1,19 @@
+account_id,account_name,segment,csm_owner,risk_score,opportunity_score,priority_score,escalation_score,health_score_delta,renewal_days_remaining,health_decline_flag,severe_decline_flag,renewal_soon_flag,high_ticket_volume_flag,negative_sentiment_flag,low_nps_flag,declining_usage_flag,expansion_opportunity_flag,unresolved_issue_flag,checkin_due_flag,quality_review_needed_flag,intervention_candidate_flag,high_value_account_flag
+A008,Harbor Insurance,Enterprise,Morgan Lee,222.5,25.0,179.5,70.0,-18.0,42,True,True,True,True,True,True,True,False,True,True,True,True,True
+A014,Northstar Travel,Mid-Market,Morgan Lee,182.5,5.0,153.0,25.0,-19.0,19,True,True,True,False,True,True,True,False,True,True,True,True,False
+A017,Quartz Media,SMB,Morgan Lee,170.0,5.0,131.0,50.0,-18.0,82,True,True,False,True,True,True,True,False,True,True,True,True,False
+A005,Evergreen Finance,Enterprise,Morgan Lee,131.25,17.0,126.55,60.0,-9.0,27,True,False,True,False,True,True,True,True,True,True,True,True,False
+A002,BrightPath Logistics,Enterprise,Taylor Chen,135.0,17.0,110.8,50.0,-8.0,60,True,False,False,True,True,True,True,True,True,True,False,True,False
+A004,DeltaEd Services,SMB,Riley Patel,143.0,0.0,96.3,0.0,-19.0,111,True,True,False,True,False,True,True,False,True,False,False,True,False
+A012,Lumen Energy,Enterprise,Riley Patel,106.0,27.0,86.4,10.0,3.0,96,False,False,False,True,False,True,True,True,True,True,True,True,True
+A010,Juniper Manufacturing,Mid-Market,Taylor Chen,111.0,17.0,83.4,0.0,-5.0,62,True,False,False,True,False,True,True,True,True,True,True,True,False
+A001,Acme Retail,Mid-Market,Taylor Chen,102.0,5.0,73.2,25.0,-9.0,75,True,False,False,False,True,True,True,False,True,True,False,True,False
+A015,Orchid Telecom,Enterprise,Riley Patel,47.0,40.0,64.2,10.0,2.0,184,False,False,False,False,False,True,False,True,True,True,True,False,True
+A018,Redwood Cloud,Enterprise,Riley Patel,28.0,65.0,55.8,0.0,7.0,182,False,False,False,False,False,False,False,True,True,True,False,False,True
+A003,Cobalt Health,Enterprise,Morgan Lee,24.0,63.0,54.6,0.0,3.0,214,False,False,False,False,False,False,False,True,True,True,True,False,True
+A006,Futura Robotics,Mid-Market,Riley Patel,32.0,63.0,49.4,0.0,5.0,152,False,False,False,False,False,False,False,True,True,True,False,False,False
+A016,Pioneer Biotech,Mid-Market,Taylor Chen,47.0,12.0,33.0,0.0,2.0,48,False,False,False,False,False,False,True,True,False,False,False,False,False
+A011,Keystone Legal,Mid-Market,Morgan Lee,18.0,40.0,29.3,0.0,4.0,228,False,False,False,False,False,False,False,True,False,False,False,False,False
+A009,Indigo Studios,SMB,Riley Patel,45.0,0.0,27.0,0.0,-1.0,154,True,False,False,False,False,True,False,False,False,False,False,False,False
+A007,GreenLeaf Foods,SMB,Taylor Chen,28.0,12.0,24.6,0.0,-2.0,198,True,False,False,False,False,False,False,True,False,False,False,False,False
+A013,Mosaic Labs,SMB,Taylor Chen,9.0,27.0,16.2,0.0,2.0,132,False,False,False,False,False,False,False,True,False,False,False,False,False

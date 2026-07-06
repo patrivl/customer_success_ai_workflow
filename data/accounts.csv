@@ -1,0 +1,19 @@
+account_id,account_name,segment,contract_value,renewal_date,csm_owner,current_health_score,previous_health_score,product_usage_trend,support_ticket_count_30d,nps_score,expansion_signal,last_contact_date,notes
+A001,Acme Retail,Mid-Market,42000,2026-07-15,Taylor Chen,72,81,declining,4,6,low,2026-04-21,At-risk renewal; adoption drop in reporting module
+A002,BrightPath Logistics,Enterprise,128000,2026-06-30,Taylor Chen,61,69,flat,7,4,medium,2026-04-18,Multiple unresolved integrations tickets
+A003,Cobalt Health,Enterprise,210000,2026-12-01,Morgan Lee,88,85,growing,1,9,high,2026-04-25,Expansion interest from analytics team
+A004,DeltaEd Services,SMB,18000,2026-08-20,Riley Patel,54,73,declining,5,3,low,2026-04-10,Champion left company; low login frequency
+A005,Evergreen Finance,Enterprise,175000,2026-05-28,Morgan Lee,67,76,declining,3,5,medium,2026-04-23,Renewal soon; exec sponsor requested usage review
+A006,Futura Robotics,Mid-Market,65000,2026-09-30,Riley Patel,82,77,growing,2,8,high,2026-04-22,Strong adoption; potential premium-feature expansion
+A007,GreenLeaf Foods,SMB,22000,2026-11-15,Taylor Chen,76,78,flat,0,7,medium,2026-04-11,Stable account; no recent risks
+A008,Harbor Insurance,Enterprise,240000,2026-06-12,Morgan Lee,48,66,declining,9,2,low,2026-04-17,High-value account with severe implementation blockers
+A009,Indigo Studios,SMB,12000,2026-10-02,Riley Patel,69,70,flat,2,6,low,2026-04-19,Small account; routine support needs
+A010,Juniper Manufacturing,Mid-Market,74000,2026-07-02,Taylor Chen,58,63,declining,6,5,medium,2026-04-24,Tickets increasing; usage declining in two departments
+A011,Keystone Legal,Mid-Market,56000,2026-12-15,Morgan Lee,84,80,growing,1,8,high,2026-04-12,Legal ops team asked about advanced workflows
+A012,Lumen Energy,Enterprise,190000,2026-08-05,Riley Patel,63,60,flat,8,4,medium,2026-04-23,Many tickets but usage remains strong
+A013,Mosaic Labs,SMB,15000,2026-09-10,Taylor Chen,91,89,growing,0,10,medium,2026-04-26,Very high satisfaction; candidate for advocacy
+A014,Northstar Travel,Mid-Market,83000,2026-05-20,Morgan Lee,52,71,declining,4,3,low,2026-04-16,Renewal imminent; adoption issue in mobile app
+A015,Orchid Telecom,Enterprise,300000,2026-11-01,Riley Patel,79,77,flat,4,6,high,2026-04-25,Strategic account; integrations roadmap concern
+A016,Pioneer Biotech,Mid-Market,69000,2026-06-18,Taylor Chen,74,72,flat,3,7,medium,2026-04-20,Support volume rising but sentiment still neutral
+A017,Quartz Media,SMB,16000,2026-07-22,Morgan Lee,46,64,declining,6,2,low,2026-04-09,Low usage and negative sentiment; unclear stakeholder owner
+A018,Redwood Cloud,Enterprise,260000,2026-10-30,Riley Patel,86,79,growing,2,9,high,2026-04-26,Strong account; expansion signal from platform team

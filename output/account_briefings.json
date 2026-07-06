@@ -1,0 +1,319 @@
+[
+  {
+    "account_id": "A008",
+    "account_name": "Harbor Insurance",
+    "csm_owner": "Morgan Lee",
+    "priority_tier": "High",
+    "risk_score": 206.25,
+    "opportunity_score": 0.0,
+    "summary": "Harbor Insurance (Enterprise, $240,000 ARR) health score has declined 18 points to 48, with 9 support ticket(s) in the last 30 days and an NPS of 2. Renewal is in 42 days (2026-06-12).",
+    "risk_and_opportunity_notes": [
+      "Usage is trending downward across the tracked window (High-value account with severe implementation blockers).",
+      "High-severity issue(s) open: Executive sponsor says implementation is blocked by SSO failures.",
+      "1 open ticket(s) carry negative/concerned sentiment, indicating relationship risk beyond the technical issue itself.",
+      "Outstanding follow-up from the last call (2026-04-17): CSM to coordinate technical escalation."
+    ],
+    "recommended_actions": [
+      "Escalate open high-severity ticket(s) to technical/support leadership (T001) before the next check-in.",
+      "Flag to CSM leadership: renewal in 42 day(s) with elevated risk (score 206.25) \u2014 prepare a save/renewal plan, not just a status update.",
+      "Close the loop on the outstanding commitment: CSM to coordinate technical escalation.",
+      "Prepare talking points for the Implementation recovery check-in on 2026-05-04, covering: SSO status, rollout unblock plan, executive confidence."
+    ]
+  },
+  {
+    "account_id": "A014",
+    "account_name": "Northstar Travel",
+    "csm_owner": "Morgan Lee",
+    "priority_tier": "High",
+    "risk_score": 166.25,
+    "opportunity_score": 0.0,
+    "summary": "Northstar Travel (Mid-Market, $83,000 ARR) health score has declined 19 points to 52, with 4 support ticket(s) in the last 30 days and an NPS of 3. Renewal is in 19 days (2026-05-20).",
+    "risk_and_opportunity_notes": [
+      "Usage is trending downward across the tracked window (Renewal imminent; adoption issue in mobile app).",
+      "1 open ticket(s) carry negative/concerned sentiment, indicating relationship risk beyond the technical issue itself.",
+      "Outstanding follow-up from the last call (2026-04-16): Send mobile onboarding plan."
+    ],
+    "recommended_actions": [
+      "Flag to CSM leadership: renewal in 19 day(s) with elevated risk (score 166.25) \u2014 prepare a save/renewal plan, not just a status update.",
+      "Close the loop on the outstanding commitment: Send mobile onboarding plan.",
+      "Prepare talking points for the Mobile adoption plan check-in on 2026-05-05, covering: Mobile onboarding issue, renewal timeline."
+    ]
+  },
+  {
+    "account_id": "A017",
+    "account_name": "Quartz Media",
+    "csm_owner": "Morgan Lee",
+    "priority_tier": "High",
+    "risk_score": 155.0,
+    "opportunity_score": 0.0,
+    "summary": "Quartz Media (SMB, $16,000 ARR) health score has declined 18 points to 46, with 6 support ticket(s) in the last 30 days and an NPS of 2. Renewal is in 82 days (2026-07-22).",
+    "risk_and_opportunity_notes": [
+      "Usage is trending downward across the tracked window (Low usage and negative sentiment; unclear stakeholder owner).",
+      "High-severity issue(s) open: Customer says team has stopped using the platform and needs a reset.",
+      "1 open ticket(s) carry negative/concerned sentiment, indicating relationship risk beyond the technical issue itself.",
+      "Outstanding follow-up from the last call (2026-04-09): Identify new sponsor and propose reset."
+    ],
+    "recommended_actions": [
+      "Escalate open high-severity ticket(s) to technical/support leadership (T006) before the next check-in.",
+      "Close the loop on the outstanding commitment: Identify new sponsor and propose reset.",
+      "Prepare talking points for the Account reset check-in on 2026-05-07, covering: Champion gap, platform value, reactivation."
+    ]
+  },
+  {
+    "account_id": "A004",
+    "account_name": "DeltaEd Services",
+    "csm_owner": "Riley Patel",
+    "priority_tier": "High",
+    "risk_score": 125.0,
+    "opportunity_score": 0.0,
+    "summary": "DeltaEd Services (SMB, $18,000 ARR) health score has declined 19 points to 54, with 5 support ticket(s) in the last 30 days and an NPS of 3. Renewal is in 111 days (2026-08-20).",
+    "risk_and_opportunity_notes": [
+      "Usage is trending downward across the tracked window (Champion left company; low login frequency)."
+    ],
+    "recommended_actions": [
+      "Maintain standard cadence; no urgent action required this cycle."
+    ]
+  },
+  {
+    "account_id": "A002",
+    "account_name": "BrightPath Logistics",
+    "csm_owner": "Taylor Chen",
+    "priority_tier": "High",
+    "risk_score": 110.0,
+    "opportunity_score": 10.0,
+    "summary": "BrightPath Logistics (Enterprise, $128,000 ARR) health score has declined 8 points to 61, with 7 support ticket(s) in the last 30 days and an NPS of 4. Renewal is in 60 days (2026-06-30).",
+    "risk_and_opportunity_notes": [
+      "High-severity issue(s) open: Customer asks why integration sync has failed three times this week.",
+      "1 open ticket(s) carry negative/concerned sentiment, indicating relationship risk beyond the technical issue itself.",
+      "Outstanding follow-up from the last call (2026-04-18): Escalate integration logs."
+    ],
+    "recommended_actions": [
+      "Escalate open high-severity ticket(s) to technical/support leadership (T002) before the next check-in.",
+      "Close the loop on the outstanding commitment: Escalate integration logs.",
+      "Prepare talking points for the Integration stabilization check-in on 2026-05-12, covering: Sync failures, technical escalation."
+    ]
+  },
+  {
+    "account_id": "A005",
+    "account_name": "Evergreen Finance",
+    "csm_owner": "Morgan Lee",
+    "priority_tier": "High",
+    "risk_score": 110.0,
+    "opportunity_score": 10.0,
+    "summary": "Evergreen Finance (Enterprise, $175,000 ARR) health score has declined 9 points to 67, with 3 support ticket(s) in the last 30 days and an NPS of 5. Renewal is in 27 days (2026-05-28).",
+    "risk_and_opportunity_notes": [
+      "Usage is trending downward across the tracked window (Renewal soon; exec sponsor requested usage review).",
+      "High-severity issue(s) open: Executive sponsor requests renewal usage summary by Friday.",
+      "1 open ticket(s) carry negative/concerned sentiment, indicating relationship risk beyond the technical issue itself.",
+      "Outstanding follow-up from the last call (2026-04-23): Prepare renewal value snapshot."
+    ],
+    "recommended_actions": [
+      "Escalate open high-severity ticket(s) to technical/support leadership (T007) before the next check-in.",
+      "Flag to CSM leadership: renewal in 27 day(s) with elevated risk (score 110.0) \u2014 prepare a save/renewal plan, not just a status update.",
+      "Close the loop on the outstanding commitment: Prepare renewal value snapshot.",
+      "Prepare talking points for the Renewal value review check-in on 2026-05-05, covering: ROI summary, adoption proof, renewal risk."
+    ]
+  },
+  {
+    "account_id": "A010",
+    "account_name": "Juniper Manufacturing",
+    "csm_owner": "Taylor Chen",
+    "priority_tier": "High",
+    "risk_score": 88.0,
+    "opportunity_score": 10.0,
+    "summary": "Juniper Manufacturing (Mid-Market, $74,000 ARR) health score has declined 5 points to 58, with 6 support ticket(s) in the last 30 days and an NPS of 5. Renewal is in 62 days (2026-07-02).",
+    "risk_and_opportunity_notes": [
+      "Usage is trending downward across the tracked window (Tickets increasing; usage declining in two departments).",
+      "Expansion signal is medium \u2014 this is a candidate for a growth conversation rather than pure risk mitigation.",
+      "Outstanding follow-up from the last call (2026-04-24): Investigate data freshness issue."
+    ],
+    "recommended_actions": [
+      "Close the loop on the outstanding commitment: Investigate data freshness issue.",
+      "Prepare talking points for the Usage dashboard recovery check-in on 2026-05-07, covering: Reporting usage drop, export data trust.",
+      "Draft an expansion proposal leveraging current usage strength \u2014 good timing independent of renewal-driven urgency."
+    ]
+  },
+  {
+    "account_id": "A001",
+    "account_name": "Acme Retail",
+    "csm_owner": "Taylor Chen",
+    "priority_tier": "High",
+    "risk_score": 87.0,
+    "opportunity_score": 0.0,
+    "summary": "Acme Retail (Mid-Market, $42,000 ARR) health score has declined 9 points to 72, with 4 support ticket(s) in the last 30 days and an NPS of 6. Renewal is in 75 days (2026-07-15).",
+    "risk_and_opportunity_notes": [
+      "Usage is trending downward across the tracked window (At-risk renewal; adoption drop in reporting module).",
+      "1 open ticket(s) carry negative/concerned sentiment, indicating relationship risk beyond the technical issue itself.",
+      "Outstanding follow-up from the last call (2026-04-21): Investigate reporting data issue."
+    ],
+    "recommended_actions": [
+      "Close the loop on the outstanding commitment: Investigate reporting data issue.",
+      "Prepare talking points for the Reporting recovery check-in on 2026-05-11, covering: Dashboard export issue, adoption decline."
+    ]
+  },
+  {
+    "account_id": "A012",
+    "account_name": "Lumen Energy",
+    "csm_owner": "Riley Patel",
+    "priority_tier": "High",
+    "risk_score": 78.0,
+    "opportunity_score": 10.0,
+    "summary": "Lumen Energy (Enterprise, $190,000 ARR) health score has improved 3 points to 63, with 8 support ticket(s) in the last 30 days and an NPS of 4. Renewal is in 96 days (2026-08-05).",
+    "risk_and_opportunity_notes": [
+      "Expansion signal is medium \u2014 this is a candidate for a growth conversation rather than pure risk mitigation.",
+      "Outstanding follow-up from the last call (2026-04-23): Provide permissions guide."
+    ],
+    "recommended_actions": [
+      "Close the loop on the outstanding commitment: Provide permissions guide.",
+      "Prepare talking points for the Permissions enablement check-in on 2026-05-08, covering: Admin training, permissions confusion.",
+      "Draft an expansion proposal leveraging current usage strength \u2014 good timing independent of renewal-driven urgency."
+    ]
+  },
+  {
+    "account_id": "A009",
+    "account_name": "Indigo Studios",
+    "csm_owner": "Riley Patel",
+    "priority_tier": "Medium",
+    "risk_score": 49.0,
+    "opportunity_score": 0.0,
+    "summary": "Indigo Studios (SMB, $12,000 ARR) health score has declined 1 points to 69, with 2 support ticket(s) in the last 30 days and an NPS of 6. Renewal is in 154 days (2026-10-02).",
+    "risk_and_opportunity_notes": [
+      "No material risk signals beyond routine account health."
+    ],
+    "recommended_actions": [
+      "Maintain standard cadence; no urgent action required this cycle."
+    ]
+  },
+  {
+    "account_id": "A015",
+    "account_name": "Orchid Telecom",
+    "csm_owner": "Riley Patel",
+    "priority_tier": "Medium",
+    "risk_score": 42.0,
+    "opportunity_score": 20.0,
+    "summary": "Orchid Telecom (Enterprise, $300,000 ARR) health score has improved 2 points to 79, with 4 support ticket(s) in the last 30 days and an NPS of 6. Renewal is in 184 days (2026-11-01).",
+    "risk_and_opportunity_notes": [
+      "Expansion signal is high \u2014 this is a candidate for a growth conversation rather than pure risk mitigation.",
+      "Outstanding follow-up from the last call (2026-04-25): Escalate roadmap question to product."
+    ],
+    "recommended_actions": [
+      "Close the loop on the outstanding commitment: Escalate roadmap question to product.",
+      "Prepare talking points for the Integration roadmap review check-in on 2026-05-08, covering: Roadmap dependency, strategic relationship.",
+      "Draft an expansion proposal leveraging current usage strength \u2014 good timing independent of renewal-driven urgency."
+    ]
+  },
+  {
+    "account_id": "A016",
+    "account_name": "Pioneer Biotech",
+    "csm_owner": "Taylor Chen",
+    "priority_tier": "Medium",
+    "risk_score": 39.0,
+    "opportunity_score": 10.0,
+    "summary": "Pioneer Biotech (Mid-Market, $69,000 ARR) health score has improved 2 points to 74, with 3 support ticket(s) in the last 30 days and an NPS of 7. Renewal is in 48 days (2026-06-18).",
+    "risk_and_opportunity_notes": [
+      "Expansion signal is medium \u2014 this is a candidate for a growth conversation rather than pure risk mitigation."
+    ],
+    "recommended_actions": [
+      "Draft an expansion proposal leveraging current usage strength \u2014 good timing independent of renewal-driven urgency."
+    ]
+  },
+  {
+    "account_id": "A007",
+    "account_name": "GreenLeaf Foods",
+    "csm_owner": "Taylor Chen",
+    "priority_tier": "Low",
+    "risk_score": 29.0,
+    "opportunity_score": 10.0,
+    "summary": "GreenLeaf Foods (SMB, $22,000 ARR) health score has declined 2 points to 76, with 0 support ticket(s) in the last 30 days and an NPS of 7. Renewal is in 198 days (2026-11-15).",
+    "risk_and_opportunity_notes": [
+      "Expansion signal is medium \u2014 this is a candidate for a growth conversation rather than pure risk mitigation."
+    ],
+    "recommended_actions": [
+      "Draft an expansion proposal leveraging current usage strength \u2014 good timing independent of renewal-driven urgency."
+    ]
+  },
+  {
+    "account_id": "A006",
+    "account_name": "Futura Robotics",
+    "csm_owner": "Riley Patel",
+    "priority_tier": "Low",
+    "risk_score": 17.0,
+    "opportunity_score": 36.0,
+    "summary": "Futura Robotics (Mid-Market, $65,000 ARR) health score has improved 5 points to 82, with 2 support ticket(s) in the last 30 days and an NPS of 8. Renewal is in 152 days (2026-09-30).",
+    "risk_and_opportunity_notes": [
+      "Expansion signal is high \u2014 this is a candidate for a growth conversation rather than pure risk mitigation.",
+      "Outstanding follow-up from the last call (2026-04-22): Send premium automation options."
+    ],
+    "recommended_actions": [
+      "Close the loop on the outstanding commitment: Send premium automation options.",
+      "Prepare talking points for the Premium automation exploration check-in on 2026-05-06, covering: Automation limits, premium use cases.",
+      "Draft an expansion proposal leveraging current usage strength \u2014 good timing independent of renewal-driven urgency."
+    ]
+  },
+  {
+    "account_id": "A011",
+    "account_name": "Keystone Legal",
+    "csm_owner": "Morgan Lee",
+    "priority_tier": "Low",
+    "risk_score": 14.0,
+    "opportunity_score": 37.0,
+    "summary": "Keystone Legal (Mid-Market, $56,000 ARR) health score has improved 4 points to 84, with 1 support ticket(s) in the last 30 days and an NPS of 8. Renewal is in 228 days (2026-12-15).",
+    "risk_and_opportunity_notes": [
+      "Expansion signal is high \u2014 this is a candidate for a growth conversation rather than pure risk mitigation."
+    ],
+    "recommended_actions": [
+      "Draft an expansion proposal leveraging current usage strength \u2014 good timing independent of renewal-driven urgency."
+    ]
+  },
+  {
+    "account_id": "A018",
+    "account_name": "Redwood Cloud",
+    "csm_owner": "Riley Patel",
+    "priority_tier": "Low",
+    "risk_score": 14.0,
+    "opportunity_score": 43.0,
+    "summary": "Redwood Cloud (Enterprise, $260,000 ARR) health score has improved 7 points to 86, with 2 support ticket(s) in the last 30 days and an NPS of 9. Renewal is in 182 days (2026-10-30).",
+    "risk_and_opportunity_notes": [
+      "Expansion signal is high \u2014 this is a candidate for a growth conversation rather than pure risk mitigation.",
+      "Outstanding follow-up from the last call (2026-04-26): Draft phased rollout approach."
+    ],
+    "recommended_actions": [
+      "Close the loop on the outstanding commitment: Draft phased rollout approach.",
+      "Prepare talking points for the Expansion rollout design check-in on 2026-05-11, covering: Governance plan, multi-team adoption.",
+      "Draft an expansion proposal leveraging current usage strength \u2014 good timing independent of renewal-driven urgency."
+    ]
+  },
+  {
+    "account_id": "A003",
+    "account_name": "Cobalt Health",
+    "csm_owner": "Morgan Lee",
+    "priority_tier": "Low",
+    "risk_score": 5.0,
+    "opportunity_score": 44.0,
+    "summary": "Cobalt Health (Enterprise, $210,000 ARR) health score has improved 3 points to 88, with 1 support ticket(s) in the last 30 days and an NPS of 9. Renewal is in 214 days (2026-12-01).",
+    "risk_and_opportunity_notes": [
+      "Expansion signal is high \u2014 this is a candidate for a growth conversation rather than pure risk mitigation.",
+      "Outstanding follow-up from the last call (2026-04-25): Share rollout plan."
+    ],
+    "recommended_actions": [
+      "Close the loop on the outstanding commitment: Share rollout plan.",
+      "Prepare talking points for the Analytics expansion planning check-in on 2026-05-06, covering: New department rollout, best-practice setup.",
+      "Draft an expansion proposal leveraging current usage strength \u2014 good timing independent of renewal-driven urgency."
+    ]
+  },
+  {
+    "account_id": "A013",
+    "account_name": "Mosaic Labs",
+    "csm_owner": "Taylor Chen",
+    "priority_tier": "Low",
+    "risk_score": 4.0,
+    "opportunity_score": 40.5,
+    "summary": "Mosaic Labs (SMB, $15,000 ARR) health score has improved 2 points to 91, with 0 support ticket(s) in the last 30 days and an NPS of 10. Renewal is in 132 days (2026-09-10).",
+    "risk_and_opportunity_notes": [
+      "Expansion signal is medium \u2014 this is a candidate for a growth conversation rather than pure risk mitigation."
+    ],
+    "recommended_actions": [
+      "Draft an expansion proposal leveraging current usage strength \u2014 good timing independent of renewal-driven urgency."
+    ]
+  }
+]

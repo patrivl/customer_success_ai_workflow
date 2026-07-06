@@ -1,0 +1,55 @@
+account_id,event_date,active_users,key_feature_users,login_frequency,usage_trend,notable_change
+A001,2026-04-10,106,40,weekly,declining,Lower weekly engagement and fewer power-user actions
+A001,2026-04-17,97,35,weekly,declining,Lower weekly engagement and fewer power-user actions
+A001,2026-04-24,82,25,weekly,declining,Lower weekly engagement and fewer power-user actions
+A002,2026-04-10,264,117,weekly,flat,Stable usage with no sharp movement
+A002,2026-04-17,265,118,weekly,flat,Stable usage with no sharp movement
+A002,2026-04-24,257,117,weekly,flat,Stable usage with no sharp movement
+A003,2026-04-10,243,132,weekly,growing,Increased adoption among additional users
+A003,2026-04-17,264,146,weekly,growing,Increased adoption among additional users
+A003,2026-04-24,294,164,weekly,growing,Increased adoption among additional users
+A004,2026-04-10,25,10,weekly,declining,Lower weekly engagement and fewer power-user actions
+A004,2026-04-17,20,8,weekly,declining,Lower weekly engagement and fewer power-user actions
+A004,2026-04-24,15,4,weekly,declining,Lower weekly engagement and fewer power-user actions
+A005,2026-04-10,299,102,weekly,declining,Lower weekly engagement and fewer power-user actions
+A005,2026-04-17,272,98,weekly,declining,Lower weekly engagement and fewer power-user actions
+A005,2026-04-24,255,91,weekly,declining,Lower weekly engagement and fewer power-user actions
+A006,2026-04-10,77,42,weekly,growing,Increased adoption among additional users
+A006,2026-04-17,89,48,weekly,growing,Increased adoption among additional users
+A006,2026-04-24,98,54,weekly,growing,Increased adoption among additional users
+A007,2026-04-10,20,6,weekly,flat,Stable usage with no sharp movement
+A007,2026-04-17,23,7,weekly,flat,Stable usage with no sharp movement
+A007,2026-04-24,21,10,weekly,flat,Stable usage with no sharp movement
+A008,2026-04-10,301,105,weekly,declining,Lower weekly engagement and fewer power-user actions
+A008,2026-04-17,277,97,weekly,declining,Lower weekly engagement and fewer power-user actions
+A008,2026-04-24,245,87,weekly,declining,Lower weekly engagement and fewer power-user actions
+A009,2026-04-10,14,4,weekly,flat,Stable usage with no sharp movement
+A009,2026-04-17,23,12,weekly,flat,Stable usage with no sharp movement
+A009,2026-04-24,17,4,weekly,flat,Stable usage with no sharp movement
+A010,2026-04-10,104,38,weekly,declining,Lower weekly engagement and fewer power-user actions
+A010,2026-04-17,94,32,weekly,declining,Lower weekly engagement and fewer power-user actions
+A010,2026-04-24,87,27,weekly,declining,Lower weekly engagement and fewer power-user actions
+A011,2026-04-10,79,43,weekly,growing,Increased adoption among additional users
+A011,2026-04-17,88,48,weekly,growing,Increased adoption among additional users
+A011,2026-04-24,97,56,weekly,growing,Increased adoption among additional users
+A012,2026-04-10,268,119,weekly,flat,Stable usage with no sharp movement
+A012,2026-04-17,259,114,weekly,flat,Stable usage with no sharp movement
+A012,2026-04-24,261,118,weekly,flat,Stable usage with no sharp movement
+A013,2026-04-10,17,6,weekly,growing,Increased adoption among additional users
+A013,2026-04-17,21,10,weekly,growing,Increased adoption among additional users
+A013,2026-04-24,22,11,weekly,growing,Increased adoption among additional users
+A014,2026-04-10,99,37,weekly,declining,Lower weekly engagement and fewer power-user actions
+A014,2026-04-17,95,30,weekly,declining,Lower weekly engagement and fewer power-user actions
+A014,2026-04-24,87,33,weekly,declining,Lower weekly engagement and fewer power-user actions
+A015,2026-04-10,259,115,weekly,flat,Stable usage with no sharp movement
+A015,2026-04-17,262,119,weekly,flat,Stable usage with no sharp movement
+A015,2026-04-24,267,117,weekly,flat,Stable usage with no sharp movement
+A016,2026-04-10,94,43,weekly,flat,Stable usage with no sharp movement
+A016,2026-04-17,96,40,weekly,flat,Stable usage with no sharp movement
+A016,2026-04-24,86,35,weekly,flat,Stable usage with no sharp movement
+A017,2026-04-10,21,7,weekly,declining,Lower weekly engagement and fewer power-user actions
+A017,2026-04-17,17,5,weekly,declining,Lower weekly engagement and fewer power-user actions
+A017,2026-04-24,16,3,weekly,declining,Lower weekly engagement and fewer power-user actions
+A018,2026-04-10,244,136,weekly,growing,Increased adoption among additional users
+A018,2026-04-17,262,146,weekly,growing,Increased adoption among additional users
+A018,2026-04-24,290,162,weekly,growing,Increased adoption among additional users

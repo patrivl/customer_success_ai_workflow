@@ -1,0 +1,13 @@
+checkin_id,account_id,scheduled_date,checkin_type,priority,topics_to_cover
+C001,A008,2026-05-04,Implementation recovery,High,"SSO status, rollout unblock plan, executive confidence"
+C002,A005,2026-05-05,Renewal value review,High,"ROI summary, adoption proof, renewal risk"
+C003,A014,2026-05-05,Mobile adoption plan,High,"Mobile onboarding issue, renewal timeline"
+C004,A003,2026-05-06,Analytics expansion planning,Medium,"New department rollout, best-practice setup"
+C005,A006,2026-05-06,Premium automation exploration,Medium,"Automation limits, premium use cases"
+C006,A010,2026-05-07,Usage dashboard recovery,Medium,"Reporting usage drop, export data trust"
+C007,A017,2026-05-07,Account reset,High,"Champion gap, platform value, reactivation"
+C008,A015,2026-05-08,Integration roadmap review,Medium,"Roadmap dependency, strategic relationship"
+C009,A012,2026-05-08,Permissions enablement,Low,"Admin training, permissions confusion"
+C010,A018,2026-05-11,Expansion rollout design,Medium,"Governance plan, multi-team adoption"
+C011,A001,2026-05-11,Reporting recovery,Medium,"Dashboard export issue, adoption decline"
+C012,A002,2026-05-12,Integration stabilization,High,"Sync failures, technical escalation"

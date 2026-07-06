@@ -1,0 +1,52 @@
+{
+  "accounts_by_segment": [
+    {
+      "segment": "Enterprise",
+      "account_count": 7,
+      "avg_current_health_score": 70.3
+    },
+    {
+      "segment": "Mid-Market",
+      "account_count": 6,
+      "avg_current_health_score": 70.3
+    },
+    {
+      "segment": "SMB",
+      "account_count": 5,
+      "avg_current_health_score": 67.2
+    }
+  ],
+  "declining_accounts_by_segment": {
+    "Mid-Market": 4,
+    "Enterprise": 4,
+    "SMB": 2
+  },
+  "intervention_candidate_segments": {
+    "Mid-Market": 3,
+    "Enterprise": 4,
+    "SMB": 2
+  },
+  "expansion_opportunity_segments": {
+    "Enterprise": 6,
+    "Mid-Market": 4,
+    "SMB": 2
+  },
+  "common_issue_themes": {
+    "integration_sync": 2,
+    "onboarding_mobile": 2,
+    "reporting_dashboard": 2,
+    "sso_authentication": 1,
+    "permissions_access": 1,
+    "usage_decline_reset": 1,
+    "roadmap_strategic": 1,
+    "automation_features": 1
+  },
+  "common_blocker_themes": {
+    "reporting_dashboard": 2,
+    "sso_authentication": 1,
+    "onboarding_mobile": 1,
+    "permissions_access": 1,
+    "roadmap_strategic": 1,
+    "integration_sync": 1
+  }
+}

@@ -1,0 +1,7 @@
+standard_id,standard_name,description
+QS001,Customer-specific context,"Output references the account's current situation, recent history, and relevant customer goal."
+QS002,Actionability,"Output gives concrete next steps, owner/path, and timing rather than generic advice."
+QS003,Risk accuracy,"Output identifies material churn, renewal, implementation, or sentiment risks without overstating low-risk issues."
+QS004,Tone and clarity,"Output is concise, professional, and suitable for customer-facing or internal CSM use."
+QS005,Escalation judgment,Output escalates urgent or specialist issues and avoids unnecessary escalation for low-risk items.
+QS006,Follow-up continuity,Output carries forward prior commitments and does not ignore unresolved follow-up items.

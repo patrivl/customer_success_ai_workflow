@@ -1,0 +1,52 @@
+[
+  {
+    "account_id": "A008",
+    "account_name": "Harbor Insurance",
+    "case_type": "severe_support_escalation_case",
+    "reason": "preferred representative account for case type 'severe_support_escalation_case'",
+    "risk_score": 222.5,
+    "opportunity_score": 25.0,
+    "priority_score": 179.5,
+    "escalation_score": 70.0
+  },
+  {
+    "account_id": "A005",
+    "account_name": "Evergreen Finance",
+    "case_type": "renewal_value_review_case",
+    "reason": "preferred representative account for case type 'renewal_value_review_case'",
+    "risk_score": 131.25,
+    "opportunity_score": 17.0,
+    "priority_score": 126.55,
+    "escalation_score": 60.0
+  },
+  {
+    "account_id": "A014",
+    "account_name": "Northstar Travel",
+    "case_type": "negative_sentiment_declining_adoption_case",
+    "reason": "preferred representative account for case type 'negative_sentiment_declining_adoption_case'",
+    "risk_score": 182.5,
+    "opportunity_score": 5.0,
+    "priority_score": 153.0,
+    "escalation_score": 25.0
+  },
+  {
+    "account_id": "A003",
+    "account_name": "Cobalt Health",
+    "case_type": "healthy_expansion_opportunity_case",
+    "reason": "preferred representative account for case type 'healthy_expansion_opportunity_case'",
+    "risk_score": 24.0,
+    "opportunity_score": 63.0,
+    "priority_score": 54.6,
+    "escalation_score": 0.0
+  },
+  {
+    "account_id": "A017",
+    "account_name": "Quartz Media",
+    "case_type": "low_usage_reactivation_intervention_case",
+    "reason": "preferred representative account for case type 'low_usage_reactivation_intervention_case'",
+    "risk_score": 170.0,
+    "opportunity_score": 5.0,
+    "priority_score": 131.0,
+    "escalation_score": 50.0
+  }
+]

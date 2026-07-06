@@ -1,0 +1,236 @@
+[
+  {
+    "output_id": "O001",
+    "account_id": "A008",
+    "output_type": "Executive update draft",
+    "draft_text": "We are checking the SSO issue and will update you soon. Thanks for your patience.",
+    "intended_customer_action": "Reassure executive sponsor and set recovery plan",
+    "overall_score": 25.0,
+    "recommendation": "Rejected",
+    "suggested_revision": "Suggested revision: reference the account's actual situation (e.g. 'High-value account with severe implementation blockers'); add a concrete next step with a named owner and a specific date; align escalation language with the issue's actual severity.",
+    "standard_verdicts": [
+      {
+        "standard_id": "QS001",
+        "standard_name": "Customer-specific context",
+        "verdict": "FAIL",
+        "rationale": "Draft does not reference any specific account context (situation, history, or stated customer goal)."
+      },
+      {
+        "standard_id": "QS002",
+        "standard_name": "Actionability",
+        "verdict": "FAIL",
+        "rationale": "Draft is vague with no concrete owner, timing, or next step (e.g. 'will update you soon')."
+      },
+      {
+        "standard_id": "QS003",
+        "standard_name": "Risk accuracy",
+        "verdict": "PASS",
+        "rationale": "Draft appropriately acknowledges the account's material risk signals."
+      },
+      {
+        "standard_id": "QS005",
+        "standard_name": "Escalation judgment",
+        "verdict": "FAIL",
+        "rationale": "Account has a high-severity/urgent issue that the draft does not route toward escalation or specialist follow-up."
+      }
+    ]
+  },
+  {
+    "output_id": "O002",
+    "account_id": "A005",
+    "output_type": "Renewal summary",
+    "draft_text": "Your team has used the product a lot this year and we think renewal makes sense.",
+    "intended_customer_action": "Support renewal conversation with usage value",
+    "overall_score": 16.7,
+    "recommendation": "Rejected",
+    "suggested_revision": "Suggested revision: reference the account's actual situation (e.g. 'Renewal soon; exec sponsor requested usage review'); add a concrete next step with a named owner and a specific date; tighten the language and remove generic filler phrasing.",
+    "standard_verdicts": [
+      {
+        "standard_id": "QS001",
+        "standard_name": "Customer-specific context",
+        "verdict": "PARTIAL",
+        "rationale": "Draft references only one specific account detail (renewal); mostly generic otherwise."
+      },
+      {
+        "standard_id": "QS002",
+        "standard_name": "Actionability",
+        "verdict": "FAIL",
+        "rationale": "Draft is vague with no concrete owner, timing, or next step (e.g. 'we think')."
+      },
+      {
+        "standard_id": "QS004",
+        "standard_name": "Tone and clarity",
+        "verdict": "FAIL",
+        "rationale": "Draft relies on multiple generic/filler phrases, undermining professional clarity."
+      }
+    ]
+  },
+  {
+    "output_id": "O003",
+    "account_id": "A014",
+    "output_type": "Mobile adoption plan",
+    "draft_text": "Please ask users to try logging in again and tell us if the issue continues.",
+    "intended_customer_action": "Recover mobile onboarding before renewal",
+    "overall_score": 66.7,
+    "recommendation": "Needs revision",
+    "suggested_revision": "Suggested revision: add a concrete next step with a named owner and a specific date.",
+    "standard_verdicts": [
+      {
+        "standard_id": "QS001",
+        "standard_name": "Customer-specific context",
+        "verdict": "PASS",
+        "rationale": "Draft references specific account context (issue, users)."
+      },
+      {
+        "standard_id": "QS002",
+        "standard_name": "Actionability",
+        "verdict": "FAIL",
+        "rationale": "Draft gives no concrete next steps, owner, or timing."
+      },
+      {
+        "standard_id": "QS003",
+        "standard_name": "Risk accuracy",
+        "verdict": "PASS",
+        "rationale": "Draft appropriately acknowledges the account's material risk signals."
+      }
+    ]
+  },
+  {
+    "output_id": "O004",
+    "account_id": "A017",
+    "output_type": "Reactivation email",
+    "draft_text": "We miss seeing your team in the product. Do you want to meet sometime?",
+    "intended_customer_action": "Re-engage account with low usage and no champion",
+    "overall_score": 0.0,
+    "recommendation": "Rejected",
+    "suggested_revision": "Suggested revision: reference the account's actual situation (e.g. 'Low usage and negative sentiment; unclear stakeholder owner'); add a concrete next step with a named owner and a specific date; explicitly reference the outstanding commitment: 'Identify new sponsor and propose reset'.",
+    "standard_verdicts": [
+      {
+        "standard_id": "QS001",
+        "standard_name": "Customer-specific context",
+        "verdict": "FAIL",
+        "rationale": "Draft does not reference any specific account context (situation, history, or stated customer goal)."
+      },
+      {
+        "standard_id": "QS002",
+        "standard_name": "Actionability",
+        "verdict": "FAIL",
+        "rationale": "Draft is vague with no concrete owner, timing, or next step (e.g. 'sometime')."
+      },
+      {
+        "standard_id": "QS006",
+        "standard_name": "Follow-up continuity",
+        "verdict": "FAIL",
+        "rationale": "Draft does not reference the outstanding follow-up commitment from the last call: 'Identify new sponsor and propose reset'."
+      }
+    ]
+  },
+  {
+    "output_id": "O005",
+    "account_id": "A003",
+    "output_type": "Expansion plan",
+    "draft_text": "The analytics team can be onboarded in three phases with training, admin setup, and success metrics.",
+    "intended_customer_action": "Support analytics-team expansion",
+    "overall_score": 100.0,
+    "recommendation": "Approved",
+    "suggested_revision": "",
+    "standard_verdicts": [
+      {
+        "standard_id": "QS002",
+        "standard_name": "Actionability",
+        "verdict": "PASS",
+        "rationale": "Draft includes concrete next-step language (3 actionability signal(s) found)."
+      },
+      {
+        "standard_id": "QS004",
+        "standard_name": "Tone and clarity",
+        "verdict": "PASS",
+        "rationale": "Draft is concise and professionally toned for its intended audience."
+      }
+    ]
+  },
+  {
+    "output_id": "O006",
+    "account_id": "A010",
+    "output_type": "Internal risk note",
+    "draft_text": "Reporting exports are broken and the account is probably going to churn unless fixed immediately.",
+    "intended_customer_action": "Summarize account risk for manager review",
+    "overall_score": 100.0,
+    "recommendation": "Approved",
+    "suggested_revision": "",
+    "standard_verdicts": [
+      {
+        "standard_id": "QS003",
+        "standard_name": "Risk accuracy",
+        "verdict": "PASS",
+        "rationale": "Draft's risk framing is consistent with the account's medium current risk level."
+      },
+      {
+        "standard_id": "QS004",
+        "standard_name": "Tone and clarity",
+        "verdict": "PASS",
+        "rationale": "Draft is concise and professionally toned for its intended audience."
+      },
+      {
+        "standard_id": "QS005",
+        "standard_name": "Escalation judgment",
+        "verdict": "PASS",
+        "rationale": "Escalation framing matches the account's medium urgency level."
+      }
+    ]
+  },
+  {
+    "output_id": "O007",
+    "account_id": "A012",
+    "output_type": "Permissions guide response",
+    "draft_text": "Here is a general permissions guide. Let us know if you have questions.",
+    "intended_customer_action": "Resolve repeated permissions questions",
+    "overall_score": 50.0,
+    "recommendation": "Needs revision",
+    "suggested_revision": "Suggested revision: add a concrete next step with a named owner and a specific date.",
+    "standard_verdicts": [
+      {
+        "standard_id": "QS001",
+        "standard_name": "Customer-specific context",
+        "verdict": "PASS",
+        "rationale": "Draft references specific account context (guide, permissions, questions)."
+      },
+      {
+        "standard_id": "QS002",
+        "standard_name": "Actionability",
+        "verdict": "FAIL",
+        "rationale": "Draft is vague with no concrete owner, timing, or next step (e.g. 'let us know if you have questions')."
+      }
+    ]
+  },
+  {
+    "output_id": "O008",
+    "account_id": "A015",
+    "output_type": "Roadmap response",
+    "draft_text": "The integration roadmap is not finalized, but we can collect requirements and escalate to product.",
+    "intended_customer_action": "Respond to strategic roadmap concern",
+    "overall_score": 100.0,
+    "recommendation": "Approved",
+    "suggested_revision": "",
+    "standard_verdicts": [
+      {
+        "standard_id": "QS002",
+        "standard_name": "Actionability",
+        "verdict": "PASS",
+        "rationale": "Draft includes concrete next-step language (1 actionability signal(s) found)."
+      },
+      {
+        "standard_id": "QS004",
+        "standard_name": "Tone and clarity",
+        "verdict": "PASS",
+        "rationale": "Draft is concise and professionally toned for its intended audience."
+      },
+      {
+        "standard_id": "QS005",
+        "standard_name": "Escalation judgment",
+        "verdict": "PASS",
+        "rationale": "Escalation framing matches the account's medium urgency level."
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+output_id,account_id,output_type,draft_text,intended_customer_action,quality_standard_ids
+O001,A008,Executive update draft,We are checking the SSO issue and will update you soon. Thanks for your patience.,Reassure executive sponsor and set recovery plan,QS001;QS002;QS003;QS005
+O002,A005,Renewal summary,Your team has used the product a lot this year and we think renewal makes sense.,Support renewal conversation with usage value,QS001;QS002;QS004
+O003,A014,Mobile adoption plan,Please ask users to try logging in again and tell us if the issue continues.,Recover mobile onboarding before renewal,QS001;QS002;QS003
+O004,A017,Reactivation email,We miss seeing your team in the product. Do you want to meet sometime?,Re-engage account with low usage and no champion,QS001;QS002;QS006
+O005,A003,Expansion plan,"The analytics team can be onboarded in three phases with training, admin setup, and success metrics.",Support analytics-team expansion,QS002;QS004
+O006,A010,Internal risk note,Reporting exports are broken and the account is probably going to churn unless fixed immediately.,Summarize account risk for manager review,QS003;QS004;QS005
+O007,A012,Permissions guide response,Here is a general permissions guide. Let us know if you have questions.,Resolve repeated permissions questions,QS001;QS002
+O008,A015,Roadmap response,"The integration roadmap is not finalized, but we can collect requirements and escalate to product.",Respond to strategic roadmap concern,QS002;QS004;QS005

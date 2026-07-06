@@ -1,0 +1,1889 @@
+{
+  "A001": {
+    "account_id": "A001",
+    "account_name": "Acme Retail",
+    "segment": "Mid-Market",
+    "csm_owner": "Taylor Chen",
+    "contract_value": 42000.0,
+    "current_health_score": 72.0,
+    "previous_health_score": 81.0,
+    "health_score_delta": -9.0,
+    "product_usage_trend": "declining",
+    "support_ticket_count_30d": 4.0,
+    "nps_score": 6.0,
+    "expansion_signal": "low",
+    "renewal_date": "2026-07-15",
+    "renewal_days_remaining": 75,
+    "days_since_last_contact": 10,
+    "notes": "At-risk renewal; adoption drop in reporting module",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 106.0,
+        "key_feature_users": 40.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 97.0,
+        "key_feature_users": 35.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 82.0,
+        "key_feature_users": 25.0,
+        "usage_trend": "declining"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T010",
+        "severity": "medium",
+        "customer_sentiment": "frustrated",
+        "issue_summary": "Customer asks why dashboard exports are missing recent data",
+        "current_status": "open"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [
+      {
+        "call_date": "2026-04-21",
+        "customer_goal": "Restore reporting adoption",
+        "risk_or_blocker": "Missing dashboard exports",
+        "follow_up_items": "Investigate reporting data issue"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C011",
+        "scheduled_date": "2026-05-11",
+        "checkin_type": "Reporting recovery",
+        "priority": "medium",
+        "topics_to_cover": "Dashboard export issue, adoption decline"
+      }
+    ],
+    "related_junior_outputs": [],
+    "unresolved_follow_up_items": "Investigate reporting data issue",
+    "open_ticket_ids": [
+      "T010"
+    ],
+    "flags": {
+      "health_decline_flag": true,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": true,
+      "low_nps_flag": true,
+      "declining_usage_flag": true,
+      "expansion_opportunity_flag": false,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": false,
+      "intervention_candidate_flag": true,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 102.0,
+      "opportunity_score": 5.0,
+      "priority_score": 73.2,
+      "escalation_score": 25.0
+    },
+    "score_reasons": {
+      "risk": [
+        "health score declined by 9 points",
+        "usage trend is declining",
+        "open ticket(s) carry negative/concerned sentiment",
+        "low NPS (6)",
+        "unresolved follow-up: Investigate reporting data issue"
+      ],
+      "opportunity": [
+        "upcoming check-in scheduled"
+      ],
+      "priority": [
+        "open-ticket severity weighting (+7)"
+      ],
+      "escalation": [
+        "negative/frustrated customer sentiment on an open ticket",
+        "executive/renewal risk language present"
+      ]
+    }
+  },
+  "A002": {
+    "account_id": "A002",
+    "account_name": "BrightPath Logistics",
+    "segment": "Enterprise",
+    "csm_owner": "Taylor Chen",
+    "contract_value": 128000.0,
+    "current_health_score": 61.0,
+    "previous_health_score": 69.0,
+    "health_score_delta": -8.0,
+    "product_usage_trend": "flat",
+    "support_ticket_count_30d": 7.0,
+    "nps_score": 4.0,
+    "expansion_signal": "medium",
+    "renewal_date": "2026-06-30",
+    "renewal_days_remaining": 60,
+    "days_since_last_contact": 13,
+    "notes": "Multiple unresolved integrations tickets",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 264.0,
+        "key_feature_users": 117.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 265.0,
+        "key_feature_users": 118.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 257.0,
+        "key_feature_users": 117.0,
+        "usage_trend": "flat"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T002",
+        "severity": "high",
+        "customer_sentiment": "concerned",
+        "issue_summary": "Customer asks why integration sync has failed three times this week",
+        "current_status": "open"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [
+      {
+        "call_date": "2026-04-18",
+        "customer_goal": "Stabilize data sync",
+        "risk_or_blocker": "Repeated sync failures",
+        "follow_up_items": "Escalate integration logs"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C012",
+        "scheduled_date": "2026-05-12",
+        "checkin_type": "Integration stabilization",
+        "priority": "high",
+        "topics_to_cover": "Sync failures, technical escalation"
+      }
+    ],
+    "related_junior_outputs": [],
+    "unresolved_follow_up_items": "Escalate integration logs",
+    "open_ticket_ids": [
+      "T002"
+    ],
+    "flags": {
+      "health_decline_flag": true,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": true,
+      "negative_sentiment_flag": true,
+      "low_nps_flag": true,
+      "declining_usage_flag": true,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": false,
+      "intervention_candidate_flag": true,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 135.0,
+      "opportunity_score": 17.0,
+      "priority_score": 110.8,
+      "escalation_score": 50.0
+    },
+    "score_reasons": {
+      "risk": [
+        "health score declined by 8 points",
+        "usage trend is declining",
+        "high ticket volume (7 in 30d)",
+        "open ticket(s) carry negative/concerned sentiment",
+        "low NPS (4)",
+        "unresolved follow-up: Escalate integration logs"
+      ],
+      "opportunity": [
+        "expansion signal is medium",
+        "upcoming check-in scheduled"
+      ],
+      "priority": [
+        "open-ticket severity weighting (+15)",
+        "high-priority check-in scheduled"
+      ],
+      "escalation": [
+        "1 high-severity open ticket(s)",
+        "negative/frustrated customer sentiment on an open ticket",
+        "technical blocker language present"
+      ]
+    }
+  },
+  "A003": {
+    "account_id": "A003",
+    "account_name": "Cobalt Health",
+    "segment": "Enterprise",
+    "csm_owner": "Morgan Lee",
+    "contract_value": 210000.0,
+    "current_health_score": 88.0,
+    "previous_health_score": 85.0,
+    "health_score_delta": 3.0,
+    "product_usage_trend": "growing",
+    "support_ticket_count_30d": 1.0,
+    "nps_score": 9.0,
+    "expansion_signal": "high",
+    "renewal_date": "2026-12-01",
+    "renewal_days_remaining": 214,
+    "days_since_last_contact": 6,
+    "notes": "Expansion interest from analytics team",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 243.0,
+        "key_feature_users": 132.0,
+        "usage_trend": "growing"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 264.0,
+        "key_feature_users": 146.0,
+        "usage_trend": "growing"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 294.0,
+        "key_feature_users": 164.0,
+        "usage_trend": "growing"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T012",
+        "severity": "low",
+        "customer_sentiment": "positive",
+        "issue_summary": "Analytics team asks for best-practice setup for new department",
+        "current_status": "new"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [
+      {
+        "call_date": "2026-04-25",
+        "customer_goal": "Roll platform out to analytics team",
+        "risk_or_blocker": "Need best-practice configuration",
+        "follow_up_items": "Share rollout plan"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C004",
+        "scheduled_date": "2026-05-06",
+        "checkin_type": "Analytics expansion planning",
+        "priority": "medium",
+        "topics_to_cover": "New department rollout, best-practice setup"
+      }
+    ],
+    "related_junior_outputs": [
+      {
+        "output_id": "O005",
+        "output_type": "Expansion plan",
+        "weak_output_flag": false,
+        "standard_ids": [
+          "QS002",
+          "QS004"
+        ]
+      }
+    ],
+    "unresolved_follow_up_items": "Share rollout plan",
+    "open_ticket_ids": [
+      "T012"
+    ],
+    "flags": {
+      "health_decline_flag": false,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": false,
+      "declining_usage_flag": false,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": true,
+      "intervention_candidate_flag": false,
+      "high_value_account_flag": true
+    },
+    "scores": {
+      "risk_score": 24.0,
+      "opportunity_score": 63.0,
+      "priority_score": 54.6,
+      "escalation_score": 0.0
+    },
+    "score_reasons": {
+      "risk": [
+        "unresolved follow-up: Share rollout plan"
+      ],
+      "opportunity": [
+        "usage trend is growing",
+        "expansion signal is high",
+        "open ticket(s) carry positive sentiment",
+        "upcoming check-in scheduled",
+        "high-value account (top quartile contract value)"
+      ],
+      "priority": [
+        "high-value account weighting",
+        "open-ticket severity weighting (+2)"
+      ],
+      "escalation": []
+    }
+  },
+  "A004": {
+    "account_id": "A004",
+    "account_name": "DeltaEd Services",
+    "segment": "SMB",
+    "csm_owner": "Riley Patel",
+    "contract_value": 18000.0,
+    "current_health_score": 54.0,
+    "previous_health_score": 73.0,
+    "health_score_delta": -19.0,
+    "product_usage_trend": "declining",
+    "support_ticket_count_30d": 5.0,
+    "nps_score": 3.0,
+    "expansion_signal": "low",
+    "renewal_date": "2026-08-20",
+    "renewal_days_remaining": 111,
+    "days_since_last_contact": 21,
+    "notes": "Champion left company; low login frequency",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 25.0,
+        "key_feature_users": 10.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 20.0,
+        "key_feature_users": 8.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 15.0,
+        "key_feature_users": 4.0,
+        "usage_trend": "declining"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T008",
+        "severity": "medium",
+        "customer_sentiment": "neutral",
+        "issue_summary": "New admin asks for onboarding materials after former champion left",
+        "current_status": "new"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [],
+    "upcoming_checkins": [],
+    "related_junior_outputs": [],
+    "unresolved_follow_up_items": null,
+    "open_ticket_ids": [
+      "T008"
+    ],
+    "flags": {
+      "health_decline_flag": true,
+      "severe_decline_flag": true,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": true,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": true,
+      "declining_usage_flag": true,
+      "expansion_opportunity_flag": false,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": false,
+      "quality_review_needed_flag": false,
+      "intervention_candidate_flag": true,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 143.0,
+      "opportunity_score": 0.0,
+      "priority_score": 96.3,
+      "escalation_score": 0.0
+    },
+    "score_reasons": {
+      "risk": [
+        "health score declined by 19 points",
+        "usage trend is declining",
+        "high ticket volume (5 in 30d)",
+        "low NPS (3)",
+        "open ticket(s): T008"
+      ],
+      "opportunity": [],
+      "priority": [
+        "open-ticket severity weighting (+7)",
+        "unresolved-item ageing (21d since last contact)"
+      ],
+      "escalation": []
+    }
+  },
+  "A005": {
+    "account_id": "A005",
+    "account_name": "Evergreen Finance",
+    "segment": "Enterprise",
+    "csm_owner": "Morgan Lee",
+    "contract_value": 175000.0,
+    "current_health_score": 67.0,
+    "previous_health_score": 76.0,
+    "health_score_delta": -9.0,
+    "product_usage_trend": "declining",
+    "support_ticket_count_30d": 3.0,
+    "nps_score": 5.0,
+    "expansion_signal": "medium",
+    "renewal_date": "2026-05-28",
+    "renewal_days_remaining": 27,
+    "days_since_last_contact": 8,
+    "notes": "Renewal soon; exec sponsor requested usage review",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 299.0,
+        "key_feature_users": 102.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 272.0,
+        "key_feature_users": 98.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 255.0,
+        "key_feature_users": 91.0,
+        "usage_trend": "declining"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T007",
+        "severity": "high",
+        "customer_sentiment": "concerned",
+        "issue_summary": "Executive sponsor requests renewal usage summary by Friday",
+        "current_status": "new"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [
+      {
+        "call_date": "2026-04-23",
+        "customer_goal": "Demonstrate measurable usage value",
+        "risk_or_blocker": "Sponsor wants concise ROI summary",
+        "follow_up_items": "Prepare renewal value snapshot"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C002",
+        "scheduled_date": "2026-05-05",
+        "checkin_type": "Renewal value review",
+        "priority": "high",
+        "topics_to_cover": "ROI summary, adoption proof, renewal risk"
+      }
+    ],
+    "related_junior_outputs": [
+      {
+        "output_id": "O002",
+        "output_type": "Renewal summary",
+        "weak_output_flag": true,
+        "standard_ids": [
+          "QS001",
+          "QS002",
+          "QS004"
+        ]
+      }
+    ],
+    "unresolved_follow_up_items": "Prepare renewal value snapshot",
+    "open_ticket_ids": [
+      "T007"
+    ],
+    "flags": {
+      "health_decline_flag": true,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": true,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": true,
+      "low_nps_flag": true,
+      "declining_usage_flag": true,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": true,
+      "intervention_candidate_flag": true,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 131.25,
+      "opportunity_score": 17.0,
+      "priority_score": 126.55,
+      "escalation_score": 60.0
+    },
+    "score_reasons": {
+      "risk": [
+        "health score declined by 9 points",
+        "usage trend is declining",
+        "open ticket(s) carry negative/concerned sentiment",
+        "low NPS (5)",
+        "renewal within 45 days (27d)",
+        "unresolved follow-up: Prepare renewal value snapshot"
+      ],
+      "opportunity": [
+        "expansion signal is medium",
+        "upcoming check-in scheduled"
+      ],
+      "priority": [
+        "renewal proximity bonus (+18, 27d out)",
+        "open-ticket severity weighting (+15)",
+        "high-priority check-in scheduled"
+      ],
+      "escalation": [
+        "1 high-severity open ticket(s)",
+        "negative/frustrated customer sentiment on an open ticket",
+        "executive/renewal risk language present",
+        "a related junior output failed the preliminary quality pre-check"
+      ]
+    }
+  },
+  "A006": {
+    "account_id": "A006",
+    "account_name": "Futura Robotics",
+    "segment": "Mid-Market",
+    "csm_owner": "Riley Patel",
+    "contract_value": 65000.0,
+    "current_health_score": 82.0,
+    "previous_health_score": 77.0,
+    "health_score_delta": 5.0,
+    "product_usage_trend": "growing",
+    "support_ticket_count_30d": 2.0,
+    "nps_score": 8.0,
+    "expansion_signal": "high",
+    "renewal_date": "2026-09-30",
+    "renewal_days_remaining": 152,
+    "days_since_last_contact": 9,
+    "notes": "Strong adoption; potential premium-feature expansion",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 77.0,
+        "key_feature_users": 42.0,
+        "usage_trend": "growing"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 89.0,
+        "key_feature_users": 48.0,
+        "usage_trend": "growing"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 98.0,
+        "key_feature_users": 54.0,
+        "usage_trend": "growing"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T011",
+        "severity": "low",
+        "customer_sentiment": "positive",
+        "issue_summary": "Customer asks about premium automation feature limits",
+        "current_status": "new"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [
+      {
+        "call_date": "2026-04-22",
+        "customer_goal": "Assess premium automation use case",
+        "risk_or_blocker": "Budget approval needed",
+        "follow_up_items": "Send premium automation options"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C005",
+        "scheduled_date": "2026-05-06",
+        "checkin_type": "Premium automation exploration",
+        "priority": "medium",
+        "topics_to_cover": "Automation limits, premium use cases"
+      }
+    ],
+    "related_junior_outputs": [],
+    "unresolved_follow_up_items": "Send premium automation options",
+    "open_ticket_ids": [
+      "T011"
+    ],
+    "flags": {
+      "health_decline_flag": false,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": false,
+      "declining_usage_flag": false,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": false,
+      "intervention_candidate_flag": false,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 32.0,
+      "opportunity_score": 63.0,
+      "priority_score": 49.4,
+      "escalation_score": 0.0
+    },
+    "score_reasons": {
+      "risk": [
+        "unresolved follow-up: Send premium automation options"
+      ],
+      "opportunity": [
+        "usage trend is growing",
+        "expansion signal is high",
+        "open ticket(s) carry positive sentiment",
+        "upcoming check-in scheduled",
+        "stated customer goal aligns with growth/expansion language"
+      ],
+      "priority": [
+        "open-ticket severity weighting (+2)"
+      ],
+      "escalation": []
+    }
+  },
+  "A007": {
+    "account_id": "A007",
+    "account_name": "GreenLeaf Foods",
+    "segment": "SMB",
+    "csm_owner": "Taylor Chen",
+    "contract_value": 22000.0,
+    "current_health_score": 76.0,
+    "previous_health_score": 78.0,
+    "health_score_delta": -2.0,
+    "product_usage_trend": "flat",
+    "support_ticket_count_30d": 0.0,
+    "nps_score": 7.0,
+    "expansion_signal": "medium",
+    "renewal_date": "2026-11-15",
+    "renewal_days_remaining": 198,
+    "days_since_last_contact": 20,
+    "notes": "Stable account; no recent risks",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 20.0,
+        "key_feature_users": 6.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 23.0,
+        "key_feature_users": 7.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 21.0,
+        "key_feature_users": 10.0,
+        "usage_trend": "flat"
+      }
+    ],
+    "open_tickets": [],
+    "all_tickets_count": 0,
+    "call_notes": [],
+    "upcoming_checkins": [],
+    "related_junior_outputs": [],
+    "unresolved_follow_up_items": null,
+    "open_ticket_ids": [],
+    "flags": {
+      "health_decline_flag": true,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": false,
+      "declining_usage_flag": false,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": false,
+      "checkin_due_flag": false,
+      "quality_review_needed_flag": false,
+      "intervention_candidate_flag": false,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 28.0,
+      "opportunity_score": 12.0,
+      "priority_score": 24.6,
+      "escalation_score": 0.0
+    },
+    "score_reasons": {
+      "risk": [
+        "health score declined by 2 points"
+      ],
+      "opportunity": [
+        "expansion signal is medium"
+      ],
+      "priority": [
+        "unresolved-item ageing (20d since last contact)"
+      ],
+      "escalation": []
+    }
+  },
+  "A008": {
+    "account_id": "A008",
+    "account_name": "Harbor Insurance",
+    "segment": "Enterprise",
+    "csm_owner": "Morgan Lee",
+    "contract_value": 240000.0,
+    "current_health_score": 48.0,
+    "previous_health_score": 66.0,
+    "health_score_delta": -18.0,
+    "product_usage_trend": "declining",
+    "support_ticket_count_30d": 9.0,
+    "nps_score": 2.0,
+    "expansion_signal": "low",
+    "renewal_date": "2026-06-12",
+    "renewal_days_remaining": 42,
+    "days_since_last_contact": 14,
+    "notes": "High-value account with severe implementation blockers",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 301.0,
+        "key_feature_users": 105.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 277.0,
+        "key_feature_users": 97.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 245.0,
+        "key_feature_users": 87.0,
+        "usage_trend": "declining"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T001",
+        "severity": "high",
+        "customer_sentiment": "frustrated",
+        "issue_summary": "Executive sponsor says implementation is blocked by SSO failures",
+        "current_status": "open"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [
+      {
+        "call_date": "2026-04-17",
+        "customer_goal": "Resolve SSO and complete rollout",
+        "risk_or_blocker": "SSO blockers delaying launch",
+        "follow_up_items": "CSM to coordinate technical escalation"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C001",
+        "scheduled_date": "2026-05-04",
+        "checkin_type": "Implementation recovery",
+        "priority": "high",
+        "topics_to_cover": "SSO status, rollout unblock plan, executive confidence"
+      }
+    ],
+    "related_junior_outputs": [
+      {
+        "output_id": "O001",
+        "output_type": "Executive update draft",
+        "weak_output_flag": true,
+        "standard_ids": [
+          "QS001",
+          "QS002",
+          "QS003",
+          "QS005"
+        ]
+      }
+    ],
+    "unresolved_follow_up_items": "CSM to coordinate technical escalation",
+    "open_ticket_ids": [
+      "T001"
+    ],
+    "flags": {
+      "health_decline_flag": true,
+      "severe_decline_flag": true,
+      "renewal_soon_flag": true,
+      "high_ticket_volume_flag": true,
+      "negative_sentiment_flag": true,
+      "low_nps_flag": true,
+      "declining_usage_flag": true,
+      "expansion_opportunity_flag": false,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": true,
+      "intervention_candidate_flag": true,
+      "high_value_account_flag": true
+    },
+    "scores": {
+      "risk_score": 222.5,
+      "opportunity_score": 25.0,
+      "priority_score": 179.5,
+      "escalation_score": 70.0
+    },
+    "score_reasons": {
+      "risk": [
+        "health score declined by 18 points",
+        "usage trend is declining",
+        "high ticket volume (9 in 30d)",
+        "open ticket(s) carry negative/concerned sentiment",
+        "low NPS (2)",
+        "renewal within 45 days (42d)",
+        "unresolved follow-up: CSM to coordinate technical escalation"
+      ],
+      "opportunity": [
+        "upcoming check-in scheduled",
+        "high-value account (top quartile contract value)",
+        "stated customer goal aligns with growth/expansion language"
+      ],
+      "priority": [
+        "renewal proximity bonus (+3, 42d out)",
+        "high-value account weighting",
+        "open-ticket severity weighting (+15)",
+        "high-priority check-in scheduled"
+      ],
+      "escalation": [
+        "1 high-severity open ticket(s)",
+        "negative/frustrated customer sentiment on an open ticket",
+        "executive/renewal risk language present",
+        "technical blocker language present",
+        "a related junior output failed the preliminary quality pre-check"
+      ]
+    }
+  },
+  "A009": {
+    "account_id": "A009",
+    "account_name": "Indigo Studios",
+    "segment": "SMB",
+    "csm_owner": "Riley Patel",
+    "contract_value": 12000.0,
+    "current_health_score": 69.0,
+    "previous_health_score": 70.0,
+    "health_score_delta": -1.0,
+    "product_usage_trend": "flat",
+    "support_ticket_count_30d": 2.0,
+    "nps_score": 6.0,
+    "expansion_signal": "low",
+    "renewal_date": "2026-10-02",
+    "renewal_days_remaining": 154,
+    "days_since_last_contact": 12,
+    "notes": "Small account; routine support needs",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 14.0,
+        "key_feature_users": 4.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 23.0,
+        "key_feature_users": 12.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 17.0,
+        "key_feature_users": 4.0,
+        "usage_trend": "flat"
+      }
+    ],
+    "open_tickets": [],
+    "all_tickets_count": 0,
+    "call_notes": [],
+    "upcoming_checkins": [],
+    "related_junior_outputs": [],
+    "unresolved_follow_up_items": null,
+    "open_ticket_ids": [],
+    "flags": {
+      "health_decline_flag": true,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": true,
+      "declining_usage_flag": false,
+      "expansion_opportunity_flag": false,
+      "unresolved_issue_flag": false,
+      "checkin_due_flag": false,
+      "quality_review_needed_flag": false,
+      "intervention_candidate_flag": false,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 45.0,
+      "opportunity_score": 0.0,
+      "priority_score": 27.0,
+      "escalation_score": 0.0
+    },
+    "score_reasons": {
+      "risk": [
+        "health score declined by 1 points",
+        "low NPS (6)"
+      ],
+      "opportunity": [],
+      "priority": [],
+      "escalation": []
+    }
+  },
+  "A010": {
+    "account_id": "A010",
+    "account_name": "Juniper Manufacturing",
+    "segment": "Mid-Market",
+    "csm_owner": "Taylor Chen",
+    "contract_value": 74000.0,
+    "current_health_score": 58.0,
+    "previous_health_score": 63.0,
+    "health_score_delta": -5.0,
+    "product_usage_trend": "declining",
+    "support_ticket_count_30d": 6.0,
+    "nps_score": 5.0,
+    "expansion_signal": "medium",
+    "renewal_date": "2026-07-02",
+    "renewal_days_remaining": 62,
+    "days_since_last_contact": 7,
+    "notes": "Tickets increasing; usage declining in two departments",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 104.0,
+        "key_feature_users": 38.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 94.0,
+        "key_feature_users": 32.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 87.0,
+        "key_feature_users": 27.0,
+        "usage_trend": "declining"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T004",
+        "severity": "medium",
+        "customer_sentiment": "neutral",
+        "issue_summary": "Power user wants help interpreting usage dashboard drop",
+        "current_status": "open"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [
+      {
+        "call_date": "2026-04-24",
+        "customer_goal": "Understand drop in reporting usage",
+        "risk_or_blocker": "Report exports not trusted",
+        "follow_up_items": "Investigate data freshness issue"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C006",
+        "scheduled_date": "2026-05-07",
+        "checkin_type": "Usage dashboard recovery",
+        "priority": "medium",
+        "topics_to_cover": "Reporting usage drop, export data trust"
+      }
+    ],
+    "related_junior_outputs": [
+      {
+        "output_id": "O006",
+        "output_type": "Internal risk note",
+        "weak_output_flag": false,
+        "standard_ids": [
+          "QS003",
+          "QS004",
+          "QS005"
+        ]
+      }
+    ],
+    "unresolved_follow_up_items": "Investigate data freshness issue",
+    "open_ticket_ids": [
+      "T004"
+    ],
+    "flags": {
+      "health_decline_flag": true,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": true,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": true,
+      "declining_usage_flag": true,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": true,
+      "intervention_candidate_flag": true,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 111.0,
+      "opportunity_score": 17.0,
+      "priority_score": 83.4,
+      "escalation_score": 0.0
+    },
+    "score_reasons": {
+      "risk": [
+        "health score declined by 5 points",
+        "usage trend is declining",
+        "high ticket volume (6 in 30d)",
+        "low NPS (5)",
+        "unresolved follow-up: Investigate data freshness issue"
+      ],
+      "opportunity": [
+        "expansion signal is medium",
+        "upcoming check-in scheduled"
+      ],
+      "priority": [
+        "open-ticket severity weighting (+7)"
+      ],
+      "escalation": []
+    }
+  },
+  "A011": {
+    "account_id": "A011",
+    "account_name": "Keystone Legal",
+    "segment": "Mid-Market",
+    "csm_owner": "Morgan Lee",
+    "contract_value": 56000.0,
+    "current_health_score": 84.0,
+    "previous_health_score": 80.0,
+    "health_score_delta": 4.0,
+    "product_usage_trend": "growing",
+    "support_ticket_count_30d": 1.0,
+    "nps_score": 8.0,
+    "expansion_signal": "high",
+    "renewal_date": "2026-12-15",
+    "renewal_days_remaining": 228,
+    "days_since_last_contact": 19,
+    "notes": "Legal ops team asked about advanced workflows",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 79.0,
+        "key_feature_users": 43.0,
+        "usage_trend": "growing"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 88.0,
+        "key_feature_users": 48.0,
+        "usage_trend": "growing"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 97.0,
+        "key_feature_users": 56.0,
+        "usage_trend": "growing"
+      }
+    ],
+    "open_tickets": [],
+    "all_tickets_count": 0,
+    "call_notes": [],
+    "upcoming_checkins": [],
+    "related_junior_outputs": [],
+    "unresolved_follow_up_items": null,
+    "open_ticket_ids": [],
+    "flags": {
+      "health_decline_flag": false,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": false,
+      "declining_usage_flag": false,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": false,
+      "checkin_due_flag": false,
+      "quality_review_needed_flag": false,
+      "intervention_candidate_flag": false,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 18.0,
+      "opportunity_score": 40.0,
+      "priority_score": 29.3,
+      "escalation_score": 0.0
+    },
+    "score_reasons": {
+      "risk": [],
+      "opportunity": [
+        "usage trend is growing",
+        "expansion signal is high"
+      ],
+      "priority": [
+        "unresolved-item ageing (19d since last contact)"
+      ],
+      "escalation": []
+    }
+  },
+  "A012": {
+    "account_id": "A012",
+    "account_name": "Lumen Energy",
+    "segment": "Enterprise",
+    "csm_owner": "Riley Patel",
+    "contract_value": 190000.0,
+    "current_health_score": 63.0,
+    "previous_health_score": 60.0,
+    "health_score_delta": 3.0,
+    "product_usage_trend": "flat",
+    "support_ticket_count_30d": 8.0,
+    "nps_score": 4.0,
+    "expansion_signal": "medium",
+    "renewal_date": "2026-08-05",
+    "renewal_days_remaining": 96,
+    "days_since_last_contact": 8,
+    "notes": "Many tickets but usage remains strong",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 268.0,
+        "key_feature_users": 119.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 259.0,
+        "key_feature_users": 114.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 261.0,
+        "key_feature_users": 118.0,
+        "usage_trend": "flat"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T005",
+        "severity": "low",
+        "customer_sentiment": "neutral",
+        "issue_summary": "Customer opened several how-to questions about advanced permissions",
+        "current_status": "new"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [
+      {
+        "call_date": "2026-04-23",
+        "customer_goal": "Reduce admin confusion",
+        "risk_or_blocker": "Permission model unclear",
+        "follow_up_items": "Provide permissions guide"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C009",
+        "scheduled_date": "2026-05-08",
+        "checkin_type": "Permissions enablement",
+        "priority": "low",
+        "topics_to_cover": "Admin training, permissions confusion"
+      }
+    ],
+    "related_junior_outputs": [
+      {
+        "output_id": "O007",
+        "output_type": "Permissions guide response",
+        "weak_output_flag": true,
+        "standard_ids": [
+          "QS001",
+          "QS002"
+        ]
+      }
+    ],
+    "unresolved_follow_up_items": "Provide permissions guide",
+    "open_ticket_ids": [
+      "T005"
+    ],
+    "flags": {
+      "health_decline_flag": false,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": true,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": true,
+      "declining_usage_flag": true,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": true,
+      "intervention_candidate_flag": true,
+      "high_value_account_flag": true
+    },
+    "scores": {
+      "risk_score": 106.0,
+      "opportunity_score": 27.0,
+      "priority_score": 86.4,
+      "escalation_score": 10.0
+    },
+    "score_reasons": {
+      "risk": [
+        "usage trend is declining",
+        "high ticket volume (8 in 30d)",
+        "low NPS (4)",
+        "unresolved follow-up: Provide permissions guide"
+      ],
+      "opportunity": [
+        "expansion signal is medium",
+        "upcoming check-in scheduled",
+        "high-value account (top quartile contract value)"
+      ],
+      "priority": [
+        "high-value account weighting",
+        "open-ticket severity weighting (+2)"
+      ],
+      "escalation": [
+        "a related junior output failed the preliminary quality pre-check"
+      ]
+    }
+  },
+  "A013": {
+    "account_id": "A013",
+    "account_name": "Mosaic Labs",
+    "segment": "SMB",
+    "csm_owner": "Taylor Chen",
+    "contract_value": 15000.0,
+    "current_health_score": 91.0,
+    "previous_health_score": 89.0,
+    "health_score_delta": 2.0,
+    "product_usage_trend": "growing",
+    "support_ticket_count_30d": 0.0,
+    "nps_score": 10.0,
+    "expansion_signal": "medium",
+    "renewal_date": "2026-09-10",
+    "renewal_days_remaining": 132,
+    "days_since_last_contact": 5,
+    "notes": "Very high satisfaction; candidate for advocacy",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 17.0,
+        "key_feature_users": 6.0,
+        "usage_trend": "growing"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 21.0,
+        "key_feature_users": 10.0,
+        "usage_trend": "growing"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 22.0,
+        "key_feature_users": 11.0,
+        "usage_trend": "growing"
+      }
+    ],
+    "open_tickets": [],
+    "all_tickets_count": 0,
+    "call_notes": [],
+    "upcoming_checkins": [],
+    "related_junior_outputs": [],
+    "unresolved_follow_up_items": null,
+    "open_ticket_ids": [],
+    "flags": {
+      "health_decline_flag": false,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": false,
+      "declining_usage_flag": false,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": false,
+      "checkin_due_flag": false,
+      "quality_review_needed_flag": false,
+      "intervention_candidate_flag": false,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 9.0,
+      "opportunity_score": 27.0,
+      "priority_score": 16.2,
+      "escalation_score": 0.0
+    },
+    "score_reasons": {
+      "risk": [],
+      "opportunity": [
+        "usage trend is growing",
+        "expansion signal is medium"
+      ],
+      "priority": [],
+      "escalation": []
+    }
+  },
+  "A014": {
+    "account_id": "A014",
+    "account_name": "Northstar Travel",
+    "segment": "Mid-Market",
+    "csm_owner": "Morgan Lee",
+    "contract_value": 83000.0,
+    "current_health_score": 52.0,
+    "previous_health_score": 71.0,
+    "health_score_delta": -19.0,
+    "product_usage_trend": "declining",
+    "support_ticket_count_30d": 4.0,
+    "nps_score": 3.0,
+    "expansion_signal": "low",
+    "renewal_date": "2026-05-20",
+    "renewal_days_remaining": 19,
+    "days_since_last_contact": 15,
+    "notes": "Renewal imminent; adoption issue in mobile app",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 99.0,
+        "key_feature_users": 37.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 95.0,
+        "key_feature_users": 30.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 87.0,
+        "key_feature_users": 33.0,
+        "usage_trend": "declining"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T003",
+        "severity": "medium",
+        "customer_sentiment": "negative",
+        "issue_summary": "Admin reports mobile users cannot complete onboarding steps",
+        "current_status": "open"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [
+      {
+        "call_date": "2026-04-16",
+        "customer_goal": "Increase field-team onboarding",
+        "risk_or_blocker": "Mobile onboarding friction",
+        "follow_up_items": "Send mobile onboarding plan"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C003",
+        "scheduled_date": "2026-05-05",
+        "checkin_type": "Mobile adoption plan",
+        "priority": "high",
+        "topics_to_cover": "Mobile onboarding issue, renewal timeline"
+      }
+    ],
+    "related_junior_outputs": [
+      {
+        "output_id": "O003",
+        "output_type": "Mobile adoption plan",
+        "weak_output_flag": false,
+        "standard_ids": [
+          "QS001",
+          "QS002",
+          "QS003"
+        ]
+      }
+    ],
+    "unresolved_follow_up_items": "Send mobile onboarding plan",
+    "open_ticket_ids": [
+      "T003"
+    ],
+    "flags": {
+      "health_decline_flag": true,
+      "severe_decline_flag": true,
+      "renewal_soon_flag": true,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": true,
+      "low_nps_flag": true,
+      "declining_usage_flag": true,
+      "expansion_opportunity_flag": false,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": true,
+      "intervention_candidate_flag": true,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 182.5,
+      "opportunity_score": 5.0,
+      "priority_score": 153.0,
+      "escalation_score": 25.0
+    },
+    "score_reasons": {
+      "risk": [
+        "health score declined by 19 points",
+        "usage trend is declining",
+        "open ticket(s) carry negative/concerned sentiment",
+        "low NPS (3)",
+        "renewal within 45 days (19d)",
+        "unresolved follow-up: Send mobile onboarding plan"
+      ],
+      "opportunity": [
+        "upcoming check-in scheduled"
+      ],
+      "priority": [
+        "renewal proximity bonus (+26, 19d out)",
+        "open-ticket severity weighting (+7)",
+        "high-priority check-in scheduled",
+        "unresolved-item ageing (15d since last contact)"
+      ],
+      "escalation": [
+        "negative/frustrated customer sentiment on an open ticket",
+        "executive/renewal risk language present"
+      ]
+    }
+  },
+  "A015": {
+    "account_id": "A015",
+    "account_name": "Orchid Telecom",
+    "segment": "Enterprise",
+    "csm_owner": "Riley Patel",
+    "contract_value": 300000.0,
+    "current_health_score": 79.0,
+    "previous_health_score": 77.0,
+    "health_score_delta": 2.0,
+    "product_usage_trend": "flat",
+    "support_ticket_count_30d": 4.0,
+    "nps_score": 6.0,
+    "expansion_signal": "high",
+    "renewal_date": "2026-11-01",
+    "renewal_days_remaining": 184,
+    "days_since_last_contact": 6,
+    "notes": "Strategic account; integrations roadmap concern",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 259.0,
+        "key_feature_users": 115.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 262.0,
+        "key_feature_users": 119.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 267.0,
+        "key_feature_users": 117.0,
+        "usage_trend": "flat"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T009",
+        "severity": "medium",
+        "customer_sentiment": "neutral",
+        "issue_summary": "Platform team asks for update on integration roadmap",
+        "current_status": "open"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [
+      {
+        "call_date": "2026-04-25",
+        "customer_goal": "Confirm integrations roadmap",
+        "risk_or_blocker": "Roadmap dependency for next rollout",
+        "follow_up_items": "Escalate roadmap question to product"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C008",
+        "scheduled_date": "2026-05-08",
+        "checkin_type": "Integration roadmap review",
+        "priority": "medium",
+        "topics_to_cover": "Roadmap dependency, strategic relationship"
+      }
+    ],
+    "related_junior_outputs": [
+      {
+        "output_id": "O008",
+        "output_type": "Roadmap response",
+        "weak_output_flag": false,
+        "standard_ids": [
+          "QS002",
+          "QS004",
+          "QS005"
+        ]
+      }
+    ],
+    "unresolved_follow_up_items": "Escalate roadmap question to product",
+    "open_ticket_ids": [
+      "T009"
+    ],
+    "flags": {
+      "health_decline_flag": false,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": true,
+      "declining_usage_flag": false,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": true,
+      "intervention_candidate_flag": false,
+      "high_value_account_flag": true
+    },
+    "scores": {
+      "risk_score": 47.0,
+      "opportunity_score": 40.0,
+      "priority_score": 64.2,
+      "escalation_score": 10.0
+    },
+    "score_reasons": {
+      "risk": [
+        "low NPS (6)",
+        "unresolved follow-up: Escalate roadmap question to product"
+      ],
+      "opportunity": [
+        "expansion signal is high",
+        "upcoming check-in scheduled",
+        "high-value account (top quartile contract value)"
+      ],
+      "priority": [
+        "high-value account weighting",
+        "open-ticket severity weighting (+7)"
+      ],
+      "escalation": [
+        "technical blocker language present"
+      ]
+    }
+  },
+  "A016": {
+    "account_id": "A016",
+    "account_name": "Pioneer Biotech",
+    "segment": "Mid-Market",
+    "csm_owner": "Taylor Chen",
+    "contract_value": 69000.0,
+    "current_health_score": 74.0,
+    "previous_health_score": 72.0,
+    "health_score_delta": 2.0,
+    "product_usage_trend": "flat",
+    "support_ticket_count_30d": 3.0,
+    "nps_score": 7.0,
+    "expansion_signal": "medium",
+    "renewal_date": "2026-06-18",
+    "renewal_days_remaining": 48,
+    "days_since_last_contact": 11,
+    "notes": "Support volume rising but sentiment still neutral",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 94.0,
+        "key_feature_users": 43.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 96.0,
+        "key_feature_users": 40.0,
+        "usage_trend": "flat"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 86.0,
+        "key_feature_users": 35.0,
+        "usage_trend": "flat"
+      }
+    ],
+    "open_tickets": [],
+    "all_tickets_count": 0,
+    "call_notes": [],
+    "upcoming_checkins": [],
+    "related_junior_outputs": [],
+    "unresolved_follow_up_items": null,
+    "open_ticket_ids": [],
+    "flags": {
+      "health_decline_flag": false,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": false,
+      "declining_usage_flag": true,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": false,
+      "checkin_due_flag": false,
+      "quality_review_needed_flag": false,
+      "intervention_candidate_flag": false,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 47.0,
+      "opportunity_score": 12.0,
+      "priority_score": 33.0,
+      "escalation_score": 0.0
+    },
+    "score_reasons": {
+      "risk": [
+        "usage trend is declining"
+      ],
+      "opportunity": [
+        "expansion signal is medium"
+      ],
+      "priority": [],
+      "escalation": []
+    }
+  },
+  "A017": {
+    "account_id": "A017",
+    "account_name": "Quartz Media",
+    "segment": "SMB",
+    "csm_owner": "Morgan Lee",
+    "contract_value": 16000.0,
+    "current_health_score": 46.0,
+    "previous_health_score": 64.0,
+    "health_score_delta": -18.0,
+    "product_usage_trend": "declining",
+    "support_ticket_count_30d": 6.0,
+    "nps_score": 2.0,
+    "expansion_signal": "low",
+    "renewal_date": "2026-07-22",
+    "renewal_days_remaining": 82,
+    "days_since_last_contact": 22,
+    "notes": "Low usage and negative sentiment; unclear stakeholder owner",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 21.0,
+        "key_feature_users": 7.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 17.0,
+        "key_feature_users": 5.0,
+        "usage_trend": "declining"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 16.0,
+        "key_feature_users": 3.0,
+        "usage_trend": "declining"
+      }
+    ],
+    "open_tickets": [
+      {
+        "ticket_id": "T006",
+        "severity": "high",
+        "customer_sentiment": "negative",
+        "issue_summary": "Customer says team has stopped using the platform and needs a reset",
+        "current_status": "open"
+      }
+    ],
+    "all_tickets_count": 1,
+    "call_notes": [
+      {
+        "call_date": "2026-04-09",
+        "customer_goal": "Rebuild use case and assign owner",
+        "risk_or_blocker": "No clear champion",
+        "follow_up_items": "Identify new sponsor and propose reset"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C007",
+        "scheduled_date": "2026-05-07",
+        "checkin_type": "Account reset",
+        "priority": "high",
+        "topics_to_cover": "Champion gap, platform value, reactivation"
+      }
+    ],
+    "related_junior_outputs": [
+      {
+        "output_id": "O004",
+        "output_type": "Reactivation email",
+        "weak_output_flag": true,
+        "standard_ids": [
+          "QS001",
+          "QS002",
+          "QS006"
+        ]
+      }
+    ],
+    "unresolved_follow_up_items": "Identify new sponsor and propose reset",
+    "open_ticket_ids": [
+      "T006"
+    ],
+    "flags": {
+      "health_decline_flag": true,
+      "severe_decline_flag": true,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": true,
+      "negative_sentiment_flag": true,
+      "low_nps_flag": true,
+      "declining_usage_flag": true,
+      "expansion_opportunity_flag": false,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": true,
+      "intervention_candidate_flag": true,
+      "high_value_account_flag": false
+    },
+    "scores": {
+      "risk_score": 170.0,
+      "opportunity_score": 5.0,
+      "priority_score": 131.0,
+      "escalation_score": 50.0
+    },
+    "score_reasons": {
+      "risk": [
+        "health score declined by 18 points",
+        "usage trend is declining",
+        "high ticket volume (6 in 30d)",
+        "open ticket(s) carry negative/concerned sentiment",
+        "low NPS (2)",
+        "unresolved follow-up: Identify new sponsor and propose reset"
+      ],
+      "opportunity": [
+        "upcoming check-in scheduled"
+      ],
+      "priority": [
+        "open-ticket severity weighting (+15)",
+        "high-priority check-in scheduled",
+        "unresolved-item ageing (22d since last contact)"
+      ],
+      "escalation": [
+        "1 high-severity open ticket(s)",
+        "negative/frustrated customer sentiment on an open ticket",
+        "a related junior output failed the preliminary quality pre-check"
+      ]
+    }
+  },
+  "A018": {
+    "account_id": "A018",
+    "account_name": "Redwood Cloud",
+    "segment": "Enterprise",
+    "csm_owner": "Riley Patel",
+    "contract_value": 260000.0,
+    "current_health_score": 86.0,
+    "previous_health_score": 79.0,
+    "health_score_delta": 7.0,
+    "product_usage_trend": "growing",
+    "support_ticket_count_30d": 2.0,
+    "nps_score": 9.0,
+    "expansion_signal": "high",
+    "renewal_date": "2026-10-30",
+    "renewal_days_remaining": 182,
+    "days_since_last_contact": 5,
+    "notes": "Strong account; expansion signal from platform team",
+    "recent_usage_events": [
+      {
+        "event_date": "2026-04-10",
+        "active_users": 244.0,
+        "key_feature_users": 136.0,
+        "usage_trend": "growing"
+      },
+      {
+        "event_date": "2026-04-17",
+        "active_users": 262.0,
+        "key_feature_users": 146.0,
+        "usage_trend": "growing"
+      },
+      {
+        "event_date": "2026-04-24",
+        "active_users": 290.0,
+        "key_feature_users": 162.0,
+        "usage_trend": "growing"
+      }
+    ],
+    "open_tickets": [],
+    "all_tickets_count": 0,
+    "call_notes": [
+      {
+        "call_date": "2026-04-26",
+        "customer_goal": "Assess multi-team rollout",
+        "risk_or_blocker": "Need governance plan",
+        "follow_up_items": "Draft phased rollout approach"
+      }
+    ],
+    "upcoming_checkins": [
+      {
+        "checkin_id": "C010",
+        "scheduled_date": "2026-05-11",
+        "checkin_type": "Expansion rollout design",
+        "priority": "medium",
+        "topics_to_cover": "Governance plan, multi-team adoption"
+      }
+    ],
+    "related_junior_outputs": [],
+    "unresolved_follow_up_items": "Draft phased rollout approach",
+    "open_ticket_ids": [],
+    "flags": {
+      "health_decline_flag": false,
+      "severe_decline_flag": false,
+      "renewal_soon_flag": false,
+      "high_ticket_volume_flag": false,
+      "negative_sentiment_flag": false,
+      "low_nps_flag": false,
+      "declining_usage_flag": false,
+      "expansion_opportunity_flag": true,
+      "unresolved_issue_flag": true,
+      "checkin_due_flag": true,
+      "quality_review_needed_flag": false,
+      "intervention_candidate_flag": false,
+      "high_value_account_flag": true
+    },
+    "scores": {
+      "risk_score": 28.0,
+      "opportunity_score": 65.0,
+      "priority_score": 55.8,
+      "escalation_score": 0.0
+    },
+    "score_reasons": {
+      "risk": [
+        "unresolved follow-up: Draft phased rollout approach"
+      ],
+      "opportunity": [
+        "usage trend is growing",
+        "expansion signal is high",
+        "upcoming check-in scheduled",
+        "high-value account (top quartile contract value)",
+        "stated customer goal aligns with growth/expansion language"
+      ],
+      "priority": [
+        "high-value account weighting"
+      ],
+      "escalation": []
+    }
+  }
+}

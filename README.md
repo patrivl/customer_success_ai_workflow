@@ -1,0 +1,262 @@
+# Customer Success AI Workflow (Simulated)
+
+A runnable, deterministic simulation of an end-to-end Customer Success AI
+workflow. It ingests the seven synthetic CSVs in `data/`, joins them,
+generates a risk-ranked briefing for every account, and runs a quality
+review of junior-drafted customer communications against a defined set of
+quality standards.
+
+**No external AI API is called anywhere in this project.** Every "LLM
+response" is produced by deterministic, rule-based logic that is fed
+through a `SimulatedLLMClient` (see `src/llm_simulator.py`), which mimics
+the call shape, prompt handling, and token/cost metering of a real LLM
+integration. This keeps the workflow fully offline, free, and 100%
+reproducible, while still exercising every part of the pipeline a real
+integration would need (prompt templates, a call interface, token counting,
+cost logging).
+
+## Quick start
+
+```bash
+pip install -r requirements.txt
+python run_workflow.py
+```
+
+That's it — one command, no API keys, no network access required. Output
+appears in `output/` and a run summary is printed to the console.
+
+## What it does
+
+1. **Load & validate** — every CSV in `data/` is loaded and checked against
+   a required-column schema (`src/config.py::REQUIRED_COLUMNS`). Missing
+   files or columns cause a clear, fail-fast error listing every problem
+   found (see "Data validation" below).
+2. **Deterministic preprocessing layer** (`src/preprocessing.py`, runs
+   before any simulated-LLM stage) — normalizes every table, joins
+   everything on `account_id`, splits/joins `quality_standard_ids`, builds
+   a compact per-account context, computes transparent flags and four
+   scores (`risk_score`, `opportunity_score`, `priority_score`,
+   `escalation_score`), selects which accounts/tickets/outputs move into
+   the later stages, detects portfolio-level patterns, and picks 5
+   representative end-to-end runs. See "The preprocessing layer" below.
+3. **Join on `account_id`** — `accounts.csv` is joined with
+   `usage_events.csv`, `support_tickets.csv`, `call_notes.csv`, and
+   `scheduled_checkins.csv` into one consolidated `AccountContext` per
+   account (this is the Stage 1/2 input shape; separate from, but
+   consistent with, the join done inside the preprocessing layer).
+4. **Split + join `quality_standard_ids`** — `junior_outputs.csv` has a
+   semicolon-delimited `quality_standard_ids` column (e.g.
+   `QS001;QS002;QS003`). This is exploded into one row per
+   `(output_id, standard_id)` pair, then joined against
+   `quality_standards.csv` on `standard_id` to attach the full standard
+   name and description to every row that needs reviewing.
+5. **Stage 1 — Account briefings** (`src/briefing_generator.py`):
+   for every SELECTED account (from the preprocessing layer's
+   `daily_account_review` selector), compute a deterministic `risk_score`
+   and `opportunity_score`, render the `account_briefing` prompt template
+   with real data, and generate a narrative summary + risk/opportunity
+   notes + recommended next actions. Accounts are ranked highest-risk-first.
+6. **Stage 2 — Quality review** (`src/quality_reviewer.py`): for every
+   SELECTED junior output (from the `quality_review_outputs` selector),
+   evaluate each assigned quality standard with a dedicated heuristic and
+   produce a PASS / PARTIAL / FAIL verdict with a grounded rationale.
+   Verdicts roll up into an overall score and a recommendation of
+   *Approved*, *Needs revision*, or *Rejected*, plus a suggested revision
+   when it isn't a clean approval.
+7. **Reports** — Stage 1/2 output lands in `output/` as JSON + Markdown,
+   plus a per-call token/cost log. The preprocessing layer's own output
+   lands separately in `outputs/preprocessing/` (see below).
+
+## Project structure
+
+```
+run_workflow.py            # single entry point — orchestrates everything
+requirements.txt
+data/                       # the 7 source CSVs
+  accounts.csv
+  usage_events.csv
+  support_tickets.csv
+  call_notes.csv
+  scheduled_checkins.csv
+  junior_outputs.csv
+  quality_standards.csv
+src/
+  config.py                 # required columns, scoring weights, thresholds, pricing constants
+  data_loader.py             # load, validate, account_id joins, standard_ids split/join (Stage 1/2 shape)
+  preprocessing.py            # deterministic preprocessing layer: normalize, flags, scores, selectors, patterns
+  llm_simulator.py           # simulated LLM call wrapper + token/cost metering
+  prompts.py                 # prompt templates for both simulated LLM tasks
+  briefing_generator.py       # Stage 1: risk/opportunity scoring + briefings
+  quality_reviewer.py         # Stage 2: per-standard heuristic evaluators
+  report_writer.py            # writes Stage 1/2 JSON/Markdown reports + logs
+tests/
+  test_workflow.py            # sanity tests: loading/joins/split-join/token logging/preprocessing
+output/                      # Stage 1/2 reports (generated by running the workflow)
+  account_briefings.json / .md
+  quality_review_report.json / .md
+  token_usage_log.csv
+  workflow_summary.md
+outputs/preprocessing/       # deterministic preprocessing layer output (generated by running the workflow)
+  account_contexts.json
+  account_scores.csv
+  portfolio_patterns.json
+  selected_workflow_items.json
+  representative_accounts.json
+```
+
+## The preprocessing layer (`src/preprocessing.py`)
+
+This layer does everything that doesn't require judgement or synthesis, so
+the (simulated) model-facing stages only see clean, compact, decision-ready
+context -- and, on a real/larger portfolio, only see the accounts/outputs
+that actually warrant a model call.
+
+**Normalization** (`validate_and_normalize_data`): re-confirms required
+columns, lowercases/strips categorical fields (`severity`, `sentiment`,
+`status`, `priority`, `usage_trend`) with safe defaults for missing values,
+parses `renewal_date` / `call_date` / `event_date` / `scheduled_date` into
+real datetimes, and coerces key numeric fields. This produces a *separate*
+normalized copy — it never mutates the tables Stage 1/2 use, so existing
+report text/casing is unaffected.
+
+**Account context** (`build_account_contexts`): one compact,
+JSON-serializable dict per account — identity fields, health/usage/ticket/
+NPS/expansion signals, `renewal_days_remaining`, recent usage events, open
+tickets, prior call notes, upcoming check-ins, related junior outputs, and
+any unresolved follow-up item.
+
+**Deterministic flags** (12, per account): `health_decline_flag`,
+`severe_decline_flag`, `renewal_soon_flag`, `high_ticket_volume_flag`,
+`negative_sentiment_flag`, `low_nps_flag`, `declining_usage_flag`,
+`expansion_opportunity_flag`, `unresolved_issue_flag`, `checkin_due_flag`,
+`quality_review_needed_flag`, `intervention_candidate_flag` (plus a bonus
+`high_value_account_flag`).
+
+**Scores** (all transparent, weights documented in `config.py`):
+- `risk_score` — health decline, low current health, declining usage,
+  ticket volume/severity, negative sentiment, low NPS, renewal proximity,
+  unresolved blockers.
+- `opportunity_score` — growing usage, expansion signal, positive
+  sentiment, upcoming check-in, high account value, customer-goal language
+  aligned with growth/expansion.
+- `priority_score` — combines risk + opportunity with renewal proximity,
+  account value, ticket severity, check-in priority, and unresolved-item
+  ageing (days since last contact).
+- `escalation_score` — high-severity tickets, negative/frustrated
+  sentiment, executive/renewal risk language, technical-blocker language,
+  manager/escalation language, and a failed preliminary output quality
+  pre-check.
+
+**Selectors** (each returns IDs + a short deterministic reason, e.g.
+*"health score declined by 18 points"* or *"renewal within 45 days and
+negative sentiment"*): `select_daily_account_review_accounts` (all),
+`select_second_pass_validation_accounts`, `select_flagged_account_summary_accounts`
+(top 25-40, gracefully scaled down on this small dataset),
+`select_csm_alert_accounts`, `select_unresolved_items`,
+`select_inbound_issues`, `select_issue_pattern_review_items`,
+`select_scheduled_checkins`, `select_quality_review_outputs`,
+`select_failed_or_weak_outputs`, `select_intervention_candidates`,
+`select_complex_escalation_candidates` (capped at 3/day, simulating a daily
+token budget for the most expensive escalation-reasoning calls).
+
+**Portfolio patterns** (`build_portfolio_patterns`): accounts/avg health by
+segment, declining-account counts by segment, common support-ticket issue
+themes and call-note blocker themes (deterministic keyword clustering),
+and intervention/expansion segment breakdowns.
+
+**Representative runs** (`select_representative_runs`): returns >= 5
+accounts covering distinct cases (severe escalation, renewal/value review,
+negative-sentiment/declining adoption, healthy expansion, low-usage
+reactivation). On this dataset the preferred IDs (`A008, A005, A014, A003,
+A017`) are all present and used directly; if any were missing, the
+function falls back to the closest match by `priority_score`.
+
+`run_workflow.py` calls `preprocessing.run_preprocessing()` right after
+loading the raw CSVs (Step 2 of 6), writes its five output files, and then
+uses the `daily_account_review` / `quality_review_outputs` selectors to
+decide which accounts/outputs actually reach Stage 1/2. On this small
+synthetic dataset those selectors return everything (nothing to filter out
+yet) — but that's exactly the wiring that makes the later stages
+cost-controlled on a real, larger portfolio.
+
+
+
+## Data validation
+
+`src/data_loader.load_csv()` checks every input file against the required
+columns defined in `src/config.py::REQUIRED_COLUMNS`. If a file is missing
+or a required column isn't present, the workflow stops before doing any
+processing and prints every problem it found, e.g.:
+
+```
+FATAL: Data validation failed with the following issue(s):
+  - 'accounts.csv' is missing required column(s): ['nps_score']. Found columns: [...]
+```
+
+The loader also runs a referential-integrity check: any `account_id` that
+appears in a child table (tickets, usage, calls, check-ins, outputs) but
+not in `accounts.csv` is reported as a warning (not a hard failure), since
+the rest of the workflow can still run for every account that *does*
+resolve.
+
+## The `quality_standard_ids` split/join, concretely
+
+`junior_outputs.csv` stores multiple standard IDs per row:
+
+| output_id | quality_standard_ids          |
+|-----------|--------------------------------|
+| O001      | `QS001;QS002;QS003;QS005`     |
+
+`data_loader.explode_quality_standards()` turns this into one row per
+standard, then merges in the standard's name/description:
+
+| output_id | standard_id | standard_name              | description                 |
+|-----------|-------------|-----------------------------|------------------------------|
+| O001      | QS001       | Customer-specific context   | Output references ...        |
+| O001      | QS002       | Actionability                | Output gives concrete ...    |
+| O001      | QS003       | Risk accuracy                 | Output identifies material...|
+| O001      | QS005       | Escalation judgment            | Output escalates urgent ...  |
+
+This long-format table is what `quality_reviewer.review_all_outputs()`
+iterates over (grouped back by `output_id`) to produce one verdict per
+standard and one overall recommendation per output.
+
+## Simulated LLM calls & cost logging
+
+Every "LLM call" (one per account for briefings, one per junior output for
+quality review) goes through `SimulatedLLMClient.call()`:
+
+- The full prompt is rendered from `src/prompts.py` templates with real
+  joined data (nothing is hard-coded).
+- A deterministic Python function produces the "response" text (the
+  narrative/verdicts described above).
+- Both prompt and response are token-counted (`~1.33 tokens/word`
+  heuristic) and priced against illustrative per-1K-token rates in
+  `config.py`, then logged to `output/token_usage_log.csv` with a
+  timestamp, task name, reference id, and estimated cost.
+
+This means the pipeline's *shape* — prompt in, metered response out — is a
+faithful stand-in for a real LLM integration; swapping `response_fn` for
+an actual API call in `llm_simulator.py` is the only change needed to make
+this a live system.
+
+## Extending this
+
+- **New/changed data**: as long as the required columns in
+  `src/config.py::REQUIRED_COLUMNS` are present, the workflow will run on
+  any number of accounts/tickets/outputs — nothing is hard-coded to the
+  specific rows in the provided sample data.
+- **New quality standards**: add a row to `quality_standards.csv` and a
+  matching evaluator function to `src/quality_reviewer.py::STANDARD_EVALUATORS`.
+- **Real LLM integration**: replace the `response_fn` callbacks in
+  `briefing_generator.py` / `quality_reviewer.py` with an actual API call,
+  keeping the same prompt templates and `SimulatedLLMClient` interface (or
+  swap in a real client with the same `.call()` signature).
+
+## Tests
+
+```bash
+python -m pytest tests/ -v
+# or, without pytest installed:
+python tests/test_workflow.py
+```
