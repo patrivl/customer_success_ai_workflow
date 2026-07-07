@@ -536,7 +536,7 @@
       "qa_eval_multiplier": 1.02,
       "adjusted_measured_cost": 4.57776e-06,
       "variance_pct": -92.67,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": null
     },
     {
@@ -574,7 +574,7 @@
       "qa_eval_multiplier": 1.15,
       "adjusted_measured_cost": 0.0022628549999999994,
       "variance_pct": -62.52,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -605,7 +605,7 @@
       "qa_eval_multiplier": 1.25,
       "adjusted_measured_cost": 0.0030475,
       "variance_pct": -79.56,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -643,7 +643,7 @@
       "qa_eval_multiplier": 1.35,
       "adjusted_measured_cost": 0.00800604,
       "variance_pct": -81.42,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -681,7 +681,7 @@
       "qa_eval_multiplier": 1.45,
       "adjusted_measured_cost": 0.009278289,
       "variance_pct": -91.09,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -712,7 +712,7 @@
       "qa_eval_multiplier": 1.2,
       "adjusted_measured_cost": 0.001126224,
       "variance_pct": -85.52,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -742,7 +742,7 @@
       "qa_eval_multiplier": 1.12,
       "adjusted_measured_cost": 0.000810264,
       "variance_pct": -83.79,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.85
     },
     {
@@ -800,7 +800,7 @@
       "qa_eval_multiplier": 1.02,
       "adjusted_measured_cost": 4.556952e-06,
       "variance_pct": -93.74,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": null
     },
     {
@@ -831,7 +831,7 @@
       "qa_eval_multiplier": 1.2,
       "adjusted_measured_cost": 0.0011447999999999999,
       "variance_pct": -83.64,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -862,7 +862,7 @@
       "qa_eval_multiplier": 1.3,
       "adjusted_measured_cost": 0.0033140250000000004,
       "variance_pct": -92.52,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -893,7 +893,7 @@
       "qa_eval_multiplier": 1.18,
       "adjusted_measured_cost": 0.0010869451999999998,
       "variance_pct": -83.45,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -927,7 +927,7 @@
       "qa_eval_multiplier": 1.2,
       "adjusted_measured_cost": 0.001752192,
       "variance_pct": -79.97,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.8
     },
     {
@@ -973,7 +973,7 @@
       "qa_eval_multiplier": 1.05,
       "adjusted_measured_cost": 3.5256900000000005e-06,
       "variance_pct": -96.74,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": null
     },
     {
@@ -1007,7 +1007,7 @@
       "qa_eval_multiplier": 1.4,
       "adjusted_measured_cost": 0.006534989999999999,
       "variance_pct": -92.88,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.8
     },
     {
@@ -1038,7 +1038,7 @@
       "qa_eval_multiplier": 1.25,
       "adjusted_measured_cost": 0.0011783750000000002,
       "variance_pct": -88.57,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -1086,7 +1086,7 @@
       "qa_eval_multiplier": 1.05,
       "adjusted_measured_cost": 3.7203600000000006e-06,
       "variance_pct": -97.54,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": null
     },
     {
@@ -1134,7 +1134,7 @@
       "qa_eval_multiplier": 1.45,
       "adjusted_measured_cost": 0.0061580775,
       "variance_pct": -96.27,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.85
     },
     {
@@ -1182,7 +1182,7 @@
       "qa_eval_multiplier": 1.35,
       "adjusted_measured_cost": 0.005235300000000002,
       "variance_pct": -94.42,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.85
     },
     {
@@ -1213,7 +1213,7 @@
       "qa_eval_multiplier": 1.18,
       "adjusted_measured_cost": 0.0011169644,
       "variance_pct": -86.77,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -1243,7 +1243,7 @@
       "qa_eval_multiplier": 1.15,
       "adjusted_measured_cost": 0.000777722,
       "variance_pct": -91.49,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.7
     },
     {
@@ -1284,7 +1284,7 @@
       "qa_eval_multiplier": 1.05,
       "adjusted_measured_cost": 3.0930900000000002e-06,
       "variance_pct": -97.14,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": null
     },
     {
@@ -1323,7 +1323,7 @@
       "qa_eval_multiplier": 1.6,
       "adjusted_measured_cost": 0.0058755199999999995,
       "variance_pct": -94.72,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.65
     },
     {
@@ -1362,7 +1362,7 @@
       "qa_eval_multiplier": 1.5,
       "adjusted_measured_cost": 0.00587817,
       "variance_pct": -95.19,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.65
     },
     {
@@ -1393,7 +1393,7 @@
       "qa_eval_multiplier": 1.25,
       "adjusted_measured_cost": 0.001139875,
       "variance_pct": -88.16,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -1423,7 +1423,7 @@
       "qa_eval_multiplier": 1.15,
       "adjusted_measured_cost": 0.0007740649999999999,
       "variance_pct": -87.9,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.7
     },
     {
@@ -1481,7 +1481,7 @@
       "qa_eval_multiplier": 1.05,
       "adjusted_measured_cost": 4.91001e-06,
       "variance_pct": -97.16,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": null
     },
     {
@@ -1526,7 +1526,7 @@
       "qa_eval_multiplier": 1.7,
       "adjusted_measured_cost": 0.009071675999999997,
       "variance_pct": -97.76,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -1571,7 +1571,7 @@
       "qa_eval_multiplier": 1.5,
       "adjusted_measured_cost": 0.007327799999999999,
       "variance_pct": -94.98,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -1602,7 +1602,7 @@
       "qa_eval_multiplier": 1.25,
       "adjusted_measured_cost": 0.0012512500000000002,
       "variance_pct": -90.9,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -1635,7 +1635,7 @@
       "qa_eval_multiplier": 1.55,
       "adjusted_measured_cost": 0.0044389830000000005,
       "variance_pct": -96.89,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.9
     },
     {
@@ -1665,7 +1665,7 @@
       "qa_eval_multiplier": 1.25,
       "adjusted_measured_cost": 0.0009460000000000001,
       "variance_pct": -92.76,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.85
     },
     {
@@ -1703,7 +1703,7 @@
       "qa_eval_multiplier": 1.25,
       "adjusted_measured_cost": 0.002600125,
       "variance_pct": -73.92,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -1734,7 +1734,7 @@
       "qa_eval_multiplier": 1.3,
       "adjusted_measured_cost": 0.0012541100000000001,
       "variance_pct": -90.26,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -1765,7 +1765,7 @@
       "qa_eval_multiplier": 1.2,
       "adjusted_measured_cost": 0.001210464,
       "variance_pct": -86.66,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     },
     {
@@ -1795,7 +1795,7 @@
       "qa_eval_multiplier": 1.15,
       "adjusted_measured_cost": 0.0008569570000000001,
       "variance_pct": -87.77,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.85
     },
     {
@@ -1827,7 +1827,7 @@
       "qa_eval_multiplier": 1.75,
       "adjusted_measured_cost": 0.015855,
       "variance_pct": -97.48,
-      "review_flag": "High variance: estimate too conservative",
+      "review_flag": "Measured cost materially below original estimate",
       "confidence": 0.95
     }
   ]

@@ -27,7 +27,7 @@ import json
 from datetime import datetime, timezone
 from typing import Any, Dict, List
 
-from src import config
+from src import config, token_measurement
 from src.model_simulator import STAGE_RUNTIME_MAP
 from src.token_math_config import load_token_math_plan
 
@@ -274,6 +274,15 @@ def build_workflow_summary(traces: List[dict], representative_runs: List[dict],
     workflow_components_covered = sorted({s.workflow_component for s in plan.values()})
     operating_areas_covered = sorted({s.operating_area for s in plan.values()})
 
+    # Reuses src.token_measurement's own row-building (no duplicated math)
+    # to roll each stage's planned_annual_cost (Adjusted cost/run x Runs
+    # per cadence x Annualization factor) up to the portfolio total -- this
+    # should match the Token Math Template's own budget total, allowing for
+    # minor rounding.
+    total_planned_annual_cost = sum(
+        r["planned_annual_cost"] for r in token_measurement._build_measurement_rows(traces)
+    )
+
     total_calls = len(traces)
     total_input = sum(t["measured_input_tokens"] for t in traces)
     total_output = sum(t["measured_output_tokens"] for t in traces)
@@ -323,6 +332,11 @@ def build_workflow_summary(traces: List[dict], representative_runs: List[dict],
         "total_measured_output_tokens": total_output,
         "total_measured_cost": round(total_cost, 6),
         "total_adjusted_measured_cost": round(total_adjusted_cost, 6),
+        # Planned annual cost across all 37 stage_ids, using each stage's
+        # ADJUSTED cost/run (not base cost/run) x runs_per_cadence x
+        # annualization_factor -- comparable to the Token Math Template's
+        # own budget total (~$12,517.52, allowing for minor rounding).
+        "total_planned_annual_cost": round(total_planned_annual_cost, 2),
         "measured_average_cost_per_end_to_end_run": measured_average_cost_per_end_to_end_run,
         "average_input_tokens_per_run": average_input_tokens_per_run,
         "average_output_tokens_per_run": average_output_tokens_per_run,
@@ -385,6 +399,12 @@ def write_workflow_summary_md(summary: Dict[str, Any], out_dir=None):
     lines.append(f"- Total measured cost: ${summary['total_measured_cost']:.6f}")
     lines.append(f"- Total adjusted measured cost (incl. retry/QA overhead): ${summary['total_adjusted_measured_cost']:.6f}")
     lines.append(
+        f"- Total planned annual cost (all 37 stages, using each stage's Adjusted cost/run x "
+        f"Runs per cadence x Annualization factor): ${summary['total_planned_annual_cost']:,.2f} -- "
+        f"should match the Token Math Template's own budget total (~$12,517.52), allowing for "
+        f"minor rounding."
+    )
+    lines.append(
         f"- Average per representative end-to-end run: "
         f"${summary['measured_average_cost_per_end_to_end_run']:.6f} "
         f"({summary['average_input_tokens_per_run']} input tokens + "
@@ -397,14 +417,19 @@ def write_workflow_summary_md(summary: Dict[str, Any], out_dir=None):
     lines.append(
         "`outputs/token_math_measurement_summary.csv` has one row for every one of the 37 "
         "`stage_id`s in `config/token_math_plan.csv` -- including any that had zero calls in a "
-        "given run (marked `Not exercised in representative runs`). Its "
-        "`notebook_measured_avg_cost_per_run` column is the average cost per call **including** "
-        "each stage's planned retry rate and QA/eval multiplier (the realistic per-run cost), and "
-        "`estimate_vs_measured_variance` is the percent difference between that figure and the "
-        "planned cost per run, using the same bands as `review_flag` (±20% = OK, +20/+50% = "
-        "Review: above estimate, >+50% = High variance: revise assumptions, -20/-50% = Review: "
-        "overestimated, <-50% = High variance: estimate too conservative). "
-        "`outputs/token_math_spreadsheet_export.csv` is the same data narrowed to exactly the "
+        "given run (marked `Not measured`). Its `planned_cost_per_run` column is each stage's "
+        "**Adjusted cost/run** (base cost x (1 + retry_rate) x qa_eval_multiplier) -- the plan's "
+        "actual final per-run estimate, matching the Token Math Template, not the unadjusted base "
+        "token cost. Its `notebook_measured_avg_cost_per_run` column is the average cost per call "
+        "**including** each stage's planned retry rate and QA/eval multiplier (the realistic "
+        "per-run cost), and `estimate_vs_measured_variance` is the percent difference between "
+        "that figure and `planned_cost_per_run` (adjusted vs. adjusted, an apples-to-apples "
+        "comparison), using the same bands as `review_flag` (±20% = Measured cost on par with "
+        "original estimate, +20% to +50% = Measured cost above original estimate, more than +50% "
+        "= Measured cost materially above original estimate, -20% to -50% = Measured cost below "
+        "original estimate, less than -50% = Measured cost materially below original estimate, no "
+        "measurement = Not measured). `outputs/token_math_spreadsheet_export.csv` is the same data "
+        "narrowed to exactly the "
         "Token Math Template's measurement columns (`stage_id`, `notebook_measured_avg_cost_per_run`, "
         "`estimate_vs_measured_variance`, `source_measurement_link`, `review_flag`, plus `exercised`) "
         "-- one row per stage, ready to paste back into the spreadsheet."

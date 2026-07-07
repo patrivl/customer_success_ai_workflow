@@ -163,12 +163,16 @@ def test_token_cost_math():
     assert round(adjusted, 4) == round(1.0 * 1.10 * 1.20, 4)
     assert token_costs.calculate_variance(1.0, 1.0) == 0.0
     assert round(token_costs.calculate_variance(1.0, 1.3), 6) == 30.0
-    assert token_costs.assign_review_flag(10) == token_costs.REVIEW_FLAG_OK
+    assert token_costs.assign_review_flag(10) == token_costs.REVIEW_FLAG_ON_PAR
     assert token_costs.assign_review_flag(30) == token_costs.REVIEW_FLAG_ABOVE_ESTIMATE
-    assert token_costs.assign_review_flag(60) == token_costs.REVIEW_FLAG_HIGH_ABOVE
-    assert token_costs.assign_review_flag(-30) == token_costs.REVIEW_FLAG_OVERESTIMATED
-    assert token_costs.assign_review_flag(-60) == token_costs.REVIEW_FLAG_HIGH_BELOW
-    assert token_costs.assign_review_flag(None) == token_costs.REVIEW_FLAG_PENDING
+    assert token_costs.assign_review_flag(60) == token_costs.REVIEW_FLAG_MATERIALLY_ABOVE
+    assert token_costs.assign_review_flag(-30) == token_costs.REVIEW_FLAG_BELOW_ESTIMATE
+    assert token_costs.assign_review_flag(-60) == token_costs.REVIEW_FLAG_MATERIALLY_BELOW
+    assert token_costs.assign_review_flag(None) == token_costs.REVIEW_FLAG_NOT_MEASURED
+    assert token_costs.assign_review_flag(20) == token_costs.REVIEW_FLAG_ON_PAR  # boundary: within +/-20% is on par
+    assert token_costs.assign_review_flag(50) == token_costs.REVIEW_FLAG_ABOVE_ESTIMATE  # boundary: +50% is not yet "materially"
+    assert token_costs.assign_review_flag(-20) == token_costs.REVIEW_FLAG_ON_PAR
+    assert token_costs.assign_review_flag(-50) == token_costs.REVIEW_FLAG_BELOW_ESTIMATE
 
 
 def test_simulate_model_call_produces_full_trace():
@@ -241,8 +245,22 @@ def test_token_measurement_runs_all_stages_and_writes_outputs(tmp_path=None):
         assert r["num_calls"] != "0", f"{r['stage_id']} has zero calls in this run"
         assert r["notebook_measured_avg_cost_per_run"] != "Not exercised"
         assert r["estimate_vs_measured_variance"] != "Not exercised"
-        assert r["review_flag"] != "Not exercised in representative runs"
+        assert r["review_flag"] != "Not measured"
         assert r["source_measurement_link"] == "outputs/stage_token_counts.csv"
+
+    # planned_cost_per_run must be the ADJUSTED cost/run (base cost x
+    # (1 + retry_rate) x qa_eval_multiplier), matching the Token Math
+    # Template's own "Adjusted cost/run" column -- not the unadjusted base
+    # token cost. TM_002: 3500 input @ $1/1M + 300 output @ $5/1M = $0.005
+    # base; retry_rate_percent=5 -> 0.05, qa_eval_multiplier=1.15 ->
+    # adjusted = 0.005 * 1.05 * 1.15 = 0.0060375.
+    from src.token_math_config import load_token_math_plan
+    plan = load_token_math_plan()
+    by_stage_id = {r["stage_id"]: r for r in rows}
+    tm002 = by_stage_id["TM_002"]
+    expected_adjusted = round(0.005 * (1 + plan["TM_002"].retry_rate) * plan["TM_002"].qa_eval_multiplier, 6)
+    assert abs(float(tm002["planned_cost_per_run"]) - expected_adjusted) < 1e-9
+    assert float(tm002["planned_cost_per_run"]) > 0.005  # strictly above the unadjusted base cost
 
     with open(cfg.OUTPUT_DIR / "token_math_spreadsheet_export.csv") as f:
         export_rows = list(csv.DictReader(f))
@@ -271,7 +289,7 @@ def test_token_measurement_runs_all_stages_and_writes_outputs(tmp_path=None):
     for r in export_rows:
         assert r["exercised"] == "Yes"  # this dataset exercises every stage
         assert r["notebook_measured_avg_cost_per_run"] != "Not exercised"
-        assert r["review_flag"] != token_costs.REVIEW_FLAG_NOT_EXERCISED
+        assert r["review_flag"] != token_costs.REVIEW_FLAG_NOT_MEASURED
 
 
 def test_final_report_writes_representative_runs_and_rollup_csvs():
@@ -316,15 +334,24 @@ def test_final_report_writes_representative_runs_and_rollup_csvs():
         "generated_at", "dataset_files_used", "total_representative_runs",
         "representative_accounts", "workflow_components_covered", "operating_areas_covered",
         "total_simulated_model_calls", "total_measured_input_tokens", "total_measured_output_tokens",
-        "total_measured_cost", "total_adjusted_measured_cost",
+        "total_measured_cost", "total_adjusted_measured_cost", "total_planned_annual_cost",
         "measured_average_cost_per_end_to_end_run", "average_input_tokens_per_run",
         "average_output_tokens_per_run", "quality_flags_total", "escalation_cases_total",
         "intervention_plans_total", "final_routes_by_account", "measurement_files_created",
     ):
         assert field in summary, f"workflow summary missing field {field}"
 
-    # Production-scaled annual-cost projection fields were removed -- they
-    # didn't improve interpretation of this small synthetic sample.
+    # total_planned_annual_cost sums each stage_id's Adjusted cost/run x
+    # Runs per cadence x Annualization factor across all 37 stages -- this
+    # must match the submitted Token Math Template's own budget total of
+    # ~$12,517.52 (allowing for minor rounding), not the unadjusted-base
+    # total of ~$8,349.92 that the earlier (buggy) calculation produced.
+    assert abs(summary["total_planned_annual_cost"] - 12517.52) < 1.0
+
+    # Production-scaled MEASURED-cost projection fields (annualizing this
+    # small sample's measurements) remain removed -- they didn't improve
+    # interpretation of this small synthetic sample. Only the corrected
+    # PLANNED annual total (from the plan itself, above) was reinstated.
     for field in (
         "full_plan_annual_cost", "exercised_plan_annual_cost", "unexercised_plan_annual_cost",
         "exercised_stage_count", "unexercised_stage_count", "scaled_measured_annual_cost",

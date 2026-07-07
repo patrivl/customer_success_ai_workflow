@@ -329,6 +329,17 @@ def _build_measurement_rows(traces: List[dict]) -> List[dict]:
     computed on that same adjusted basis for internal consistency; the
     unadjusted `avg_measured_cost_per_run` / `variance_pct` are kept
     alongside as supporting, non-adjusted detail.
+
+    `planned_cost_per_run` is the ADJUSTED planned cost (base cost x
+    (1 + retry_rate) x qa_eval_multiplier, via the existing
+    `token_costs.calculate_adjusted_cost` -- not a new formula), matching
+    the Token Math Template's own "Adjusted cost/run" column. Using the
+    unadjusted base cost here previously understated every stage's plan
+    and was the source of a ~$4,168 mismatch between this project's
+    total planned annual cost ($8,349.92) and the submitted spreadsheet's
+    total ($12,517.52) -- the adjusted figure is the plan's actual final
+    per-run estimate, so it's also what `estimate_vs_measured_variance`
+    and `review_flag` are compared against below.
     """
     by_stage: Dict[str, List[dict]] = {}
     for t in traces:
@@ -338,10 +349,18 @@ def _build_measurement_rows(traces: List[dict]) -> List[dict]:
     rows = []
     for stage_id, stage in plan.items():
         stage_traces = by_stage.get(stage_id, [])
-        planned_cost_per_run = token_costs.calculate_cost(
+        base_cost_per_run = token_costs.calculate_cost(
             stage.planned_input_tokens_per_run, stage.planned_output_tokens_per_run,
             stage.input_price_per_1m, stage.output_price_per_1m,
         )
+        planned_cost_per_run = token_costs.calculate_adjusted_cost(
+            base_cost_per_run, stage.retry_rate, stage.qa_eval_multiplier,
+        )
+        # Row planned annual cost = Adjusted cost/run x Runs per cadence x
+        # Annualization factor (equivalently: Cost per cadence x
+        # Annualization factor). Always computable from the plan alone,
+        # regardless of whether this run exercised the stage.
+        planned_annual_cost = planned_cost_per_run * stage.runs_per_cadence * stage.annualization_factor
 
         if stage_traces:
             n = len(stage_traces)
@@ -358,7 +377,7 @@ def _build_measurement_rows(traces: List[dict]) -> List[dict]:
         else:
             avg_input = avg_output = avg_cost = avg_adjusted_cost = None
             variance_pct = adjusted_variance_pct = None
-            review_flag = token_costs.REVIEW_FLAG_NOT_EXERCISED
+            review_flag = token_costs.REVIEW_FLAG_NOT_MEASURED
             notebook_measured_avg_cost_per_run = "Not exercised"
             estimate_vs_measured_variance = "Not exercised"
             source_measurement_link = "No representative call in sample"
@@ -384,6 +403,12 @@ def _build_measurement_rows(traces: List[dict]) -> List[dict]:
             "source_measurement_link": source_measurement_link,
             "source_output_file": "outputs/stage_token_counts.csv",
             "exercised": "Yes" if stage_traces else "No",
+            # Internal field (not part of MEASUREMENT_SUMMARY_FIELDNAMES /
+            # SPREADSHEET_EXPORT_FIELDNAMES, so it never appears as a CSV
+            # column) -- used only to roll up total_planned_annual_cost in
+            # src/final_report.py, for comparison against the Token Math
+            # Template's own budget total.
+            "planned_annual_cost": round(planned_annual_cost, 2),
         })
 
     return rows

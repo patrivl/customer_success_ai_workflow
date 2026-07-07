@@ -11,19 +11,18 @@ from __future__ import annotations
 import math
 
 # ---------------------------------------------------------------------------
-# Review-flag variance bands.
+# Review-flag variance bands. Wording describes measured cost relative to
+# the original (planned) estimate.
 # ---------------------------------------------------------------------------
-REVIEW_FLAG_OK = "OK"
-REVIEW_FLAG_ABOVE_ESTIMATE = "Review: above estimate"
-REVIEW_FLAG_HIGH_ABOVE = "High variance: revise assumptions"
-REVIEW_FLAG_OVERESTIMATED = "Review: overestimated"
-REVIEW_FLAG_HIGH_BELOW = "High variance: estimate too conservative"
-REVIEW_FLAG_PENDING = "Pending measurement"
-# Used specifically by the stage-level token_math_measurement_summary.csv
-# aggregation (src/token_measurement.py) when a stage_id had zero calls in
-# this run -- distinct from REVIEW_FLAG_PENDING, which covers a per-call
-# variance that couldn't be computed (e.g. zero planned cost).
-REVIEW_FLAG_NOT_EXERCISED = "Not exercised in representative runs"
+REVIEW_FLAG_ON_PAR = "Measured cost on par with original estimate"
+REVIEW_FLAG_ABOVE_ESTIMATE = "Measured cost above original estimate"
+REVIEW_FLAG_MATERIALLY_ABOVE = "Measured cost materially above original estimate"
+REVIEW_FLAG_BELOW_ESTIMATE = "Measured cost below original estimate"
+REVIEW_FLAG_MATERIALLY_BELOW = "Measured cost materially below original estimate"
+# Covers both a per-call variance that couldn't be computed (e.g. zero
+# planned cost) and a stage_id with zero calls in this run -- one flag for
+# "there is no measured cost to compare against the estimate."
+REVIEW_FLAG_NOT_MEASURED = "Not measured"
 
 
 def estimate_tokens(text: str) -> int:
@@ -65,26 +64,27 @@ def calculate_variance(planned_cost: float, measured_cost: float) -> float:
 
 
 def assign_review_flag(variance_pct: float | None) -> str:
-    """Maps a variance percentage to a review-flag label.
+    """Maps a variance percentage to a review-flag label describing
+    measured cost relative to the original estimate.
 
-        within +/-20%:      OK
-        +20% to +50%:       Review: above estimate
-        above +50%:         High variance: revise assumptions
-        -20% to -50%:       Review: overestimated
-        below -50%:         High variance: estimate too conservative
-        missing measurement: Pending measurement
+        within +/-20%:        Measured cost on par with original estimate
+        +20% to +50%:         Measured cost above original estimate
+        more than +50%:       Measured cost materially above original estimate
+        -20% to -50%:         Measured cost below original estimate
+        less than -50%:       Measured cost materially below original estimate
+        no measurement:       Not measured
     """
     if variance_pct is None:
-        return REVIEW_FLAG_PENDING
+        return REVIEW_FLAG_NOT_MEASURED
     if variance_pct > 50:
-        return REVIEW_FLAG_HIGH_ABOVE
+        return REVIEW_FLAG_MATERIALLY_ABOVE
     if variance_pct > 20:
         return REVIEW_FLAG_ABOVE_ESTIMATE
     if variance_pct >= -20:
-        return REVIEW_FLAG_OK
+        return REVIEW_FLAG_ON_PAR
     if variance_pct >= -50:
-        return REVIEW_FLAG_OVERESTIMATED
-    return REVIEW_FLAG_HIGH_BELOW
+        return REVIEW_FLAG_BELOW_ESTIMATE
+    return REVIEW_FLAG_MATERIALLY_BELOW
 
 
 def format_variance_pct(variance_pct: float | None) -> str:

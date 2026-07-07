@@ -1,38 +1,38 @@
 stage_id,notebook_measured_avg_cost_per_run,estimate_vs_measured_variance,source_measurement_link,review_flag,exercised
-TM_001,5e-06,-92.4%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_002,0.00202,-59.6%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_003,0.00297,-73.6%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_004,0.007154,-74.9%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_005,0.008284,-86.9%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_006,0.001092,-81.8%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_007,0.000803,-81.1%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_008,5e-06,-93.5%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_009,0.001115,-79.7%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_010,0.003227,-89.6%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_011,0.001053,-79.9%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_012,0.001772,-73.8%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_013,4e-06,-96.5%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_014,0.006611,-88.4%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_015,0.001164,-84.5%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_016,0.006499,-90.4%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_017,4e-06,-97.3%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_018,0.005864,-94.1%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_019,0.004968,-92.0%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_020,0.001103,-83.7%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_021,0.000779,-89.6%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_022,3e-06,-96.9%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_023,0.005212,-90.9%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_024,0.005895,-91.5%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_025,0.001135,-83.8%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_026,0.000774,-85.3%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_027,5e-06,-96.9%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_028,0.009086,-95.3%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_029,0.00734,-91.1%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_030,0.001236,-87.6%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_031,0.004439,-94.3%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_032,0.000938,-90.1%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_033,0.002479,-65.8%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_034,0.001216,-86.5%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_035,0.001172,-83.3%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_036,0.000845,-85.3%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
-TM_037,0.015866,-94.7%,outputs/stage_token_counts.csv,High variance: estimate too conservative,Yes
+TM_001,5e-06,-92.7%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_002,0.00202,-66.5%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_003,0.00297,-80.1%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_004,0.007154,-83.4%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_005,0.008284,-92.0%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_006,0.001092,-86.0%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_007,0.000803,-83.9%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_008,5e-06,-93.7%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_009,0.001115,-84.1%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_010,0.003227,-92.7%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_011,0.001053,-84.0%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_012,0.001772,-79.7%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_013,4e-06,-96.7%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_014,0.006611,-92.8%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_015,0.001164,-88.7%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_016,0.006499,-94.3%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_017,4e-06,-97.5%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_018,0.005864,-96.4%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_019,0.004968,-94.7%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_020,0.001103,-86.9%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_021,0.000779,-91.5%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_022,3e-06,-97.1%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_023,0.005212,-95.3%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_024,0.005895,-95.2%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_025,0.001135,-88.2%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_026,0.000774,-87.9%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_027,5e-06,-97.2%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_028,0.009086,-97.8%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_029,0.00734,-95.0%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_030,0.001236,-91.0%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_031,0.004439,-96.9%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_032,0.000938,-92.8%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_033,0.002479,-75.1%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_034,0.001216,-90.5%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_035,0.001172,-87.1%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_036,0.000845,-88.0%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes
+TM_037,0.015866,-97.5%,outputs/stage_token_counts.csv,Measured cost materially below original estimate,Yes

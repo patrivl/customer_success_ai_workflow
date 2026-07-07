@@ -340,12 +340,13 @@ favor of citing account evidence in the rationale. Signal-monitoring /
 context-assembly stages (embedding models, zero planned output tokens) use
 a lightweight `context_indexing` pseudo-template instead of a JSON verdict.
 
-**Review-flag bands** (`src/token_costs.assign_review_flag`): within
-±20% variance = `OK`; +20% to +50% = `Review: above estimate`; above +50%
-= `High variance: revise assumptions`; -20% to -50% =
-`Review: overestimated`; below -50% =
-`High variance: estimate too conservative`; no measurement yet =
-`Pending measurement`.
+**Review-flag bands** (`src/token_costs.assign_review_flag`), describing
+measured cost relative to the original (planned) estimate: within ±20%
+variance = `Measured cost on par with original estimate`; +20% to +50% =
+`Measured cost above original estimate`; more than +50% = `Measured cost
+materially above original estimate`; -20% to -50% = `Measured cost below
+original estimate`; less than -50% = `Measured cost materially below
+original estimate`; no measurement = `Not measured`.
 
 **Output** (written by `src/token_measurement.py` to `outputs/`):
 - `stage_token_counts.csv` -- one row per simulated call: planned vs.
@@ -371,24 +372,36 @@ Math Template's measurement columns as follows:
 | Spreadsheet column | CSV column | How it's computed |
 |---|---|---|
 | Notebook measured avg cost/run | `notebook_measured_avg_cost_per_run` | Average **adjusted** measured cost per call for that `stage_id` (`adjusted_measured_cost` = measured cost × (1 + retry_rate) × qa_eval_multiplier) -- the realistic per-run cost, not just the raw token cost. |
-| Estimate vs measured variance | `estimate_vs_measured_variance` | `(notebook_measured_avg_cost_per_run − planned_cost_per_run) / planned_cost_per_run`, formatted as a signed percentage string (e.g. `-59.6%`, `+18.7%`). |
+| Estimate vs measured variance | `estimate_vs_measured_variance` | `(notebook_measured_avg_cost_per_run − planned_cost_per_run) / planned_cost_per_run`, formatted as a signed percentage string (e.g. `-59.6%`, `+18.7%`). `planned_cost_per_run` is the stage's **Adjusted cost/run** (base cost × (1 + retry_rate) × qa_eval_multiplier via `token_costs.calculate_adjusted_cost`) -- matching the Token Math Template's own adjusted estimate, not the unadjusted base token cost -- so this is an adjusted-vs-adjusted, apples-to-apples comparison. |
 | Source / measurement link | `source_measurement_link` | `outputs/stage_token_counts.csv` for any stage with at least one call in this run (aggregated rows point at the per-call detail file); `No representative call in sample` if the stage had zero calls. |
-| Review flag | `review_flag` | The variance bands below, applied to `estimate_vs_measured_variance`'s underlying number; `Not exercised in representative runs` if the stage had zero calls. |
+| Review flag | `review_flag` | The variance bands below, applied to `estimate_vs_measured_variance`'s underlying number; `Not measured` if the stage had zero calls. |
 
 Supporting (non-spreadsheet) columns on `token_math_measurement_summary.csv`
-give the unadjusted view for context: `avg_measured_cost_per_run` (no
-retry/QA overhead), `avg_adjusted_measured_cost_per_run` (same value as
-`notebook_measured_avg_cost_per_run`, named literally), `variance_pct`
-(numeric, unadjusted-basis variance), plus `avg_measured_input_tokens`,
-`avg_measured_output_tokens`, the stage's planned tokens/cost, and
-`source_output_file`.
+give the unadjusted measured view for context: `avg_measured_cost_per_run`
+(no retry/QA overhead on the measured side), `avg_adjusted_measured_cost_per_run`
+(same value as `notebook_measured_avg_cost_per_run`, named literally),
+`variance_pct` (numeric form of `estimate_vs_measured_variance`), plus
+`avg_measured_input_tokens`, `avg_measured_output_tokens`, the stage's
+planned tokens, `planned_cost_per_run` (the Adjusted cost/run described
+above), and `source_output_file`.
 
-**Review-flag bands** (`src/token_costs.assign_review_flag`): within
-±20% variance = `OK`; +20% to +50% = `Review: above estimate`; above +50%
-= `High variance: revise assumptions`; -20% to -50% =
-`Review: overestimated`; below -50% =
-`High variance: estimate too conservative`; a `stage_id` with zero calls in
-this run = `Not exercised in representative runs`.
+**Planned annual cost total** (`outputs/workflow_summary.json` /
+`outputs/workflow_summary.md`, field `total_planned_annual_cost`): sums,
+across all 37 `stage_id`s, `planned_cost_per_run` (Adjusted cost/run) ×
+`runs_per_cadence` × `annualization_factor` -- equivalently, each stage's
+Cost per cadence × Annualization factor. This is a pure planning figure
+computed from `config/token_math_plan.csv` alone (not from measured data),
+and should match the Token Math Template's own budget total of
+approximately **$12,517.52**, allowing for minor rounding. Using the
+unadjusted base cost here previously understated the total at ~$8,349.92.
+
+**Review-flag bands** (`src/token_costs.assign_review_flag`), describing
+measured cost relative to the original (planned) estimate: within ±20%
+variance = `Measured cost on par with original estimate`; +20% to +50% =
+`Measured cost above original estimate`; more than +50% = `Measured cost
+materially above original estimate`; -20% to -50% = `Measured cost below
+original estimate`; less than -50% = `Measured cost materially below
+original estimate`; a `stage_id` with zero calls in this run = `Not measured`.
 
 **`outputs/token_math_spreadsheet_export.csv`** narrows
 `token_math_measurement_summary.csv` down to exactly the 5 copy-ready

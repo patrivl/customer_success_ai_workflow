@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T17:47:21+00:00",
+  "generated_at": "2026-07-07T06:22:30+00:00",
   "dataset_files_used": [
     "data/accounts.csv",
     "data/usage_events.csv",
@@ -85,6 +85,7 @@
   "total_measured_output_tokens": 45641,
   "total_measured_cost": 0.70131,
   "total_adjusted_measured_cost": 1.1055,
+  "total_planned_annual_cost": 12517.51,
   "measured_average_cost_per_end_to_end_run": 0.055217,
   "average_input_tokens_per_run": 13530.1,
   "average_output_tokens_per_run": 3619.1,
